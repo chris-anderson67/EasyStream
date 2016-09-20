@@ -5,6 +5,8 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -32,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         Intent launchFindIntent = new Intent(MainActivity.this, MapsActivity.class);
         MainActivity.this.startActivity(launchFindIntent);
 
+    }
+
+    public void onClickRateButton(View view) {
+        Toast placeholder = Toast.makeText(this, "Rating a bathroom coming soon!", Toast.LENGTH_LONG);
+        placeholder.show();
     }
 
     /**
