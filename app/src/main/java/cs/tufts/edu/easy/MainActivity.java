@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -12,6 +13,11 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.vision.text.Text;
+
+import java.util.concurrent.ExecutionException;
+
+import static com.google.android.gms.analytics.internal.zzy.s;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,8 +43,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickRateButton(View view) {
-        Toast placeholder = Toast.makeText(this, "Rating a bathroom coming soon!", Toast.LENGTH_LONG);
-        placeholder.show();
+        try {
+            TextView txtview = (TextView)findViewById(R.id.outputText);
+
+            String s = new GetData().execute().get();
+            txtview.setText(s);
+
+            // Toast placeholder = Toast.makeText(this, s, Toast.LENGTH_LONG);
+            // placeholder.show();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 
     /**

@@ -87,4 +87,13 @@
             android:id="@+id/imageView3" />
     </FrameLayout>
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/outputText"
+        android:textSize="24sp"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
