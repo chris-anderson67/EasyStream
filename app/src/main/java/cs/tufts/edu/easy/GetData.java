@@ -30,7 +30,7 @@ import java.net.URL;
 public class GetData extends AsyncTask<Void, Integer, String> {
 
 
-    public static final String data_url = "http://45.55.189.20:5000/get_people.php";
+    public static final String data_url = "http://45.55.189.20/get_people.php";
     public GetData (){
         super();
 
