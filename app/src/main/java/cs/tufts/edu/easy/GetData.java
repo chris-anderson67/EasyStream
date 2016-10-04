@@ -65,10 +65,7 @@ public class GetData extends AsyncTask<Void, Integer, String> {
 
         }
     }
-
-
-
-    }
+}
 
 
 
