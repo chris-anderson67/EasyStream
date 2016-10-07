@@ -17,7 +17,7 @@ import com.google.android.gms.vision.text.Text;
 
 import java.util.concurrent.ExecutionException;
 
-import static com.google.android.gms.analytics.internal.zzy.s;
+//import static com.google.android.gms.analytics.internal.zzy.s;
 
 public class MainActivity extends AppCompatActivity {
 
