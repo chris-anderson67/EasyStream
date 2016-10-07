@@ -56,6 +56,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -64,6 +65,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
 
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -87,9 +94,42 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        String s = null;
+        JSONArray jArray = null;
         // Add a marker in Sydney, Australia, and move the camera.
         LatLng sydney = new LatLng(-34, 151);
+
+
+        try {
+            s = new GetData().execute().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            jArray = new JSONArray(s);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < jArray.length(); i++) {
+            try {
+                JSONObject oneObject = jArray.getJSONObject(i);
+                int lat = oneObject.getInt("latitude");
+                int lon = oneObject.getInt("longitude");
+                LatLng bathroom = new LatLng(lat, lon);
+                mMap.addMarker(new MarkerOptions().position(bathroom).title("Bathroom!"));
+
+
+                Log.d("***JOBJECT_lat***", Integer.toString(lat));
+                Log.d("***JOBJECT_lon***", Integer.toString(lon));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
