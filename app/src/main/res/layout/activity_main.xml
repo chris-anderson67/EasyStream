@@ -15,30 +15,36 @@
         android:text="Find a Bathroom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/welcomeFindButton"
         android:layout_marginBottom="15dp"
-        android:layout_above="@+id/button3"
+        android:layout_above="@+id/welcomeRateButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:onClick="onClickFindButton" />
 
     <Button
         android:text="Rate a Bathroom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
+        android:id="@+id/welcomeRateButton"
         android:layout_marginBottom="45dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:onClick="onClickRateButton" />
 
     <TextView
         android:text="An app to help you find a place to go."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/welcomeFindButton"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="51dp" />
 
@@ -80,5 +86,14 @@
             app:srcCompat="@drawable/logo_large"
             android:id="@+id/imageView3" />
     </FrameLayout>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/outputText"
+        android:textSize="24sp"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
