@@ -42,6 +42,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
         super.onCreate(savedInstanceState);
+        setTitle("EasyStream");
         // myGoogleApiClient = new GoogleApiClient.Builder(this);
         setContentView(R.layout.activity_maps);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

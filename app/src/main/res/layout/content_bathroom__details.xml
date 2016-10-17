@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app2=""
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_bathroom__details"
     android:layout_width="match_parent"
@@ -39,4 +40,5 @@
         android:layout_alignEnd="@+id/textView5"
         android:layout_marginTop="19dp"
         android:id="@+id/textView6" />
+
 </RelativeLayout>
