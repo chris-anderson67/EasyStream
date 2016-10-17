@@ -71,7 +71,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         try {
-            s = new GetData().execute().get();
+            //boolean value determines whether you're requesting all bathrooms data
+            s = new GetData(true).execute().get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {

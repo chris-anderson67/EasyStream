@@ -31,15 +31,23 @@ public class GetData extends AsyncTask<Void, Integer, String> {
 
 
     public static final String data_url = "http://45.55.189.20/get_people.php";
-    public GetData (){
-        super();
+    public static final String detail_url = "http://45.55.189.20/get_details.php";
+    private String url = "";
 
+    public GetData (boolean details){
+        super();
+        if (details == false) {
+            url = detail_url;
+
+        } else {
+            url = data_url;
+        }
     }
 
     @Override
     protected String doInBackground(Void...params) {
         try {
-            URL api = new URL(data_url);
+            URL api = new URL(url);
             HttpURLConnection conn = (HttpURLConnection) api.openConnection();
 
             InputStream is = conn.getInputStream();
@@ -65,6 +73,8 @@ public class GetData extends AsyncTask<Void, Integer, String> {
 
         }
     }
+
+
 }
 
 
