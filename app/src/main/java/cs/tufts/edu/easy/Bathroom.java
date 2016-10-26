@@ -16,8 +16,8 @@ public class Bathroom {
     public int id;
     public String bathroom_name;
     public String address;
-    public String latitude;
-    public String longitude;
+    public double latitude;
+    public double longitude;
     public boolean active;
     public String added_on;
     public String added_by;
@@ -42,8 +42,8 @@ public class Bathroom {
             this.id = jObject.getInt("id");
             this.bathroom_name = jObject.getString("bathroom_name");
             this.address = jObject.getString("address");
-            this.latitude = jObject.getString("latitude");
-            this.longitude = jObject.getString("longitude");
+            this.latitude = jObject.getDouble("latitude");
+            this.longitude = jObject.getDouble("longitude");
             this.active = jObject.getBoolean("active");
             this.added_on = jObject.getString("added_on");
             this.added_by = jObject.getString("added_by");

@@ -15,13 +15,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import cs.tufts.edu.easy.R;
 
 public class Bathroom_Details extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +48,7 @@ public class Bathroom_Details extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
+        HashMap<Integer, Bathroom> bathrooms = MapsActivity.bathroomMap;
         ArrayList<Double> ratings = new ArrayList<Double>();
         for (int i = 0; i < jArray.length(); i++) {
             try {
@@ -56,7 +56,8 @@ public class Bathroom_Details extends AppCompatActivity {
                 if (oneObject.getInt("bathroom_id") == tag){
                     TextView id_text = (TextView) findViewById(R.id.bathroom_id);
                     TextView title_text = (TextView) findViewById(R.id.bathroom_title);
-                    title_text.setText("[title goes here]");
+                    String title = bathrooms.get(tag).bathroom_name;
+                    title_text.setText(title);
                     ratings.add(oneObject.getDouble("rating"));
                     id_text.append(oneObject.getString("comments") + "\n\n");
                 }

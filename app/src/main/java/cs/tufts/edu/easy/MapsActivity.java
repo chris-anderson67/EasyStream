@@ -24,14 +24,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
-
     private GoogleMap mMap;
-    private List<Bathroom> bathroomList = null;
+    public static HashMap<Integer, Bathroom> bathroomMap;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -50,6 +50,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        bathroomMap = new HashMap<Integer, Bathroom>();
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -93,18 +94,28 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         for (int i = 0; i < jArray.length(); i++) {
             try {
                 JSONObject oneObject = jArray.getJSONObject(i);
-                int lat = oneObject.getInt("latitude");
-                int lon = oneObject.getInt("longitude");
+                Bathroom currBathroom = new Bathroom(oneObject);
+                Log.v("CURBATHROOM:", currBathroom.bathroom_name);
+                Log.v("ID:", Integer.toString(currBathroom.id));
+                bathroomMap.put(currBathroom.id, currBathroom);
+                Log.v("BATHROOM_INSERTED", currBathroom.bathroom_name);
+                // Use for getters/setters
+//                int lat = oneObject.getInt("latitude");
+//                int lon = oneObject.getInt("longitude");
+                double lat = currBathroom.latitude;
+                double lon = currBathroom.longitude;
+
+
                 LatLng bathroom = new LatLng(lat, lon);
                 Marker marker = mMap.addMarker(new MarkerOptions()
                         .position(bathroom)
-                        .title(oneObject.getString("bathroom_name"))
-                        .snippet(oneObject.getString("address")));
-                marker.setTag(oneObject.getInt("id"));
+                        .title(currBathroom.bathroom_name)
+                        .snippet(currBathroom.address));
+                marker.setTag(currBathroom.id);
 
 
-                Log.d("***JOBJECT_lat***", Integer.toString(lat));
-                Log.d("***JOBJECT_lon***", Integer.toString(lon));
+                Log.d("***JOBJECT_lat***", Double.toString(lat));
+                Log.d("***JOBJECT_lon***", Double.toString(lon));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
