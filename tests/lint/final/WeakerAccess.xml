@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java</file>
+    <line>68</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.MainActivity com.google.android.gms.appindexing.Action getIndexApiAction()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/GetData.java</file>
+    <line>34</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.GetData detail_url" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/GetData.java</file>
+    <line>33</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.GetData data_url" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/GetData.java</file>
+    <line>30</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.GetData" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package local</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>130</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.MapsActivity com.google.android.gms.appindexing.Action getIndexApiAction()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java</file>
+    <line>19</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review comment" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java</file>
+    <line>18</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review active" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java</file>
+    <line>14</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review id" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java</file>
+    <line>15</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review bathroom_id" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java</file>
+    <line>17</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review cleanliness" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>24</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom updated_on" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>22</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom added_on" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>21</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom active" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>28</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom locked" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>31</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom rating" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>13</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.Bathroom" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="packageLocal" />
+    </hints>
+    <description>Can be package local</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>25</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom updated_by" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>33</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom rating_total" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>23</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom added_by" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>29</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom baby_station" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>34</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom reviews" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>32</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom rating_count" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>30</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom customers_only" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>27</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom comments" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+</problems>
+

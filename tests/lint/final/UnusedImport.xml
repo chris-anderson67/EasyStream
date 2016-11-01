@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java</file>
+    <line>17</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import com.google.android.gms.vision.text.Text;&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/GetData.java</file>
+    <line>3</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/GetData.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import android.content.Context;&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>28</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import java.util.List;&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>7</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import android.support.v7.app.ActionBarActivity;&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>6</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import android.support.v4.app.FragmentActivity;&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom_Details.java</file>
+    <line>19</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom_Details.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import java.util.List;&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom_Details.java</file>
+    <line>9</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom_Details.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import android.view.View;&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom_Details.java</file>
+    <line>5</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom_Details.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import android.support.design.widget.Snackbar;&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java</file>
+    <line>3</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import android.app.job.JobInfo;&lt;/code&gt; #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>3</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import org.json.JSONArray;&lt;/code&gt; #loc</description>
+  </problem>
+</problems>
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/content_bathroom__details.xml</file>
+    <line>49</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/content_bathroom__details.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;ScrollView&lt;/code&gt;: &lt;code&gt;layout_alignParentBottom&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/content_bathroom__details.xml</file>
+    <line>50</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/content_bathroom__details.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;ScrollView&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/content_bathroom__details.xml</file>
+    <line>58</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/content_bathroom__details.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentBottom&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/content_bathroom__details.xml</file>
+    <line>59</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/content_bathroom__details.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/content_bathroom__details.xml</file>
+    <line>60</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/content_bathroom__details.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Obsolete layout params</problem_class>
+    <hints />
+    <description>&lt;html&gt;Invalid layout param in a &lt;code&gt;LinearLayout&lt;/code&gt;: &lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/html&gt;</description>
+  </problem>
+</problems>
+

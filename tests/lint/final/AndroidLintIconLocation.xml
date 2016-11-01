@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/drawable/logo_large.png</file>
+    <line>0</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/drawable/logo_large.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>&lt;html&gt;Found bitmap drawable &lt;code&gt;res/drawable/logo_large.png&lt;/code&gt; in densityless folder&lt;/html&gt;</description>
+  </problem>
+</problems>
+

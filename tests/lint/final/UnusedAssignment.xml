@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java</file>
+    <line>50</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.MainActivity void onClickRateButton(android.view.View view)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>Variable &lt;code&gt;textview&lt;/code&gt; is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java</file>
+    <line>52</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.MainActivity void onClickRateButton(android.view.View view)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>Variable &lt;code&gt;s&lt;/code&gt; is never used</description>
+  </problem>
+</problems>
+

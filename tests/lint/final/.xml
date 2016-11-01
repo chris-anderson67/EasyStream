@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java</file>
+    <line>42</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.MainActivity void onClickFindButton(android.view.View view)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java</file>
+    <line>48</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.MainActivity void onClickRateButton(android.view.View view)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java</file>
+    <line>24</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.MainActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>32</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.MapsActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/test/java/cs/tufts/edu/easy/ExampleUnitTest.java</file>
+    <line>14</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.ExampleUnitTest void addition_isCorrect()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/test/java/cs/tufts/edu/easy/ExampleUnitTest.java</file>
+    <line>12</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.ExampleUnitTest" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/androidTest/java/cs/tufts/edu/easy/ExampleInstrumentedTest.java</file>
+    <line>20</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.ExampleInstrumentedTest void useAppContext()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/androidTest/java/cs/tufts/edu/easy/ExampleInstrumentedTest.java</file>
+    <line>18</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.ExampleInstrumentedTest" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom_Details.java</file>
+    <line>24</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.Bathroom_Details" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java</file>
+    <line>23</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.Review Review(org.json.JSONObject jObject)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Constructor is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java</file>
+    <line>11</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.Review" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java</file>
+    <line>24</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.MainActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>32</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.MapsActivity" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/test/java/cs/tufts/edu/easy/ExampleUnitTest.java</file>
+    <line>12</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.ExampleUnitTest" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/androidTest/java/cs/tufts/edu/easy/ExampleInstrumentedTest.java</file>
+    <line>18</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.ExampleInstrumentedTest" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom_Details.java</file>
+    <line>24</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.Bathroom_Details" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Class is not instantiated.</description>
+  </problem>
+</problems>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml</file>
+    <line>25</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;backgroundTint&lt;/code&gt; is only used in API level 21 and higher (current min is 17)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml</file>
+    <line>38</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;backgroundTint&lt;/code&gt; is only used in API level 21 and higher (current min is 17)&lt;/html&gt;</description>
+  </problem>
+</problems>
+
