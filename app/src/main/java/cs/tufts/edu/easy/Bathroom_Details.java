@@ -38,9 +38,7 @@ public class Bathroom_Details extends AppCompatActivity {
         //boolean value determines whether you're requesting all bathrooms data
         try {
            s = new GetData(false).execute().get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
         try {
@@ -49,7 +47,7 @@ public class Bathroom_Details extends AppCompatActivity {
             e.printStackTrace();
         }
         HashMap<Integer, Bathroom> bathrooms = MapsActivity.bathroomMap;
-        ArrayList<Double> ratings = new ArrayList<Double>();
+        ArrayList<Double> ratings = new ArrayList<>();
         for (int i = 0; i < jArray.length(); i++) {
             try {
                 JSONObject oneObject = jArray.getJSONObject(i);

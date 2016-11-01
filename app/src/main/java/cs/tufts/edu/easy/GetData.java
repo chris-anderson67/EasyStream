@@ -36,7 +36,7 @@ public class GetData extends AsyncTask<Void, Integer, String> {
 
     public GetData (boolean details){
         super();
-        if (details == false) {
+        if (!details) {
             url = detail_url;
 
         } else {

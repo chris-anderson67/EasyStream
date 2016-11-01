@@ -30,7 +30,6 @@ import java.util.concurrent.ExecutionException;
 
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
-    private GoogleMap mMap;
     public static HashMap<Integer, Bathroom> bathroomMap;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -50,7 +49,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        bathroomMap = new HashMap<Integer, Bathroom>();
+        bathroomMap = new HashMap<>();
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -60,7 +59,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Log.v("INFOWINDOWCLICKED", "CLICKED INFO WINDOW!!");
+        Log.v("INFO WINDOWCLICKED", "CLICKED INFO WINDOW!!");
         Intent myIntent = new Intent(this, Bathroom_Details.class);
         myIntent.putExtra("bathroom_id", (Integer) marker.getTag());
         Log.d("MARKER_TAG: ", Integer.toString((Integer) marker.getTag()));
@@ -69,7 +68,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+        GoogleMap mMap = googleMap;
         String s = null;
         JSONArray jArray = null;
         // Add a marker in Sydney, Australia, and move the camera.
@@ -79,9 +78,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         try {
             //boolean value determines whether you're requesting all bathrooms data
             s = new GetData(true).execute().get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
