@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_bathroom__details.xml</file>
+    <line>27</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_bathroom__details.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless leaf layout</problem_class>
+    <hints />
+    <description>&lt;html&gt;This &lt;code&gt;RelativeLayout&lt;/code&gt; view is useless (no children, no &lt;code&gt;background&lt;/code&gt;, no &lt;code&gt;id&lt;/code&gt;, no &lt;code&gt;style&lt;/code&gt;)&lt;/html&gt;</description>
+  </problem>
+</problems>
+

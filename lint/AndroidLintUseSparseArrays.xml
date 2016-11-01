@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>53</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">HashMap can be replaced with SparseArray</problem_class>
+    <hints />
+    <description>&lt;html&gt;Use &lt;code&gt;new SparseArray&amp;lt;Bathroom&gt;(...)&lt;/code&gt; instead for better performance&lt;/html&gt;</description>
+  </problem>
+</problems>
+
