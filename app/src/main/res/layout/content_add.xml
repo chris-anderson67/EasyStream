@@ -13,121 +13,134 @@
     tools:context="cs.tufts.edu.easy.AddActivity"
     tools:showIn="@layout/activity_add">
 
-    <RatingBar
+    <Button
+        android:text="Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/cleanlinessBar"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/ratingBar" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Bathroom Name"
-        android:ems="10"
-        android:layout_marginStart="12dp"
-        android:id="@+id/name"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/checkBox" />
-
-    <TextView
-        android:text="Rating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/rating"
-        android:textSize="24sp"
-        android:layout_below="@+id/name"
-        android:layout_alignStart="@+id/ratingBar"
-        android:layout_marginTop="20dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Username"
-        android:ems="10"
-        android:id="@+id/username"
-        android:layout_below="@+id/cleanlinessBar"
-        android:layout_alignStart="@+id/cleanlinessBar" />
-
-    <CheckBox
-        android:text="Gender Neutral"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/neutral_check"
-        android:layout_below="@+id/username"
-        android:layout_alignStart="@+id/username" />
-
-    <CheckBox
-        android:text="Baby Station"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/neutral_check"
-        android:layout_alignStart="@+id/neutral_check"
-        android:id="@+id/baby_check" />
-
-    <CheckBox
-        android:text="Customers Only"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/baby_check"
-        android:layout_alignStart="@+id/baby_check"
-        android:id="@+id/customers_check" />
-
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ratingBar"
-        android:layout_below="@+id/rating"
-        android:layout_alignStart="@+id/name"
-        android:layout_marginTop="19dp" />
+        android:id="@+id/formsubmit"
+        android:onClick="onSubmitClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:text="Cleanliness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/cleanliness"
-        android:textSize="24sp"
-        android:layout_marginBottom="24dp"
-        android:layout_above="@+id/cleanlinessBar"
+        android:textSize="12sp"
+        android:layout_below="@+id/ratingBar"
+        android:layout_alignStart="@+id/ratingBar" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_below="@+id/rating"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating"
+        android:textSize="12sp"
+        android:layout_below="@+id/name"
         android:layout_alignStart="@+id/cleanlinessBar" />
-
-    <CheckBox
-        android:text="Female"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/username"
-        android:id="@+id/female_check"
-        android:layout_below="@+id/username" />
-
-    <CheckBox
-        android:text="Male"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/male_check"
-        android:layout_toEndOf="@+id/customers_check"
-        android:layout_below="@+id/username" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Comment"
         android:ems="10"
-        android:id="@+id/comment"
-        android:layout_below="@+id/customers_check"
-        android:layout_alignStart="@+id/customers_check"
-        android:layout_marginTop="15dp" />
+        android:id="@+id/name"
+        android:hint="Bathroom Name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
-    <Button
-        android:text="Submit"
+    <CheckBox
+        android:text="Locked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/lockedBox"
+        android:layout_below="@+id/cleanlinessBar"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/username"
+        android:hint="Username"
+        android:layout_above="@+id/formsubmit"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="19dp" />
+
+    <CheckBox
+        android:text="Customers Only"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/customers_check"
+        android:layout_below="@+id/cleanlinessBar"
+        android:layout_alignEnd="@+id/username" />
+
+    <CheckBox
+        android:text="Baby Station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/baby_check"
+        android:layout_below="@+id/cleanlinessBar"
         android:layout_toEndOf="@+id/customers_check"
-        android:layout_marginStart="16dp"
-        android:id="@+id/formsubmit"
-        android:onClick="onSubmitClick" />
+        android:layout_marginStart="11dp" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cleanlinessBar"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/ratingBar"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/comment"
+        android:hint="Comments"
+        android:layout_above="@+id/username"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:layout_below="@+id/lockedBox"
+        android:layout_alignEnd="@+id/customers_check"
+        android:layout_marginTop="13dp"
+        android:id="@+id/addressBox"
+        android:hint="Address" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:ems="10"
+        android:id="@+id/latBox"
+        android:layout_alignBaseline="@+id/lngBox"
+        android:layout_alignBottom="@+id/lngBox"
+        android:layout_toStartOf="@+id/lngBox"
+        android:hint="Latitude" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/lngBox"
+        android:hint="Longitude"
+        android:layout_below="@+id/addressBox"
+        android:layout_alignEnd="@+id/baby_check"
+        android:inputType="number|numberSigned|numberDecimal" />
 
 </RelativeLayout>

@@ -34,13 +34,15 @@ public class PostData extends AsyncTask<String, Integer, HttpResponse> {
             String name = (String)args[0];
             String username = args[1];
             String comments = args[2];
-            String gender = args[3];
-            String cleanliness = args[4];
-            String baby_station = args[5];
-            String rating = args[6];
-            String latitude = "43";
-            String longitude = "72";
-            String address = "123 Fake Street";
+//            String gender = args[3];
+            String cleanliness = args[3];
+            String baby_station = args[4];
+            String rating = args[5];
+            String locked = args[6];
+            String customers_only = args[7];
+            String latitude = args[8];
+            String longitude = args[9];
+            String address = args[10];
             String active = "1";
 
             Log.v("***name is entered", name);
@@ -55,9 +57,9 @@ public class PostData extends AsyncTask<String, Integer, HttpResponse> {
             nameValuePairs.add(new BasicNameValuePair("longitude", longitude));
             nameValuePairs.add(new BasicNameValuePair("address", address));
             nameValuePairs.add(new BasicNameValuePair("added_by", username));
-            nameValuePairs.add(new BasicNameValuePair("locked", "0"));
-            nameValuePairs.add(new BasicNameValuePair("customers_only", "0"));
-            nameValuePairs.add(new BasicNameValuePair("baby_station", "0"));
+            nameValuePairs.add(new BasicNameValuePair("locked", locked));
+            nameValuePairs.add(new BasicNameValuePair("customers_only", customers_only));
+            nameValuePairs.add(new BasicNameValuePair("baby_station", baby_station));
             nameValuePairs.add(new BasicNameValuePair("updated_by", username));
             nameValuePairs.add(new BasicNameValuePair("active", active));
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
