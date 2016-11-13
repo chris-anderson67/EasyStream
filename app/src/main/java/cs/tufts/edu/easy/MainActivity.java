@@ -46,19 +46,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickRateButton(View view) {
-        try {
-            TextView textview = (TextView)findViewById(R.id.outputText);
-            //boolean value determines whether you're requesting all bathrooms data
-            String s = new GetData(true).execute().get();
-//            textview.setText(s);
-
-             Toast placeholder = Toast.makeText(this, "Add functionality coming soon!", Toast.LENGTH_LONG);
-             placeholder.show();
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
-        }
-
-
+        Intent launchRateIntent = new Intent(MainActivity.this, AddActivity.class);
+        MainActivity.this.startActivity(launchRateIntent);
+//        try {
+//            TextView textview = (TextView)findViewById(R.id.outputText);
+//            //boolean value determines whether you're requesting all bathrooms data
+//            String s = new GetData(true).execute().get();
+////            textview.setText(s);
+//
+//             Toast placeholder = Toast.makeText(this, "Add functionality coming soon!", Toast.LENGTH_LONG);
+//             placeholder.show();
+//        } catch (InterruptedException | ExecutionException e) {
+//            e.printStackTrace();
+//        }
     }
 
     /**
