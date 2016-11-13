@@ -72,9 +72,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cs.tufts.edu.easy.MapsActivity" />
         </activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="56548a4ea1599b950066c83d65552d6b5daa04db" />
+
+        <activity
+            android:name=".AddActivity"
+            android:label="@string/title_activity_add"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cs.tufts.edu.easy.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -2,4 +2,5 @@
     <string name="app_name">Easy Stream</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_bathroom__details">Bathroom_Details</string>
+    <string name="title_activity_add">AddActivity</string>
 </resources>
