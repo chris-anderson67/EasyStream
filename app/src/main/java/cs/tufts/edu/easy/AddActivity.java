@@ -10,8 +10,6 @@ import android.widget.RatingBar;
 
 import org.apache.http.HttpResponse;
 
-import java.util.concurrent.ExecutionException;
-
 public class AddActivity extends AppCompatActivity {
 
     @Override
@@ -60,12 +58,8 @@ public class AddActivity extends AppCompatActivity {
         float ratingF = rBar.getRating();
         String rating = Float.toString(ratingF);
 
-        try {
-            //boolean value determines whether you're requesting all bathrooms data
-            AsyncTask<String, Integer, HttpResponse> task = new PostData().execute(name, username,comment,gender,cleanliness,rating);
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
-        }
+        //boolean value determines whether you're requesting all bathrooms data
+        AsyncTask<String, Integer, HttpResponse> task = new PostData().execute(name, username,comment,gender,cleanliness,rating);
 
     }
 }
