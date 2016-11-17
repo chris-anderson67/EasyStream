@@ -101,6 +101,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //                int lon = oneObject.getInt("longitude");
                 double lat = currBathroom.latitude;
                 double lon = currBathroom.longitude;
+                Log.v("BATHROOM_MAP", String.valueOf(bathroomMap));
 
 
                 LatLng bathroom = new LatLng(lat, lon);
@@ -117,6 +118,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 e.printStackTrace();
             }
         }
+
 
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 5));

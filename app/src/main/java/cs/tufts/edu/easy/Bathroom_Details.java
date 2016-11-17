@@ -33,6 +33,7 @@ public class Bathroom_Details extends AppCompatActivity {
         setTitle("Bathroom Details");
         Intent mIntent = getIntent();
         int tag = mIntent.getIntExtra("bathroom_id", 0);
+        Log.v("BATHROOMDETAILS-ID", String.valueOf(tag));
         String s = "";
         JSONArray jArray = null;
         //boolean value determines whether you're requesting all bathrooms data
@@ -47,30 +48,37 @@ public class Bathroom_Details extends AppCompatActivity {
             e.printStackTrace();
         }
         HashMap<Integer, Bathroom> bathrooms = MapsActivity.bathroomMap;
+        TextView id_text = (TextView) findViewById(R.id.bathroom_id);
+        TextView title_text = (TextView) findViewById(R.id.bathroom_title);
+        String title = bathrooms.get(tag).bathroom_name;
+
+        double avgRating = bathrooms.get(tag).rating;
+        Log.v("RATING:", String.valueOf(avgRating));
+
+        Log.v("TITLE: ", title);
+        title_text.setText(title);
         ArrayList<Double> ratings = new ArrayList<>();
         for (int i = 0; i < jArray.length(); i++) {
             try {
                 JSONObject oneObject = jArray.getJSONObject(i);
+                Log.v("CURRENT_BATHROOM_ID", String.valueOf(oneObject.getInt("bathroom_id")));
                 if (oneObject.getInt("bathroom_id") == tag){
-                    TextView id_text = (TextView) findViewById(R.id.bathroom_id);
-                    TextView title_text = (TextView) findViewById(R.id.bathroom_title);
-                    String title = bathrooms.get(tag).bathroom_name;
-                    title_text.setText(title);
-                    ratings.add(oneObject.getDouble("rating"));
+                    Log.v("ID's MATCH", String.valueOf(oneObject.getInt("bathroom_id")));
                     id_text.append(oneObject.getString("comments") + "\n\n");
+                    ratings.add(oneObject.getDouble("rating"));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
-        double sum = 0;
-        for (int i = 0; i < ratings.size(); i++){
-            Log.d("RATING:", String.valueOf(ratings.get(i)));
-            sum += ratings.get(i);
-        }
-        double avg = sum / (double) ratings.size();
+//        double sum = 0;
+//        for (int i = 0; i < ratings.size(); i++){
+//            Log.d("RATING:", String.valueOf(ratings.get(i)));
+//            sum += ratings.get(i);
+//        }
+//        double avg = sum / (double) ratings.size();
         RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingStars);
-        ratingBar.setRating((float) avg);
+        ratingBar.setRating((float) avgRating);
 
     }
 }

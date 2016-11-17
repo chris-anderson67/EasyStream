@@ -1,5 +1,7 @@
 package cs.tufts.edu.easy;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,16 +46,17 @@ public class Bathroom {
             this.address = jObject.getString("address");
             this.latitude = jObject.getDouble("latitude");
             this.longitude = jObject.getDouble("longitude");
-            this.active = jObject.getBoolean("active");
+            this.active = Boolean.parseBoolean(jObject.getString("active"));
             this.added_on = jObject.getString("added_on");
             this.added_by = jObject.getString("added_by");
             this.updated_on = jObject.getString("updated_on");
             this.updated_by = jObject.getString("updated_by");
             this.comments = jObject.getString("comments");
-            this.locked = jObject.getBoolean("locked");
-            this.baby_station = jObject.getBoolean("baby_station");
-            this.customers_only = jObject.getBoolean("customers_only");
+            this.locked = Boolean.parseBoolean(jObject.getString("locked"));
+            this.baby_station = Boolean.parseBoolean(jObject.getString("baby_station"));
+            this.customers_only = Boolean.parseBoolean(jObject.getString("customers_only"));
             this.rating = jObject.getDouble("rating_avg");
+            Log.v("GOT_RATING", String.valueOf(this.rating));
         } catch (JSONException e) {
             e.printStackTrace();
         }
