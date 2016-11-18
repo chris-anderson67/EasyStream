@@ -13,21 +13,12 @@
     tools:context="cs.tufts.edu.easy.Bathroom_Details"
     tools:showIn="@layout/activity_bathroom__details">
 
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ratingStars"
-        android:layout_marginTop="151dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:isIndicator="true" />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bathroom_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:text="text"
+        android:text="Title"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="42dp"
@@ -51,7 +42,6 @@
             android:layout_alignParentStart="true">
 
             <TextView
-                android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:id="@+id/bathroom_id"
@@ -62,5 +52,51 @@
                 android:layout_weight="1" />
         </LinearLayout>
     </ScrollView>
+
+    <CheckBox
+        android:text="Locked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:id="@+id/detailsLockedBox"
+        android:layout_below="@+id/ratingStars"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <CheckBox
+        android:text="Baby Station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailsBabyBox"
+        android:layout_alignBaseline="@+id/detailsLockedBox"
+        android:layout_alignBottom="@+id/detailsLockedBox"
+        android:layout_alignParentEnd="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:checked="false" />
+
+    <CheckBox
+        android:text="Restricted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailsCustomersBox"
+        android:layout_alignBaseline="@+id/detailsLockedBox"
+        android:layout_alignBottom="@+id/detailsLockedBox"
+        android:layout_toEndOf="@+id/detailsLockedBox"
+        android:layout_marginStart="32dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:checked="false" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingStars"
+        android:layout_marginTop="54dp"
+        android:isIndicator="true"
+        android:layout_below="@+id/bathroom_title"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

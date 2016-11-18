@@ -72,12 +72,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         String s = null;
         JSONArray jArray = null;
         // Add a marker in Sydney, Australia, and move the camera.
-        LatLng sydney = new LatLng(45, 72);
+        LatLng sydney = new LatLng(42.408250, -71.120336);
 
 
         try {
             //boolean value determines whether you're requesting all bathrooms data
             s = new GetData(true).execute().get();
+            Log.v("JSONSTRING", s);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
@@ -121,7 +122,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 5));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 16));
         mMap.setOnInfoWindowClickListener(this);
     }
 

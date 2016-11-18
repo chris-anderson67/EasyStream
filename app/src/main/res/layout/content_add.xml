@@ -138,9 +138,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/lngBox"
-        android:hint="Longitude"
+        android:hint="Longitude (sorry)"
+        android:inputType="number|numberSigned|numberDecimal"
         android:layout_below="@+id/addressBox"
-        android:layout_alignEnd="@+id/baby_check"
-        android:inputType="number|numberSigned|numberDecimal" />
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

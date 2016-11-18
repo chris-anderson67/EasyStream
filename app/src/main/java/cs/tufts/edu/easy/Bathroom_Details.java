@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -38,7 +39,7 @@ public class Bathroom_Details extends AppCompatActivity {
         JSONArray jArray = null;
         //boolean value determines whether you're requesting all bathrooms data
         try {
-           s = new GetData(false).execute().get();
+            s = new GetData(false).execute().get();
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
@@ -47,23 +48,37 @@ public class Bathroom_Details extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        /* Get Basic Bathroom Information */
         HashMap<Integer, Bathroom> bathrooms = MapsActivity.bathroomMap;
         TextView id_text = (TextView) findViewById(R.id.bathroom_id);
         TextView title_text = (TextView) findViewById(R.id.bathroom_title);
-        String title = bathrooms.get(tag).bathroom_name;
+        Bathroom bathroom = bathrooms.get(tag);
+        String title = bathroom.bathroom_name;
+        title_text.setText(title);
+        if (bathroom.locked) {
+            CheckBox lockedBox = (CheckBox)findViewById(R.id.detailsLockedBox);
+            lockedBox.setChecked(true);
+        }
+        if (bathroom.baby_station) {
+            CheckBox babyBox = (CheckBox)findViewById(R.id.detailsBabyBox);
+            babyBox.setChecked(true);
+        }
+        if (bathroom.customers_only) {
+            CheckBox customersBox = (CheckBox)findViewById(R.id.detailsCustomersBox);
+            customersBox.setChecked(true);
+        }
 
         double avgRating = bathrooms.get(tag).rating;
-        Log.v("RATING:", String.valueOf(avgRating));
-
-        Log.v("TITLE: ", title);
-        title_text.setText(title);
+        /* Populate Comments List */
         ArrayList<Double> ratings = new ArrayList<>();
         for (int i = 0; i < jArray.length(); i++) {
             try {
                 JSONObject oneObject = jArray.getJSONObject(i);
                 Log.v("CURRENT_BATHROOM_ID", String.valueOf(oneObject.getInt("bathroom_id")));
-                if (oneObject.getInt("bathroom_id") == tag){
+                if (oneObject.getInt("bathroom_id") == tag) {
                     Log.v("ID's MATCH", String.valueOf(oneObject.getInt("bathroom_id")));
+                    Log.v("COMMENTS:", oneObject.getString("comments"));
+                    id_text.append(oneObject.getString("added_by") + ":\n");
                     id_text.append(oneObject.getString("comments") + "\n\n");
                     ratings.add(oneObject.getDouble("rating"));
                 }
@@ -71,14 +86,18 @@ public class Bathroom_Details extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-//        double sum = 0;
-//        for (int i = 0; i < ratings.size(); i++){
-//            Log.d("RATING:", String.valueOf(ratings.get(i)));
-//            sum += ratings.get(i);
-//        }
-//        double avg = sum / (double) ratings.size();
+        if (id_text.getText() == "") {
+            id_text.setText("No Comments Yet!");
+        }
+        if (avgRating <= 0) {
+            double sum = 0;
+            for (int i = 0; i < ratings.size(); i++) {
+                Log.d("RATING:", String.valueOf(ratings.get(i)));
+                sum += ratings.get(i);
+            }
+            avgRating = sum / (double) ratings.size();
+        }
         RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingStars);
         ratingBar.setRating((float) avgRating);
-
     }
 }
