@@ -1,31 +1,22 @@
 package cs.tufts.edu.easy;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.Manifest;
-
-
 import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.vision.text.Text;
-
 import io.fabric.sdk.android.Fabric;
-import java.util.concurrent.ExecutionException;
 
-//import static com.google.android.gms.analytics.internal.zzy.s;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         context = this;
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
         this.mLocationManager = (LocationManager) this.context.getSystemService(this.context.LOCATION_SERVICE);
@@ -57,10 +46,6 @@ public class MainActivity extends AppCompatActivity {
         }
         try {
             location = this.mLocationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-            Log.v("onMapReady", "trying our best");
-            Log.v("onMapReady: latitude", String.valueOf(location.getLatitude()));
-            Log.v("onMapReady: longitude", String.valueOf(location.getLongitude()));
-
         } catch (SecurityException e) {
             e.printStackTrace();
             return;
@@ -79,17 +64,6 @@ public class MainActivity extends AppCompatActivity {
     public void onClickRateButton(View view) {
         Intent launchRateIntent = new Intent(MainActivity.this, AddActivity.class);
         MainActivity.this.startActivity(launchRateIntent);
-//        try {
-//            TextView textview = (TextView)findViewById(R.id.outputText);
-//            //boolean value determines whether you're requesting all bathrooms data
-//            String s = new GetData(true).execute().get();
-////            textview.setText(s);
-//
-//             Toast placeholder = Toast.makeText(this, "Add functionality coming soon!", Toast.LENGTH_LONG);
-//             placeholder.show();
-//        } catch (InterruptedException | ExecutionException e) {
-//            e.printStackTrace();
-//        }
     }
 
     /**
@@ -111,9 +85,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client.connect();
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
@@ -121,9 +92,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }

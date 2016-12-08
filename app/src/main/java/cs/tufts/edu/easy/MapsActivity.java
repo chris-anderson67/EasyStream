@@ -35,28 +35,19 @@ import java.util.concurrent.ExecutionException;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
     public static HashMap<Integer, Bathroom> bathroomMap;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
     private GoogleApiClient client;
     int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 0;
-    // private GoogleApiClient myGoogleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("EasyStream");
-        // myGoogleApiClient = new GoogleApiClient.Builder(this);
         setContentView(R.layout.activity_maps);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         bathroomMap = new HashMap<>();
 
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
@@ -75,9 +66,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         GoogleMap mMap = googleMap;
         String s = null;
         JSONArray jArray = null;
-        // Add a marker in Sydney, Australia, and move the camera.
         LatLng sydney = new LatLng(42.408250, -71.120336);
-
 
         try {
             //boolean value determines whether you're requesting all bathrooms data
@@ -101,13 +90,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Log.v("ID:", Integer.toString(currBathroom.id));
                 bathroomMap.put(currBathroom.id, currBathroom);
                 Log.v("BATHROOM_INSERTED", currBathroom.bathroom_name);
-                // Use for getters/setters
-//                int lat = oneObject.getInt("latitude");
-//                int lon = oneObject.getInt("longitude");
                 double lat = currBathroom.latitude;
                 double lon = currBathroom.longitude;
                 Log.v("BATHROOM_MAP", String.valueOf(bathroomMap));
-
 
                 LatLng bathroom = new LatLng(lat, lon);
                 Marker marker = mMap.addMarker(new MarkerOptions()
@@ -116,7 +101,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         .snippet(currBathroom.address));
                 marker.setTag(currBathroom.id);
 
-
                 Log.d("***JOBJECT_lat***", Double.toString(lat));
                 Log.d("***JOBJECT_lon***", Double.toString(lon));
             } catch (JSONException e) {
@@ -124,8 +108,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         }
 
-
-//        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 16));
         mMap.setOnInfoWindowClickListener(this);
     }
@@ -149,9 +131,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onStart() {
         super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client.connect();
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
@@ -159,9 +138,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onStop() {
         super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }

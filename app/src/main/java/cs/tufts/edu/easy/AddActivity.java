@@ -1,34 +1,19 @@
 package cs.tufts.edu.easy;
 
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.location.Geocoder;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
-import com.google.android.gms.vision.barcode.Barcode;
-import com.google.android.gms.vision.barcode.Barcode.Address;
-
 import org.apache.http.HttpResponse;
 
-import java.io.IOException;
-import java.util.List;
-
 public class AddActivity extends AppCompatActivity {
-    double latitude = 0;
-    double longitude = 0;
     public static Location location;
 
     @Override
@@ -73,23 +58,17 @@ public class AddActivity extends AppCompatActivity {
         String baby = "0";
         String locked = "0";
         String customers_only = "0";
-
         float cleanlinessF = cBar.getRating();
         String cleanliness = Float.toString(cleanlinessF);
-
         float ratingF = rBar.getRating();
         String rating = Float.toString(ratingF);
 
-        // TODO: Get it to not submit with missing data
-        if ((ratingF == 0) || (cleanlinessF == 0) || (address == "") || (lat == "") ||
-                (lng == "") || (name == "") || (comment == "") || (username == "") ||
-                (address == null) || (lat == null) || (lng == null) || (name == null) ||
-                (comment == null) || (username == null)) {
+        if ((ratingF == 0) || (cleanlinessF == 0) || (address.matches("")) || (lat.matches("")) ||
+                (lng.matches("")) || (name.matches("")) || (comment.matches("")) || (username.matches("")) ) {
             Toast.makeText(this, "Please fill out every field.",
                     Toast.LENGTH_SHORT).show();
             return;
         }
-
         if (lockedBox.isChecked()) {
             locked = "1";
         }
@@ -102,5 +81,8 @@ public class AddActivity extends AppCompatActivity {
 
         //boolean value determines whether you're requesting all bathrooms data
         AsyncTask<String, Integer, HttpResponse> task = new PostData().execute(name, username, comment, cleanliness, baby, rating, locked, customers_only, lat, lng, address);
+        Toast.makeText(this, "Entry Submitted!",
+                Toast.LENGTH_SHORT).show();
+        finish();
     }
 }
