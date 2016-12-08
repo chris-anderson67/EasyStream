@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.Toast;
 
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.Barcode.Address;
@@ -42,50 +43,53 @@ public class AddActivity extends AppCompatActivity {
         location = MainActivity.location;
         final EditText latBox = (EditText) findViewById(R.id.latBox);
         final EditText lngBox = (EditText) findViewById(R.id.lngBox);
-        String lat = String.valueOf(location.getLatitude());
-        String lng = String.valueOf(location.getLongitude());
-        latBox.setText(lat);
-        lngBox.setText(lng);
+        if (location != null) {
+            String lat = String.valueOf(location.getLatitude());
+            String lng = String.valueOf(location.getLongitude());
+            latBox.setText(lat);
+            lngBox.setText(lng);
+        }
     }
 
     public void onSubmitClick(View view) {
+        final CheckBox babyCheck = (CheckBox) findViewById(R.id.baby_check);
+        final CheckBox lockedBox = (CheckBox) findViewById(R.id.lockedBox);
+        final CheckBox customersBox = (CheckBox) findViewById(R.id.customers_check);
         final EditText nameText = (EditText) findViewById(R.id.name);
         final EditText usernameText = (EditText) findViewById(R.id.username);
         final EditText commentText = (EditText) findViewById(R.id.comment);
         final EditText addressBox = (EditText) findViewById(R.id.addressBox);
         final EditText latBox = (EditText) findViewById(R.id.latBox);
         final EditText lngBox = (EditText) findViewById(R.id.lngBox);
+        final RatingBar cBar = (RatingBar) findViewById(R.id.cleanlinessBar);
+        final RatingBar rBar = (RatingBar) findViewById(R.id.ratingBar);
+
         String address = addressBox.getText().toString();
         String lat = latBox.getText().toString();
         String lng = lngBox.getText().toString();
         String name = nameText.getText().toString();
         String comment = commentText.getText().toString();
         String username = usernameText.getText().toString();
-
-
-//        final CheckBox maleCheck = (CheckBox) findViewById(R.id.male_check);
-        final CheckBox babyCheck = (CheckBox) findViewById(R.id.baby_check);
-        final CheckBox lockedBox = (CheckBox) findViewById(R.id.lockedBox);
-        final CheckBox customersBox = (CheckBox) findViewById(R.id.customers_check);
-
-//        final CheckBox femaleCheck = (CheckBox) findViewById(R.id.female_check);
-//        final CheckBox neutralCheck = (CheckBox) findViewById(R.id.neutral_check);
-//        String gender = "unknown";
         String baby = "0";
         String locked = "0";
         String customers_only = "0";
-//        if (maleCheck.isChecked() && (femaleCheck.isChecked())) {
-//            gender = "neutral";
-//        }
-//        else if (maleCheck.isChecked()) {
-//            gender = "male";
-//        }
-//        else if (femaleCheck.isChecked()){
-//            gender = "female";
-//        }
-//        else if (neutralCheck.isChecked()) {
-//            gender = "neutral";
-//        }
+
+        float cleanlinessF = cBar.getRating();
+        String cleanliness = Float.toString(cleanlinessF);
+
+        float ratingF = rBar.getRating();
+        String rating = Float.toString(ratingF);
+
+        // TODO: Get it to not submit with missing data
+        if ((ratingF == 0) || (cleanlinessF == 0) || (address == "") || (lat == "") ||
+                (lng == "") || (name == "") || (comment == "") || (username == "") ||
+                (address == null) || (lat == null) || (lng == null) || (name == null) ||
+                (comment == null) || (username == null)) {
+            Toast.makeText(this, "Please fill out every field.",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         if (lockedBox.isChecked()) {
             locked = "1";
         }
@@ -95,19 +99,8 @@ public class AddActivity extends AppCompatActivity {
         if (customersBox.isChecked()) {
             customers_only = "1";
         }
-        Log.v("LATITUDE", String.valueOf(latitude));
-        Log.v("LONGITUDE", String.valueOf(longitude));
-
-        RatingBar cBar = (RatingBar) findViewById(R.id.cleanlinessBar);
-        float cleanlinessF = cBar.getRating();
-        String cleanliness = Float.toString(cleanlinessF);
-
-        RatingBar rBar = (RatingBar) findViewById(R.id.ratingBar);
-        float ratingF = rBar.getRating();
-        String rating = Float.toString(ratingF);
 
         //boolean value determines whether you're requesting all bathrooms data
         AsyncTask<String, Integer, HttpResponse> task = new PostData().execute(name, username, comment, cleanliness, baby, rating, locked, customers_only, lat, lng, address);
-
     }
 }
