@@ -28,6 +28,7 @@ import java.util.List;
 public class AddActivity extends AppCompatActivity {
     double latitude = 0;
     double longitude = 0;
+    public static Location location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,24 +37,30 @@ public class AddActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Add Bathroom");
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
 
+        location = MainActivity.location;
+        final EditText latBox = (EditText) findViewById(R.id.latBox);
+        final EditText lngBox = (EditText) findViewById(R.id.lngBox);
+        String lat = String.valueOf(location.getLatitude());
+        String lng = String.valueOf(location.getLongitude());
+        latBox.setText(lat);
+        lngBox.setText(lng);
+    }
 
     public void onSubmitClick(View view) {
         final EditText nameText = (EditText) findViewById(R.id.name);
-        String name = nameText.getText().toString();
         final EditText usernameText = (EditText) findViewById(R.id.username);
-        String username = usernameText.getText().toString();
         final EditText commentText = (EditText) findViewById(R.id.comment);
-        String comment = commentText.getText().toString();
         final EditText addressBox = (EditText) findViewById(R.id.addressBox);
         final EditText latBox = (EditText) findViewById(R.id.latBox);
         final EditText lngBox = (EditText) findViewById(R.id.lngBox);
         String address = addressBox.getText().toString();
         String lat = latBox.getText().toString();
         String lng = lngBox.getText().toString();
+        String name = nameText.getText().toString();
+        String comment = commentText.getText().toString();
+        String username = usernameText.getText().toString();
 
 
 //        final CheckBox maleCheck = (CheckBox) findViewById(R.id.male_check);

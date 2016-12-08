@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 0;
     private MainActivity context;
     private LocationManager mLocationManager;
-    Location location;
+    public static Location location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
