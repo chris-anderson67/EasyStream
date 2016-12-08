@@ -1,12 +1,18 @@
 package cs.tufts.edu.easy;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.Manifest;
 
 
 import com.crashlytics.android.Crashlytics;
@@ -28,15 +34,40 @@ public class MainActivity extends AppCompatActivity {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
+    private int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 0;
+    private MainActivity context;
+    private LocationManager mLocationManager;
+    Location location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = this;
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+        this.mLocationManager = (LocationManager) this.context.getSystemService(this.context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    MY_PERMISSIONS_ACCESS_FINE_LOCATION);
+        }
+        try {
+            location = this.mLocationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            Log.v("onMapReady", "trying our best");
+            Log.v("onMapReady: latitude", String.valueOf(location.getLatitude()));
+            Log.v("onMapReady: longitude", String.valueOf(location.getLongitude()));
+
+        } catch (SecurityException e) {
+            e.printStackTrace();
+            return;
+        }
+        if (location == null) {
+            return;
+        }
     }
 
     public void onClickFindButton(View view) {

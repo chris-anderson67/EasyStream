@@ -12,7 +12,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.Manifest;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -41,15 +40,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-    private Context context;
-    private LocationManager mLocationManager;
     int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 0;
     // private GoogleApiClient myGoogleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        context = this;
         setTitle("EasyStream");
         // myGoogleApiClient = new GoogleApiClient.Builder(this);
         setContentView(R.layout.activity_maps);
@@ -58,7 +54,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapFragment.getMapAsync(this);
         bathroomMap = new HashMap<>();
 
-        this.mLocationManager = (LocationManager) this.context.getSystemService(this.context.LOCATION_SERVICE);
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -83,26 +78,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         // Add a marker in Sydney, Australia, and move the camera.
         LatLng sydney = new LatLng(42.408250, -71.120336);
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    MY_PERMISSIONS_ACCESS_FINE_LOCATION);
-        }
-
-        Location location;
-        try {
-            location = this.mLocationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-            Log.v("onMapReady", "trying our best");
-            Log.v("onMapReady: latitude", String.valueOf(location.getLatitude()));
-            Log.v("onMapReady: longitude", String.valueOf(location.getLongitude()));
-
-        } catch (SecurityException e) {
-            e.printStackTrace();
-            return;
-        }
-        if (location == null) {
-            return;
-        }
 
         try {
             //boolean value determines whether you're requesting all bathrooms data
