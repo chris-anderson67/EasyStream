@@ -2,11 +2,9 @@ package cs.tufts.edu.easy;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -17,12 +15,11 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import cs.tufts.edu.easy.R;
 
-public class Bathroom_Details extends AppCompatActivity {
+// TODO - cleanup this fucking activity
+public class BathroomDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +34,7 @@ public class Bathroom_Details extends AppCompatActivity {
         Log.v("BATHROOMDETAILS-ID", String.valueOf(tag));
         String s = "";
         JSONArray jArray = null;
+
         //boolean value determines whether you're requesting all bathrooms data
         try {
             s = new GetData(false).execute().get();
@@ -69,6 +67,7 @@ public class Bathroom_Details extends AppCompatActivity {
         }
 
         double avgRating = bathrooms.get(tag).rating;
+
         /* Populate Comments List */
         ArrayList<Double> ratings = new ArrayList<>();
         for (int i = 0; i < jArray.length(); i++) {
