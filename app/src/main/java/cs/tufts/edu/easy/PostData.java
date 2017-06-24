@@ -11,7 +11,6 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
@@ -23,18 +22,16 @@ import java.util.List;
 
 public class PostData extends AsyncTask<String, Integer, HttpResponse> {
     @Override
-    // Taken from http://stackoverflow.com/questions/2938502/sending-post-data-in-android
     protected HttpResponse doInBackground(String... args) {
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost("http://45.55.189.20/test_post.php");
 
         try {
             // Set the data
-          //  (name, username,comment,gender,cleanliness,rating)
-            String name = (String)args[0];
+            // (name, username, comment, gender, cleanliness, rating)
+            String name = args[0];
             String username = args[1];
             String comments = args[2];
-//            String gender = args[3];
             String cleanliness = args[3];
             String baby_station = args[4];
             String rating = args[5];

@@ -1,13 +1,9 @@
 package cs.tufts.edu.easy;
 
-import android.app.job.JobInfo;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by christopheranderson on 10/23/16.
- */
 public class Review {
 
     // TODO: Change to private, add getters, setters
@@ -20,6 +16,7 @@ public class Review {
     public String added_on;
     public String added_by;
 
+    // TODO: Allow partial population of review object
     public Review(JSONObject jObject) {
         try {
             this.id = jObject.getInt("id");

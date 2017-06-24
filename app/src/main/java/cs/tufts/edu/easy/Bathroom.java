@@ -2,15 +2,11 @@ package cs.tufts.edu.easy;
 
 import android.util.Log;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
 
-/**
- * Created by christopheranderson on 10/23/16.
- */
 
 public class Bathroom {
 
@@ -36,7 +32,7 @@ public class Bathroom {
     public List<Review> reviews = null;
 
 
-    // TODO: add rating_total and rating_count to DB
+    // TODO - allow partial population of Bathroom object
     public Bathroom(JSONObject jObject) {
         this.rating_total = 0;
         this.rating_count = 0;

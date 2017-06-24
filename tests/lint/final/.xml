@@ -109,7 +109,7 @@
     <line>24</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.Bathroom_Details" />
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.BathroomDetailsActivity" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -200,7 +200,7 @@
     <line>24</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.Bathroom_Details" />
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.BathroomDetailsActivity" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />

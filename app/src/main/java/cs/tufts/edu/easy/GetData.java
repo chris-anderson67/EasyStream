@@ -1,12 +1,9 @@
 package cs.tufts.edu.easy;
 
-import android.content.Context;
 
 import android.os.AsyncTask;
 
 import android.util.Log;
-
-
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,17 +12,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 
-
-
-
 import java.net.URL;
 
 
-
-
-/**
- * Created by melaniebelkin on 9/24/16.
- */
 
 public class GetData extends AsyncTask<Void, Integer, String> {
 

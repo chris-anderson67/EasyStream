@@ -14,7 +14,7 @@
     <line>32</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.Bathroom_Details void onCreate(android.os.Bundle savedInstanceState)" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.BathroomDetailsActivity void onCreate(android.os.Bundle savedInstanceState)" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
     <description>Method invocation &lt;code&gt;setDisplayHomeAsUpEnabled&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
   </problem>
@@ -23,7 +23,7 @@
     <line>51</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.Bathroom_Details void onCreate(android.os.Bundle savedInstanceState)" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.BathroomDetailsActivity void onCreate(android.os.Bundle savedInstanceState)" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
     <description>Method invocation &lt;code&gt;length&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
   </problem>
