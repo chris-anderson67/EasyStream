@@ -8,8 +8,17 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
+
 import com.crashlytics.android.Crashlytics;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import io.fabric.sdk.android.Fabric;
 
 
@@ -42,6 +51,40 @@ public class MainActivity extends AppCompatActivity {
         if (location == null) {
             return;
         }
+
+    }
+
+    @Override
+    public void onResume() {
+       super.onResume();
+        testAccessDb();
+    }
+
+    private void testAccessDb() {
+        Toast.makeText(context, "TESTING DB", Toast.LENGTH_SHORT).show();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                String value = dataSnapshot.getValue(String.class);
+                Log.d("************", "Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("***ERROR*******", "Failed to read value.", error.toException());
+            }
+        });
+
+        myRef.setValue("Hello, World!");
+        myRef.setValue("Hello, World!");
+        myRef.setValue("Hello, World!");
+        myRef.setValue("Hello, World!");
+        myRef.setValue("Hello, World!");
     }
 
     public void onClickFindButton(View view) {

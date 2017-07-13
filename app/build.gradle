@@ -17,7 +17,7 @@ repositories {
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    buildToolsVersion '25.0.0'
     defaultConfig {
         multiDexEnabled true
         applicationId 'cs.tufts.edu.easystream'
@@ -52,6 +52,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:11.0.1'
     compile 'com.android.support:design:24.2.1'
     compile 'com.google.firebase:firebase-database:11.0.1'
+    compile 'com.firebase:geofire-android:2.1.1'
     testCompile 'junit:junit:4.12'
 }
 

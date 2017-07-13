@@ -53,15 +53,15 @@ public class BathroomDetailsActivity extends AppCompatActivity {
         Bathroom bathroom = bathrooms.get(tag);
         String title = bathroom.bathroom_name;
         title_text.setText(title);
-        if (bathroom.locked) {
+        if (bathroom.isLocked()) {
             CheckBox lockedBox = (CheckBox)findViewById(R.id.detailsLockedBox);
             lockedBox.setChecked(true);
         }
-        if (bathroom.baby_station) {
+        if (bathroom.isBaby_station()) {
             CheckBox babyBox = (CheckBox)findViewById(R.id.detailsBabyBox);
             babyBox.setChecked(true);
         }
-        if (bathroom.customers_only) {
+        if (bathroom.isCustomers_only()) {
             CheckBox customersBox = (CheckBox)findViewById(R.id.detailsCustomersBox);
             customersBox.setChecked(true);
         }
