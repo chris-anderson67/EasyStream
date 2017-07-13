@@ -30,7 +30,7 @@ public class BathroomDetailsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Bathroom Details");
         Intent mIntent = getIntent();
-        int tag = mIntent.getIntExtra("bathroom_id", 0);
+        int tag = mIntent.getIntExtra(getString(R.string.bathroom_details_activity_intent_key), 0);
         Log.v("BATHROOMDETAILS-ID", String.valueOf(tag));
         String s = "";
         JSONArray jArray = null;

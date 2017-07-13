@@ -4,4 +4,7 @@
     <string name="title_activity_bathroom__details">Bathroom_Details</string>
     <string name="title_activity_add">AddActivity</string>
     <string name="application_title">EasyStream</string>
+    <string name="geofire_database_location">Locations/</string>
+    <string name="bathroom_details_activity_intent_key">bathroom_id</string>
+    <string name="geofire_db_path">Locations/</string>
 </resources>
