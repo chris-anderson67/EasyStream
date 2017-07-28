@@ -3,6 +3,8 @@ package cs.tufts.edu.easy;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
@@ -15,14 +17,19 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 
-public class BathroomMapsActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
+public class BathroomMapsActivity extends AppCompatActivity implements OnMapReadyCallback,
+        GoogleMap.OnInfoWindowClickListener, GoogleMap.OnMarkerClickListener {
+
+    private String TAG = BathroomMapsActivity.class.getSimpleName();
 
     private static final int MAX_MARKERS = 20;
     private static final float SEARCH_LOCATION_RADIUS_KM = (float) 0.3;
@@ -35,6 +42,8 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
 
     private GeoLocation currentLocation;
     private ArrayList<Marker> markers = new ArrayList<>(20);
+
+    private GoogleMap map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +75,26 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
     }
 
     @Override
+    public boolean onMarkerClick(final Marker marker) {
+        bathroomsDatabaseRef.child(String.valueOf(marker.getTag()))
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Bathroom bathroom = dataSnapshot.getValue(Bathroom.class);
+                marker.setTitle(bathroom.name);
+                marker.setSnippet(bathroom.street);
+                marker.showInfoWindow();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        return false;
+    }
+
+    @Override
     public void onInfoWindowClick(Marker marker) {
         Intent myIntent = new Intent(this, BathroomDetailsActivity.class);
         myIntent.putExtra(getString(R.string.bathroom_details_activity_intent_key), (Integer) marker.getTag());
@@ -74,6 +103,10 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
 
     @Override
     public void onMapReady(final GoogleMap googleMap) {
+        map = googleMap;
+
+        googleMap.setOnMarkerClickListener(this);
+        googleMap.setOnInfoWindowClickListener(this);
 
         geoQuery.addGeoQueryEventListener(new GeoQueryEventListener() {
             @Override
@@ -102,7 +135,7 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
 
             @Override
             public void onGeoQueryReady() {
-                System.out.println("All bathrooms loaded for current location");
+                System.out.println("All locations loaded for current target");
             }
 
             @Override
@@ -113,7 +146,7 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
                 new LatLng(currentLocation.latitude, currentLocation.longitude), 16));
-        googleMap.setOnInfoWindowClickListener(this);
+
 
         googleMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
             @Override
@@ -124,7 +157,6 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
         });
 
     }
-
 
 
 }
