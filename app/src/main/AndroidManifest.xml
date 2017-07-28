@@ -29,7 +29,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".WelcomeSplashActivity"
+            android:name=".activities.WelcomeSplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,11 +52,11 @@
             android:value="AIzaSyDZroE_UqBXHMhwHAah7iL0Sro8B8GEsRw" />
 
         <activity
-            android:name=".BathroomMapsActivity"
+            android:name=".activities.BathroomMapsActivity"
             android:label="@string/title_activity_maps">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cs.tufts.edu.easy.WelcomeSplashActivity" />
+                android:value="cs.tufts.edu.easy.activities.WelcomeSplashActivity" />
         </activity>
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -67,13 +67,13 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".BathroomDetailsActivity"
+            android:name=".activities.BathroomDetailsActivity"
             android:label="@string/title_activity_bathroom__details"
-            android:parentActivityName=".BathroomMapsActivity"
+            android:parentActivityName=".activities.BathroomMapsActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cs.tufts.edu.easy.BathroomMapsActivity" />
+                android:value="cs.tufts.edu.easy.activities.BathroomMapsActivity" />
         </activity>
 
         <meta-data
@@ -81,13 +81,13 @@
             android:value="56548a4ea1599b950066c83d65552d6b5daa04db" />
 
         <activity
-            android:name=".AddActivity"
+            android:name=".activities.AddActivity"
             android:label="@string/title_activity_add"
-            android:parentActivityName=".WelcomeSplashActivity"
+            android:parentActivityName=".activities.WelcomeSplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cs.tufts.edu.easy.WelcomeSplashActivity" />
+                android:value="cs.tufts.edu.easy.activities.WelcomeSplashActivity" />
         </activity>
     </application>
 

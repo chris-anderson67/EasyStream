@@ -1,4 +1,4 @@
-package cs.tufts.edu.easy;
+package cs.tufts.edu.easy.activities;
 
 import android.content.Intent;
 import android.os.Bundle;

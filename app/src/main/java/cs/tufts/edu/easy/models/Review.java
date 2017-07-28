@@ -1,4 +1,4 @@
-package cs.tufts.edu.easy;
+package cs.tufts.edu.easy.models;
 
 
 import org.json.JSONException;

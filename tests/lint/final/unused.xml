@@ -5,7 +5,7 @@
     <line>19</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review comment" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Review comment" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -18,7 +18,7 @@
     <line>18</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review active" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Review active" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -31,7 +31,7 @@
     <line>14</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review id" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Review id" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -44,7 +44,7 @@
     <line>15</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review bathroom_id" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Review bathroom_id" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -57,7 +57,7 @@
     <line>17</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review cleanliness" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Review cleanliness" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -70,7 +70,7 @@
     <line>24</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom updated_on" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom updated_on" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -83,7 +83,7 @@
     <line>22</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom added_on" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom added_on" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -96,7 +96,7 @@
     <line>21</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom active" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom active" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -109,7 +109,7 @@
     <line>28</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom locked" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom locked" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -122,7 +122,7 @@
     <line>31</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom rating" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom rating" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -135,7 +135,7 @@
     <line>25</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom updated_by" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom updated_by" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -148,7 +148,7 @@
     <line>23</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom added_by" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom added_by" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -161,7 +161,7 @@
     <line>29</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom baby_station" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom baby_station" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -174,7 +174,7 @@
     <line>62</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.Bathroom void addReview(cs.tufts.edu.easy.Review review)" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.models.Bathroom void addReview(cs.tufts.edu.easy.models.Review review)" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -187,7 +187,7 @@
     <line>30</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom customers_only" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom customers_only" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />
@@ -200,7 +200,7 @@
     <line>27</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom comments" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom comments" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
     <hints>
       <hint value="comment" />

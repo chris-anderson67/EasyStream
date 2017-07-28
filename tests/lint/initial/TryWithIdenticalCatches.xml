@@ -5,7 +5,7 @@
     <line>43</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.BathroomDetailsActivity void onCreate(android.os.Bundle savedInstanceState)" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.activities.BathroomDetailsActivity void onCreate(android.os.Bundle savedInstanceState)" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Identical 'catch' branches in 'try' statement</problem_class>
     <description>'catch' branch identical to 'InterruptedException' branch #loc</description>
   </problem>
@@ -14,7 +14,7 @@
     <line>84</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.BathroomMapsActivity void onMapReady(com.google.android.gms.maps.GoogleMap googleMap)" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.activities.BathroomMapsActivity void onMapReady(com.google.android.gms.maps.GoogleMap googleMap)" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Identical 'catch' branches in 'try' statement</problem_class>
     <description>'catch' branch identical to 'InterruptedException' branch #loc</description>
   </problem>
@@ -23,7 +23,7 @@
     <line>56</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.WelcomeSplashActivity void onClickRateButton(android.view.View view)" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.activities.WelcomeSplashActivity void onClickRateButton(android.view.View view)" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Identical 'catch' branches in 'try' statement</problem_class>
     <description>'catch' branch identical to 'InterruptedException' branch #loc</description>
   </problem>

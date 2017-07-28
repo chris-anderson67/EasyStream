@@ -1,10 +1,8 @@
-package cs.tufts.edu.easy;
+package cs.tufts.edu.easy.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
@@ -24,6 +22,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
+import cs.tufts.edu.easy.R;
+import cs.tufts.edu.easy.models.Bathroom;
 
 
 public class BathroomMapsActivity extends AppCompatActivity implements OnMapReadyCallback,
@@ -108,6 +109,17 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
         googleMap.setOnMarkerClickListener(this);
         googleMap.setOnInfoWindowClickListener(this);
 
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
+                new LatLng(currentLocation.latitude, currentLocation.longitude), 16));
+
+        googleMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
+            @Override
+            public void onCameraIdle() {
+                LatLng position = googleMap.getCameraPosition().target;
+                geoQuery.setCenter(new GeoLocation(position.latitude, position.longitude));
+            }
+        });
+
         geoQuery.addGeoQueryEventListener(new GeoQueryEventListener() {
             @Override
             public void onKeyEntered(String key, GeoLocation location) {
@@ -115,7 +127,6 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
                         .position(new LatLng(location.latitude, location.longitude))
                         .title(key));
                 marker.setTag(key);
-                System.out.println("Found key: " + key);
 
                 if (markers.size() > MAX_MARKERS) {
                     markers.remove(0).remove();
@@ -143,20 +154,6 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
                 System.err.println("There was an error with this query: " + error);
             }
         });
-
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
-                new LatLng(currentLocation.latitude, currentLocation.longitude), 16));
-
-
-        googleMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
-            @Override
-            public void onCameraIdle() {
-                LatLng position = googleMap.getCameraPosition().target;
-                geoQuery.setCenter(new GeoLocation(position.latitude, position.longitude));
-            }
-        });
-
     }
-
 
 }

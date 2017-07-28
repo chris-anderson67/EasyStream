@@ -5,7 +5,7 @@
     <line>71</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.BathroomMapsActivity void onMapReady(com.google.android.gms.maps.GoogleMap googleMap)" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.activities.BathroomMapsActivity void onMapReady(com.google.android.gms.maps.GoogleMap googleMap)" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant local variable</problem_class>
     <description>Local variable &lt;code&gt;mMap&lt;/code&gt; is redundant #loc</description>
   </problem>

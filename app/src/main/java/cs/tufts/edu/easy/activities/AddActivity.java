@@ -1,7 +1,6 @@
-package cs.tufts.edu.easy;
+package cs.tufts.edu.easy.activities;
 
 import android.location.Location;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -11,7 +10,7 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
-import org.apache.http.HttpResponse;
+import cs.tufts.edu.easy.R;
 
 public class AddActivity extends AppCompatActivity {
     public static Location location;
@@ -80,7 +79,7 @@ public class AddActivity extends AppCompatActivity {
         }
 
         //boolean value determines whether you're requesting all bathrooms data
-        AsyncTask<String, Integer, HttpResponse> task = new PostData().execute(name, username, comment, cleanliness, baby, rating, locked, customers_only, lat, lng, address);
+//        AsyncTask<String, Integer, HttpResponse> task = new PostData().execute(name, username, comment, cleanliness, baby, rating, locked, customers_only, lat, lng, address);
         Toast.makeText(this, "Entry Submitted!",
                 Toast.LENGTH_SHORT).show();
         finish();

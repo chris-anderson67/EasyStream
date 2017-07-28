@@ -5,7 +5,7 @@
     <line>19</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review comment" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Review comment" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -17,7 +17,7 @@
     <line>17</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review cleanliness" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Review cleanliness" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -29,7 +29,7 @@
     <line>11</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.Review" />
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.models.Review" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="packageLocal" />
@@ -41,7 +41,7 @@
     <line>15</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review bathroom_id" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Review bathroom_id" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -53,7 +53,7 @@
     <line>14</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review id" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Review id" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -65,7 +65,7 @@
     <line>18</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Review active" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Review active" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -77,7 +77,7 @@
     <line>30</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom customers_only" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom customers_only" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -89,7 +89,7 @@
     <line>25</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom updated_by" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom updated_by" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -101,7 +101,7 @@
     <line>21</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom active" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom active" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -113,7 +113,7 @@
     <line>27</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom comments" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom comments" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -125,7 +125,7 @@
     <line>32</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom rating_count" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom rating_count" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -137,7 +137,7 @@
     <line>22</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom added_on" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom added_on" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -149,7 +149,7 @@
     <line>28</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom locked" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom locked" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -161,7 +161,7 @@
     <line>33</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom rating_total" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom rating_total" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -173,7 +173,7 @@
     <line>13</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.Bathroom" />
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.models.Bathroom" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="packageLocal" />
@@ -185,7 +185,7 @@
     <line>23</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom added_by" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom added_by" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -197,7 +197,7 @@
     <line>29</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom baby_station" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom baby_station" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -209,7 +209,7 @@
     <line>34</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom reviews" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom reviews" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -221,7 +221,7 @@
     <line>31</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom rating" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom rating" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -233,7 +233,7 @@
     <line>24</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.Bathroom updated_on" />
+    <entry_point TYPE="field" FQNAME="cs.tufts.edu.easy.models.Bathroom updated_on" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -245,7 +245,7 @@
     <line>133</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.BathroomMapsActivity com.google.android.gms.appindexing.Action getIndexApiAction()" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.activities.BathroomMapsActivity com.google.android.gms.appindexing.Action getIndexApiAction()" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -257,7 +257,7 @@
     <line>68</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.WelcomeSplashActivity com.google.android.gms.appindexing.Action getIndexApiAction()" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.activities.WelcomeSplashActivity com.google.android.gms.appindexing.Action getIndexApiAction()" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />

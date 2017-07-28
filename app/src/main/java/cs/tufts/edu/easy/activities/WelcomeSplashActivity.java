@@ -1,4 +1,4 @@
-package cs.tufts.edu.easy;
+package cs.tufts.edu.easy.activities;
 
 import android.content.Intent;
 import android.location.Location;
@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.crashlytics.android.Crashlytics;
 
+import cs.tufts.edu.easy.R;
 import io.fabric.sdk.android.Fabric;
 
 

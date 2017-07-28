@@ -14,7 +14,7 @@
     <line>8</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.Review" />
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.models.Review" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
     <description>Default File template</description>
   </problem>
@@ -23,7 +23,7 @@
     <line>9</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.Bathroom" />
+    <entry_point TYPE="class" FQNAME="cs.tufts.edu.easy.models.Bathroom" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
     <description>Default File template</description>
   </problem>
