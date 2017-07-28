@@ -1,7 +1,6 @@
 package cs.tufts.edu.easy;
 
 import android.content.Intent;
-import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -21,21 +20,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
-    /* remove */
-    public static HashMap<Integer, Bathroom> bathroomMap;
+public class BathroomMapsActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
-    private GeoLocation currentLocation;
-    private DatabaseReference ref;
+    private static final int MAX_MARKERS = 20;
+    private static final float SEARCH_LOCATION_RADIUS_KM = (float) 0.3;
+
+    private DatabaseReference geoFireDatabaseRef;
+    private DatabaseReference bathroomsDatabaseRef;
+    private DatabaseReference commentsDatabaseRef;
     private GeoFire geoFire;
     private GeoQuery geoQuery;
 
-    private ArrayList<Marker> markers;
-    private static final int MAX_MARKERS = 20;
-    private static final float SEARCH_LOCATION_RADIUS_KM = (float) 0.3;
+    private GeoLocation currentLocation;
+    private ArrayList<Marker> markers = new ArrayList<>(20);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,22 +42,26 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setTitle(getString(R.string.application_title));
         setContentView(R.layout.activity_maps);
 
+        // Start up map
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        // Replace with location manager / listener
         // Get current location from intent
         Intent intent = getIntent();
         currentLocation = new GeoLocation(intent.getDoubleExtra(getString(R.string.maps_intent_latitude), 0),
                                           intent.getDoubleExtra(getString(R.string.maps_intent_longitude), 0));
 
-        setupGeoFire();
-        markers = new ArrayList<>(20);
+        // Initialize database connections
+        setupFireBase();
     }
 
-    private void setupGeoFire() {
-        ref = FirebaseDatabase.getInstance().getReference(getString(R.string.geofire_db_path));
-        geoFire = new GeoFire(ref);
+    private void setupFireBase() {
+        bathroomsDatabaseRef = FirebaseDatabase.getInstance().getReference(getString(R.string.bathrooms_db_path));
+        commentsDatabaseRef = FirebaseDatabase.getInstance().getReference(getString(R.string.comments_db_path));
+        geoFireDatabaseRef = FirebaseDatabase.getInstance().getReference(getString(R.string.geofire_db_path));
+        geoFire = new GeoFire(geoFireDatabaseRef);
         geoQuery = geoFire.queryAtLocation(currentLocation, SEARCH_LOCATION_RADIUS_KM);
     }
 
@@ -75,32 +78,31 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         geoQuery.addGeoQueryEventListener(new GeoQueryEventListener() {
             @Override
             public void onKeyEntered(String key, GeoLocation location) {
-                System.out.println(String.format("Key %s entered the search area at [%f,%f]", key, location.latitude, location.longitude));
                 Marker marker = googleMap.addMarker(new MarkerOptions()
                         .position(new LatLng(location.latitude, location.longitude))
                         .title(key));
+                marker.setTag(key);
+                System.out.println("Found key: " + key);
 
                 if (markers.size() > MAX_MARKERS) {
-                    Marker toDelete = markers.remove(0);
-                    toDelete.remove();
+                    markers.remove(0).remove();
                 }
                 markers.add(marker);
             }
 
             @Override
             public void onKeyExited(String key) {
-                System.out.println(String.format("Key %s is no longer in the search area", key));
+
             }
 
             @Override
             public void onKeyMoved(String key, GeoLocation location) {
-                System.out.println(String.format("Key %s moved within the search area to [%f,%f]", key, location.latitude, location.longitude));
+
             }
 
             @Override
             public void onGeoQueryReady() {
-                System.out.println("All initial data has been loaded and events have been fired!");
-
+                System.out.println("All bathrooms loaded for current location");
             }
 
             @Override
@@ -113,8 +115,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 new LatLng(currentLocation.latitude, currentLocation.longitude), 16));
         googleMap.setOnInfoWindowClickListener(this);
 
-
-        // Lazy - refresh bathroom locations when the camera has stopped moving
         googleMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
             @Override
             public void onCameraIdle() {

@@ -1,6 +1,5 @@
 package cs.tufts.edu.easy;
 
-import android.Manifest;
 import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
@@ -9,15 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.crashlytics.android.Crashlytics;
-import com.google.android.gms.maps.model.LatLng;
 
 import io.fabric.sdk.android.Fabric;
 
 
-public class MainActivity extends AppCompatActivity {
+public class WelcomeSplashActivity extends AppCompatActivity {
 
     private int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 0;
-    private MainActivity context;
+    private WelcomeSplashActivity context;
     private LocationManager mLocationManager;
     public static Location location;
 
@@ -57,15 +55,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClickFindButton(View view) {
-        Intent launchFindIntent = new Intent(MainActivity.this, MapsActivity.class);
+        Intent launchFindIntent = new Intent(WelcomeSplashActivity.this, BathroomMapsActivity.class);
         launchFindIntent.putExtra(getString(R.string.maps_intent_latitude), location.getLatitude());
         launchFindIntent.putExtra(getString(R.string.maps_intent_longitude), location.getLongitude());
-        MainActivity.this.startActivity(launchFindIntent);
+        WelcomeSplashActivity.this.startActivity(launchFindIntent);
 
     }
 
     public void onClickRateButton(View view) {
-        Intent launchRateIntent = new Intent(MainActivity.this, AddActivity.class);
-        MainActivity.this.startActivity(launchRateIntent);
+        Intent launchRateIntent = new Intent(WelcomeSplashActivity.this, AddActivity.class);
+        WelcomeSplashActivity.this.startActivity(launchRateIntent);
     }
 }

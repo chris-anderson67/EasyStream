@@ -5,7 +5,7 @@
     <line>45</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.MainActivity void onClickRateButton(android.view.View view)" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.WelcomeSplashActivity void onClickRateButton(android.view.View view)" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused method parameters</problem_class>
     <hints>
       <hint value="view" />
@@ -17,7 +17,7 @@
     <line>39</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.MainActivity void onClickFindButton(android.view.View view)" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.WelcomeSplashActivity void onClickFindButton(android.view.View view)" />
     <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused method parameters</problem_class>
     <hints>
       <hint value="view" />

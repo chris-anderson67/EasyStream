@@ -25,10 +25,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name="cs.tufts.edu.easy.EasyStreamApp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeSplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,11 +52,11 @@
             android:value="AIzaSyDZroE_UqBXHMhwHAah7iL0Sro8B8GEsRw" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".BathroomMapsActivity"
             android:label="@string/title_activity_maps">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cs.tufts.edu.easy.MainActivity" />
+                android:value="cs.tufts.edu.easy.WelcomeSplashActivity" />
         </activity>
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -68,11 +69,11 @@
         <activity
             android:name=".BathroomDetailsActivity"
             android:label="@string/title_activity_bathroom__details"
-            android:parentActivityName=".MapsActivity"
+            android:parentActivityName=".BathroomMapsActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cs.tufts.edu.easy.MapsActivity" />
+                android:value="cs.tufts.edu.easy.BathroomMapsActivity" />
         </activity>
 
         <meta-data
@@ -82,11 +83,11 @@
         <activity
             android:name=".AddActivity"
             android:label="@string/title_activity_add"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".WelcomeSplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cs.tufts.edu.easy.MainActivity" />
+                android:value="cs.tufts.edu.easy.WelcomeSplashActivity" />
         </activity>
     </application>
 

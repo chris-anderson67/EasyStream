@@ -15,7 +15,7 @@
 # Disk Free: 69.9%
 
 #0. Crashed: main: 0 0 0x0000000000000000
-       at cs.tufts.edu.easy.MapsActivity.onInfoWindowClick(MapsActivity.java:66)
+       at cs.tufts.edu.easy.BathroomMapsActivity.onInfoWindowClick(MapsActivity.java:66)
        at com.google.android.gms.maps.GoogleMap$4.zze(Unknown Source)
        at com.google.android.gms.maps.internal.zzm$zza.onTransact(Unknown Source)
        at android.os.Binder.transact(Binder.java:499)
@@ -38,7 +38,7 @@
 --
 
 Fatal Exception: java.lang.NullPointerException: Attempt to invoke virtual method 'int java.lang.Integer.intValue()' on a null object reference
-       at cs.tufts.edu.easy.MapsActivity.onInfoWindowClick(MapsActivity.java:66)
+       at cs.tufts.edu.easy.BathroomMapsActivity.onInfoWindowClick(MapsActivity.java:66)
        at com.google.android.gms.maps.GoogleMap$4.zze(Unknown Source)
        at com.google.android.gms.maps.internal.zzm$zza.onTransact(Unknown Source)
        at android.os.Binder.transact(Binder.java:499)
@@ -59,7 +59,7 @@ Fatal Exception: java.lang.NullPointerException: Attempt to invoke virtual metho
        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:755)
 
 #0. Crashed: main: 0 0 0x0000000000000000
-       at cs.tufts.edu.easy.MapsActivity.onInfoWindowClick(MapsActivity.java:66)
+       at cs.tufts.edu.easy.BathroomMapsActivity.onInfoWindowClick(MapsActivity.java:66)
        at com.google.android.gms.maps.GoogleMap$4.zze(Unknown Source)
        at com.google.android.gms.maps.internal.zzm$zza.onTransact(Unknown Source)
        at android.os.Binder.transact(Binder.java:499)

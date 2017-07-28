@@ -25,7 +25,7 @@ public class AddActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        location = MainActivity.location;
+        location = WelcomeSplashActivity.location;
         final EditText latBox = (EditText) findViewById(R.id.latBox);
         final EditText lngBox = (EditText) findViewById(R.id.lngBox);
         if (location != null) {

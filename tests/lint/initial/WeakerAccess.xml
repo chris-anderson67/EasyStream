@@ -245,7 +245,7 @@
     <line>133</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.MapsActivity com.google.android.gms.appindexing.Action getIndexApiAction()" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.BathroomMapsActivity com.google.android.gms.appindexing.Action getIndexApiAction()" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
@@ -257,7 +257,7 @@
     <line>68</line>
     <module>app</module>
     <package>cs.tufts.edu.easy</package>
-    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.MainActivity com.google.android.gms.appindexing.Action getIndexApiAction()" />
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.WelcomeSplashActivity com.google.android.gms.appindexing.Action getIndexApiAction()" />
     <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
     <hints>
       <hint value="private" />
