@@ -25,6 +25,7 @@ import java.util.ArrayList;
 
 import cs.tufts.edu.easy.R;
 import cs.tufts.edu.easy.models.Bathroom;
+import cs.tufts.edu.easy.constants.IntentKeys;
 
 
 public class BathroomMapsActivity extends AppCompatActivity implements OnMapReadyCallback,
@@ -97,8 +98,8 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Intent myIntent = new Intent(this, BathroomDetailsActivity.class);
-        myIntent.putExtra(getString(R.string.bathroom_details_activity_intent_key), (Integer) marker.getTag());
+        Intent myIntent = new Intent(this, BathroomInfoActivity.class);
+        myIntent.putExtra(IntentKeys.BATHROOM_ID, (String) marker.getTag());
         startActivity(myIntent);
     }
 

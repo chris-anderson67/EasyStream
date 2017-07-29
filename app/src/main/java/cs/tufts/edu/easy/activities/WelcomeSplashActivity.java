@@ -16,14 +16,12 @@ import io.fabric.sdk.android.Fabric;
 public class WelcomeSplashActivity extends AppCompatActivity {
 
     private int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 0;
-    private WelcomeSplashActivity context;
     private LocationManager mLocationManager;
     public static Location location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        context = this;
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
         location = new Location("");

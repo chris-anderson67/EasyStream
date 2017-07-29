@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cs.tufts.edu.easy.activities.BathroomInfoActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathroom_details_name" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathroom_details_street"
+        android:layout_below="@id/bathroom_details_name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathroom_details_city_country"
+        android:layout_below="@id/bathroom_details_street"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathroom_details_score"
+        android:layout_below="@id/bathroom_details_city_country"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathroom_details_accessible_label"
+        android:text="@string/handicap_accessible"
+        android:layout_below="@id/bathroom_details_score"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathroom_details_unisex_label"
+        android:text="@string/unisex"
+        android:layout_below="@id/bathroom_details_accessible_label"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathroom_details_changing_table_label"
+        android:text="@string/changing_table"
+        android:layout_below="@id/bathroom_details_unisex_label"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathroom_details_comments_list"
+        android:layout_below="@id/bathroom_details_changing_table_label">
+    </ListView>
+
+</RelativeLayout>

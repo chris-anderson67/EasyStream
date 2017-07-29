@@ -10,4 +10,7 @@
     <string name="maps_intent_longitude">current_location_longitude</string>
     <string name="bathrooms_db_path">Bathrooms/</string>
     <string name="comments_db_path">Comments/</string>
+    <string name="handicap_accessible">Handicap Accessible</string>
+    <string name="unisex">Unisex</string>
+    <string name="changing_table">Changing Table</string>
 </resources>
