@@ -13,4 +13,10 @@
     <string name="handicap_accessible">Handicap Accessible</string>
     <string name="unisex">Unisex</string>
     <string name="changing_table">Changing Table</string>
+    <string name="add_comment">Add Comment</string>
+    <string name="new_comment">New Comment</string>
+    <string name="new_comment_prompt">Tell us what you thought!</string>
+    <string name="cancel_comment_confirmation">Are you sure you don\'t want to comment?</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
 </resources>

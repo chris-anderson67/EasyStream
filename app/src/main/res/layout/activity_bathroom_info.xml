@@ -47,7 +47,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bathroom_details_comments_list"
-        android:layout_below="@id/bathroom_details_changing_table_label">
-    </ListView>
+        android:layout_below="@id/bathroom_details_changing_table_label"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_comment"
+        android:id="@+id/bathroom_details_add_comment_button"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
 
 </RelativeLayout>
