@@ -6,6 +6,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 
 import com.crashlytics.android.Crashlytics;
 
@@ -13,20 +14,31 @@ import cs.tufts.edu.easy.R;
 import io.fabric.sdk.android.Fabric;
 
 
-public class WelcomeSplashActivity extends AppCompatActivity {
+public class WelcomeSplashActivity extends AppCompatActivity implements View.OnClickListener{
 
     private int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 0;
     private LocationManager mLocationManager;
     public static Location location;
 
+    private Button findButton;
+    private Button reviewButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
+
         setContentView(R.layout.activity_main);
+        getViews();
+        findButton.setOnClickListener(this);
+        reviewButton.setOnClickListener(this);
+
         location = new Location("");
         location.setLatitude(42.408250);
         location.setLongitude(-71.120336);
+
+
+
 
         /* GET CURRENT LOCATION - replace with static location for now */
 //        this.mLocationManager = (LocationManager) this.context.getSystemService(this.context.LOCATION_SERVICE);
@@ -47,22 +59,22 @@ public class WelcomeSplashActivity extends AppCompatActivity {
 
     }
 
+    private void getViews() {
+        findButton = (Button) findViewById(R.id.welcome_find_bathroom_button);
+        reviewButton = (Button) findViewById(R.id.welcome_review_bathroom_button);
+    }
+
     @Override
-    public void onResume() {
-       super.onResume();
-    }
+    public void onClick(View view) {
+        if (view == findViewById(R.id.welcome_find_bathroom_button)) {
+            Intent launchFindIntent = new Intent(WelcomeSplashActivity.this, BathroomMapsActivity.class);
+            launchFindIntent.putExtra(getString(R.string.maps_intent_latitude), location.getLatitude());
+            launchFindIntent.putExtra(getString(R.string.maps_intent_longitude), location.getLongitude());
+            WelcomeSplashActivity.this.startActivity(launchFindIntent);
 
-
-    public void onClickFindButton(View view) {
-        Intent launchFindIntent = new Intent(WelcomeSplashActivity.this, BathroomMapsActivity.class);
-        launchFindIntent.putExtra(getString(R.string.maps_intent_latitude), location.getLatitude());
-        launchFindIntent.putExtra(getString(R.string.maps_intent_longitude), location.getLongitude());
-        WelcomeSplashActivity.this.startActivity(launchFindIntent);
-
-    }
-
-    public void onClickRateButton(View view) {
-        Intent launchRateIntent = new Intent(WelcomeSplashActivity.this, AddActivity.class);
-        WelcomeSplashActivity.this.startActivity(launchRateIntent);
+        } else if (view == findViewById(R.id.welcome_review_bathroom_button)) {
+            Intent launchRateIntent = new Intent(WelcomeSplashActivity.this, AddBathroomActivity.class);
+            WelcomeSplashActivity.this.startActivity(launchRateIntent);
+        }
     }
 }

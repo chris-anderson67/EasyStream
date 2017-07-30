@@ -65,20 +65,12 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="56548a4ea1599b950066c83d65552d6b5daa04db" />
 
-        <activity
-            android:name=".activities.AddActivity"
-            android:label="@string/title_activity_add"
-            android:parentActivityName=".activities.WelcomeSplashActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="cs.tufts.edu.easy.activities.WelcomeSplashActivity" />
-        </activity>
-        <activity android:name=".activities.BathroomInfoActivity"></activity>
+        <activity android:name=".activities.BathroomInfoActivity" />
+        <activity android:name=".activities.AddBathroomActivity"></activity>
     </application>
 
 </manifest>

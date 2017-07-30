@@ -15,36 +15,34 @@
         android:text="Find a Bathroom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/welcomeFindButton"
+        android:id="@+id/welcome_find_bathroom_button"
         android:layout_marginBottom="15dp"
-        android:layout_above="@+id/welcomeRateButton"
+        android:layout_above="@+id/welcome_review_bathroom_button"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:backgroundTint="@color/colorAccent"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:onClick="onClickFindButton" />
+        android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
     <Button
         android:text="Rate a Bathroom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/welcomeRateButton"
+        android:id="@+id/welcome_review_bathroom_button"
         android:layout_marginBottom="45dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:backgroundTint="@color/colorAccent"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:onClick="onClickRateButton" />
+        android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
     <TextView
         android:text="An app to help you find a place to go."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
-        android:layout_above="@+id/welcomeFindButton"
+        android:layout_above="@+id/welcome_find_bathroom_button"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="51dp" />
 
