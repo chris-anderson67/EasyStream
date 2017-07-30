@@ -19,4 +19,5 @@
     <string name="cancel_comment_confirmation">Are you sure you don\'t want to comment?</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
+    <string name="okay">OK</string>
 </resources>
