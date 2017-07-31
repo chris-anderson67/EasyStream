@@ -1,28 +1,26 @@
 package cs.tufts.edu.easy.activities;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import cs.tufts.edu.easy.AddBathroomFlowAdapter;
 import cs.tufts.edu.easy.R;
-import cs.tufts.edu.easy.fragments.ConfirmationAddPageFragment;
-import cs.tufts.edu.easy.fragments.FeedbackAddPageFragment;
-import cs.tufts.edu.easy.fragments.LogisticsAddPageFragment;
-import cs.tufts.edu.easy.fragments.NameAddPageFragment;
+import cs.tufts.edu.easy.fragments.BaseAddPageFragment;
+import cs.tufts.edu.easy.models.Bathroom;
 import cs.tufts.edu.easy.views.NoSwipeViewpager;
 
 public class AddBathroomActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private static final int NUM_PAGES = 4;
+    public static final int NUM_STEPS = 4;
 
     private NoSwipeViewpager viewPager;
     private Button nextButton;
-    private PagerAdapter pagerAdapter;
+    private AddBathroomFlowAdapter pagerAdapter;
+
+    private Bathroom bathroom = new Bathroom();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +32,7 @@ public class AddBathroomActivity extends AppCompatActivity implements View.OnCli
         viewPager.setAdapter(pagerAdapter);
         nextButton.setOnClickListener(this);
     }
+
 
     private void getViews() {
         viewPager = (NoSwipeViewpager) findViewById(R.id.add_activity_view_pager);
@@ -52,9 +51,21 @@ public class AddBathroomActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View view) {
         int currentItem = viewPager.getCurrentItem();
+        BaseAddPageFragment pageFragment = (BaseAddPageFragment) pagerAdapter.getCurrentFragment();
+        Bathroom updatedBathroom = pageFragment.getUpdatedBathroom(bathroom);
+
+
+        if (updatedBathroom == null) {
+            Toast.makeText(this, "Please fill out all information", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            Toast.makeText(this, updatedBathroom.name, Toast.LENGTH_SHORT).show();
+            bathroom = updatedBathroom;
+        }
+
         if (view == nextButton) {
             // last page
-            if (currentItem == NUM_PAGES - 1) {
+            if (currentItem == NUM_STEPS - 1) {
                 finish();
             } else {
                 viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
@@ -62,33 +73,13 @@ public class AddBathroomActivity extends AppCompatActivity implements View.OnCli
         }
     }
 
-    private class AddBathroomFlowAdapter extends FragmentStatePagerAdapter {
-        public AddBathroomFlowAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            switch(position) {
-                case (0):
-                    return new NameAddPageFragment();
-
-                case (1):
-                    return new FeedbackAddPageFragment();
-
-                case (2):
-                    return new LogisticsAddPageFragment();
-
-                case (3):
-                    return new ConfirmationAddPageFragment();
-            }
-            return null;
-        }
-
-        @Override
-        public int getCount() {
-            return NUM_PAGES;
-        }
+    public void updateNewBathroom(Bathroom newBathroom) {
+        this.bathroom = newBathroom;
     }
+
+    public Bathroom getBathroom() {
+        return bathroom;
+    }
+
 }
 

@@ -18,14 +18,14 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 import cs.tufts.edu.easy.R;
-import cs.tufts.edu.easy.models.Bathroom;
 import cs.tufts.edu.easy.constants.IntentKeys;
+import cs.tufts.edu.easy.firebase.FirebaseManager;
+import cs.tufts.edu.easy.models.Bathroom;
 
 
 public class BathroomMapsActivity extends AppCompatActivity implements OnMapReadyCallback,
@@ -69,9 +69,8 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
     }
 
     private void setupFireBase() {
-        bathroomsDatabaseRef = FirebaseDatabase.getInstance().getReference(getString(R.string.bathrooms_db_path));
-        commentsDatabaseRef = FirebaseDatabase.getInstance().getReference(getString(R.string.comments_db_path));
-        geoFireDatabaseRef = FirebaseDatabase.getInstance().getReference(getString(R.string.geofire_db_path));
+        bathroomsDatabaseRef = FirebaseManager.getBathroomsReference();
+        geoFireDatabaseRef = FirebaseManager.getLocationsReference();
         geoFire = new GeoFire(geoFireDatabaseRef);
         geoQuery = geoFire.queryAtLocation(currentLocation, SEARCH_LOCATION_RADIUS_KM);
     }

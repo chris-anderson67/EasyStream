@@ -105,7 +105,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
         commentAlert.setPositiveButton(R.string.submit, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                FirebaseManager.addComment(input.getText().toString(), commentsReference);
+                FirebaseManager.addComment(input.getText().toString());
             }
         });
 

@@ -5,7 +5,7 @@ import com.google.firebase.database.IgnoreExtraProperties;
 @IgnoreExtraProperties
 public class Bathroom {
 
-    public int id;
+    public int id = -1;
 
     public boolean accessible;
     public boolean changing_table;
@@ -18,12 +18,12 @@ public class Bathroom {
     public String city;
     public String street;
     public String comment;
-    public double latitude;
-    public double longitude;
+    public String directions;
+    public double latitude = 0.0;
+    public double longitude = 0.0;
 
     public String created_at;
     public String updated_at;
-    public String directions;
 
     public Bathroom() {
 

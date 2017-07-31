@@ -1,14 +1,24 @@
 package cs.tufts.edu.easy.fragments;
 
-import cs.tufts.edu.easy.R;
+import android.view.View;
 
-/**
- * Created by christopheranderson on 7/30/17.
- */
+import cs.tufts.edu.easy.R;
+import cs.tufts.edu.easy.models.Bathroom;
+
 
 public class LogisticsAddPageFragment extends BaseAddPageFragment {
     @Override
+    protected void setupViews(View rootView) {
+
+    }
+
+    @Override
     public int getLayoutResource() {
         return R.layout.logistics_add_fragment_page;
+    }
+
+    @Override
+    public Bathroom getUpdatedBathroom(Bathroom initialBathroom) {
+        return initialBathroom;
     }
 }
