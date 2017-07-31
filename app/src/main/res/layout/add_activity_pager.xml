@@ -12,7 +12,8 @@
         android:layout_width="wrap_content"
         android:id="@+id/add_activity_next_button"
         android:text="Okay"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
     </Button>
 
 </RelativeLayout>

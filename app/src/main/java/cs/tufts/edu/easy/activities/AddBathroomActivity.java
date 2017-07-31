@@ -60,6 +60,9 @@ public class AddBathroomActivity extends AppCompatActivity implements View.OnCli
             return;
         } else {
             Toast.makeText(this, updatedBathroom.name, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "upvotes: " + updatedBathroom.upvote, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "downvotes: " + updatedBathroom.downvote, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "comments: " + updatedBathroom.comment, Toast.LENGTH_SHORT).show();
             bathroom = updatedBathroom;
         }
 
