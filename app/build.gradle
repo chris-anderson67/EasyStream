@@ -16,13 +16,13 @@ repositories {
 
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 25
     buildToolsVersion '25.0.0'
     defaultConfig {
         multiDexEnabled true
         applicationId 'cs.tufts.edu.easystream'
         minSdkVersion 17
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode 3
         versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -38,6 +38,11 @@ android {
     }
 }
 
+ext {
+    SUPPORT_LIB_VERSION = '25.3.1'
+    GOOGLE_LIB_VERSION = '11.0.4'
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -47,14 +52,14 @@ dependencies {
     compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
         transitive = true;
     }
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.google.android.gms:play-services:11.0.1'
-    compile 'com.google.android.gms:play-services-maps:11.0.1'
-    compile 'com.android.support:design:24.2.1'
-    compile 'com.google.firebase:firebase-database:11.0.1'
-    compile 'com.firebase:geofire-android:2.1.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
-    testCompile 'junit:junit:4.12'
+    compile "com.android.support:appcompat-v7:$SUPPORT_LIB_VERSION"
+    compile "com.android.support:design:$SUPPORT_LIB_VERSION"
+    compile "com.google.android.gms:play-services-location:$GOOGLE_LIB_VERSION"
+    compile "com.google.android.gms:play-services-maps:$GOOGLE_LIB_VERSION"
+    compile "com.google.firebase:firebase-database:$GOOGLE_LIB_VERSION"
+    compile "com.firebase:geofire-android:2.1.1"
+    compile "com.android.support.constraint:constraint-layout:1.0.0-alpha8"
+    testCompile "junit:junit:4.12"
 }
 
 apply plugin: 'com.google.gms.google-services'
