@@ -58,8 +58,8 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        // Replace with location manager / listener
-        // Get current location from intent
+        // Replace with currentLocation manager / listener
+        // Get current currentLocation from intent
         Intent intent = getIntent();
         currentLocation = new GeoLocation(intent.getDoubleExtra(getString(R.string.maps_intent_latitude), 0),
                                           intent.getDoubleExtra(getString(R.string.maps_intent_longitude), 0));

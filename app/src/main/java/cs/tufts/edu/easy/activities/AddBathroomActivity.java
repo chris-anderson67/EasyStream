@@ -1,5 +1,7 @@
 package cs.tufts.edu.easy.activities;
 
+import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,11 +23,16 @@ public class AddBathroomActivity extends AppCompatActivity implements View.OnCli
     private AddBathroomFlowAdapter pagerAdapter;
 
     private Bathroom bathroom = new Bathroom();
+    private Location currentLocation = new Location("");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_activity_pager);
+
+        Intent intent = getIntent();
+        currentLocation.setLatitude(intent.getDoubleExtra(getString(R.string.maps_intent_latitude), 0.0));
+        currentLocation.setLongitude(intent.getDoubleExtra(getString(R.string.maps_intent_longitude), 0.0));
 
         getViews();
         pagerAdapter = new AddBathroomFlowAdapter(getSupportFragmentManager());

@@ -39,6 +39,6 @@ I dislike that the info-window does not tell me the rating of the bathroom that 
 Why is the icon an unlocked lock and not a bathroom symbol or something more relevant?
 3. What changes would make you want to use this app? 
 I would want a marker for the closest bathroom to my geolocation
-and a marker for the most highly rated bathroom near my location
+and a marker for the most highly rated bathroom near my currentLocation
 4. Is there anything else we should know? 
 I love the simplicity of it. But in a way, it almost feels too simple...

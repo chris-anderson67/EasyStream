@@ -16,7 +16,7 @@ public class FirebaseManager {
     }
 
     /**
-     * Adds new bathroom to Firebase database, updates location information for geofire
+     * Adds new bathroom to Firebase database, updates currentLocation information for geofire
      * @param newBathroom The bathroom to add to DB
      */
     public static boolean addBathroom(Bathroom newBathroom) {
@@ -33,7 +33,7 @@ public class FirebaseManager {
         DatabaseReference newCommentsRef = getCommentsTestReference().child(newBathroomRef.getKey());
         newCommentsRef.push().setValue(newBathroom.comment);
 
-        // Add location data to locations ref at new-bathroom's key
+        // Add currentLocation data to locations ref at new-bathroom's key
         GeoFire geoFire = new GeoFire(getLocationsTestReference());
         geoFire.setLocation(newBathroomRef.getKey(),
                 new GeoLocation(newBathroom.latitude, newBathroom.longitude));
