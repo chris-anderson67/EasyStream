@@ -11,6 +11,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="cs.tufts.edu.easy.activities.WelcomeSplashActivity">
 
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
     <Button
         android:text="Find a Bathroom"
         android:layout_width="wrap_content"
@@ -21,6 +29,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
+        android:visibility="invisible"
+        android:clickable="false"
         android:layout_alignParentStart="true"
         android:backgroundTint="@color/colorAccent"
         android:textColor="@color/common_google_signin_btn_text_dark_default"/>
@@ -34,6 +44,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:visibility="invisible"
+        android:clickable="false"
         android:backgroundTint="@color/colorAccent"
         android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
@@ -42,9 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
+        android:layout_marginBottom="31dp"
         android:layout_above="@+id/welcome_find_bathroom_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="51dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:text="Easy Stream"
@@ -77,12 +89,12 @@
         android:layout_above="@+id/textView3">
 
         <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
-            app:srcCompat="@drawable/logo_large"
-            android:id="@+id/imageView3" />
+            app:srcCompat="@drawable/logo_large" />
     </FrameLayout>
 
     <TextView
