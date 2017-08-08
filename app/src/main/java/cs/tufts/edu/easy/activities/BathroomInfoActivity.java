@@ -105,7 +105,8 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
         commentAlert.setPositiveButton(R.string.submit, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                FirebaseManager.addComment(input.getText().toString());
+                Toast.makeText(BathroomInfoActivity.this, "Submit clicked: " + input.getText().toString(), Toast.LENGTH_SHORT).show();
+                FirebaseManager.addComment(input.getText().toString(), bathroomId);
             }
         });
 
@@ -120,7 +121,9 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {
+        Toast.makeText(this, "OnData Changed", Toast.LENGTH_SHORT).show();
         if (dataSnapshot.getRef().toString().equals(commentsReference.toString())) {
+            Toast.makeText(this, "Comments changed", Toast.LENGTH_SHORT).show();
 
             for (DataSnapshot child : dataSnapshot.getChildren()) {
                 String comment = child.getValue(String.class);

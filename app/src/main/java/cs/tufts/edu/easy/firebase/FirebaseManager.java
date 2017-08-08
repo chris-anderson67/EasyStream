@@ -1,5 +1,7 @@
 package cs.tufts.edu.easy.firebase;
 
+import android.util.Log;
+
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
 import com.google.firebase.database.DatabaseReference;
@@ -11,8 +13,9 @@ import cs.tufts.edu.easy.models.Bathroom;
 
 public class FirebaseManager {
 
-    public static void addComment(String comment) {
-        getCommentsReference().push().setValue(comment);
+    public static void addComment(String comment, String id) {
+        Log.d("TAG", "Adding "+ comment);
+        getCommentsReference().child(id).push().setValue(comment);
     }
 
     /**
