@@ -29,4 +29,24 @@ public class Bathroom {
 
     }
 
+    @Override
+    public String toString() {
+        return "ID: " + String.valueOf(id) + "\n" +
+                "Accessible: " + String.valueOf(accessible) + "\n" +
+                "Changing Table: " + String.valueOf(changing_table) + "\n" +
+                "Unisex: " + String.valueOf(unisex) + "\n" +
+                "DownVotes: " + String.valueOf(downvote) + "\n"  +
+                "UpVotes: " + String.valueOf(upvote) + "\n" +
+                "Name: " + name + "\n" +
+                "Country: " + country + "\n" +
+                "City: " + city + "\n" +
+                "Street: " + street + "\n" +
+                "Comment: " + comment + "\n" +
+                "Directions: " + directions + "\n" +
+                "Latitude: " + String.valueOf(latitude) + "\n" +
+                "Longitude: " + String.valueOf(latitude) + "\n" +
+                "Created At: " + created_at + "\n" +
+                "Updated At: " + updated_at + "\n";
+    }
+
 }

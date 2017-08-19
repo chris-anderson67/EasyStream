@@ -24,6 +24,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -74,14 +75,15 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
                 .build();
 
         mAuth = FirebaseAuth.getInstance();
-
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-        if (!hasLocationPermission()) {
+
+        if (hasLocationPermission()) {
+            getCurrentLocation();
+        } else {
             requestLocationPermission();
         }
     }
 
-    // TODO Switch to binding views
     private void getViews() {
         findButton = (Button) findViewById(R.id.welcome_find_bathroom_button);
         reviewButton = (Button) findViewById(R.id.welcome_review_bathroom_button);
@@ -170,9 +172,18 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
                 .addOnSuccessListener(this, new OnSuccessListener<Location>() {
                     @Override
                     public void onSuccess(Location location) {
+                        Toast.makeText(WelcomeSplashActivity.this, "success", Toast.LENGTH_SHORT).show();
                         if (location != null) {
                             currentLocation = location;
+                        } else {
+                            Toast.makeText(WelcomeSplashActivity.this, "location null", Toast.LENGTH_SHORT).show();
                         }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(WelcomeSplashActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }

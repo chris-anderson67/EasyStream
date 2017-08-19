@@ -23,7 +23,7 @@ public class NameAddPageFragment extends BaseAddPageFragment {
 
     @Override
     public Bathroom getUpdatedBathroom(Bathroom initialBathroom) {
-        initialBathroom.name = nameField.getText().toString();
-        return initialBathroom;
+        initialBathroom.name = nameField.getText().toString().trim();
+        return initialBathroom.name.equals("") ? null : initialBathroom;
     }
 }

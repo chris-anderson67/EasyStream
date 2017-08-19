@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,6 +35,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
     private DatabaseReference bathroomReference;
     private DatabaseReference commentsReference;
+    private FirebaseAuth mAuth;
 
     private String bathroomId;
     private Bathroom bathroom;
@@ -57,6 +60,9 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         bathroomId = getIntent().getStringExtra(IntentKeys.BATHROOM_ID);
         bathroomReference = FirebaseDatabase.getInstance().getReference(getString(R.string.bathrooms_db_path)).child(bathroomId);
         commentsReference = FirebaseDatabase.getInstance().getReference(getString(R.string.comments_db_path)).child(bathroomId);
+
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
         setupAddComment();
     }
