@@ -46,7 +46,7 @@
         android:layout_alignParentEnd="true"
         android:visibility="invisible"
         android:clickable="false"
-        android:backgroundTint="@color/colorAccent"
+        android:backgroundTint="@color/button_disabled"
         android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
     <TextView

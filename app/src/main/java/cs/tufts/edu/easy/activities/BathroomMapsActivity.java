@@ -1,8 +1,13 @@
 package cs.tufts.edu.easy.activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
@@ -24,6 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import cs.tufts.edu.easy.LocationHelper;
 import cs.tufts.edu.easy.R;
 import cs.tufts.edu.easy.constants.IntentKeys;
 import cs.tufts.edu.easy.firebase.FirebaseManager;
@@ -32,6 +38,7 @@ import cs.tufts.edu.easy.models.Bathroom;
 import static cs.tufts.edu.easy.R.id.map;
 
 
+@SuppressWarnings("MissingPermission")
 public class BathroomMapsActivity extends AppCompatActivity implements OnMapReadyCallback,
         GoogleMap.OnInfoWindowClickListener, GoogleMap.OnMarkerClickListener {
 
@@ -47,6 +54,7 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
     private GeoQuery geoQuery;
 
     private GeoLocation currentLocation;
+    private LocationManager locationManager;
     private ArrayList<Marker> markers = new ArrayList<>(20);
 
     @Override
@@ -60,14 +68,27 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
                 .findFragmentById(map);
         mapFragment.getMapAsync(this);
 
-        // Replace with currentLocation manager / listener
-        // Get current currentLocation from intent
+        // Get current currentLocation from intent to focus immediately, start listening for updates
         Intent intent = getIntent();
         currentLocation = new GeoLocation(intent.getDoubleExtra(getString(R.string.maps_intent_latitude), 0),
                                           intent.getDoubleExtra(getString(R.string.maps_intent_longitude), 0));
+        locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
         // Initialize database connections
         setupFireBase();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        locationManager.removeUpdates(locationListener);
     }
 
     private void setupFireBase() {
@@ -173,5 +194,38 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
             }
         });
     }
+
+    private LocationListener locationListener = new LocationListener() {
+        @Override
+        public void onLocationChanged(Location location) {
+            Toast.makeText(BathroomMapsActivity.this, "Location changed to: " + location.toString(), Toast.LENGTH_SHORT).show();
+
+            // keep field variable as type GeoLocation for queries, do messy conversion here
+            Location currentBestLocation = new Location("");
+            currentBestLocation.setLatitude(currentLocation.latitude);
+            currentBestLocation.setLongitude(currentLocation.longitude);
+            if (LocationHelper.isBetterLocation(location, currentBestLocation)) {
+                Toast.makeText(BathroomMapsActivity.this, "got better location from " + location.getProvider(), Toast.LENGTH_SHORT).show();
+                currentLocation = new GeoLocation(location.getLatitude(), location.getLongitude());
+            } else {
+                Toast.makeText(BathroomMapsActivity.this, "got worse location from " + location.getProvider(), Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+
+        }
+
+        @Override
+        public void onProviderEnabled(String provider) {
+
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {
+
+        }
+    };
 
 }
