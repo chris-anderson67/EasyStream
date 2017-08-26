@@ -3,8 +3,10 @@ package cs.tufts.edu.easy.activities;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.annotation.ColorRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +32,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
@@ -175,7 +178,7 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
                 Marker marker = map.addMarker(new MarkerOptions()
                         .position(new LatLng(location.latitude, location.longitude))
                         .title(key)
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+                        .icon(getMarkerIcon(R.color.colorAccent)));
                 marker.setTag(key);
 
                 if (markers.size() > MAX_MARKERS) {
@@ -184,6 +187,12 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
                 markers.add(marker);
             }
         });
+    }
+
+    public BitmapDescriptor getMarkerIcon(@ColorRes int color) {
+        float[] hsv = new float[3];
+        Color.colorToHSV(getResources().getColor(color), hsv);
+        return BitmapDescriptorFactory.defaultMarker(hsv[0]);
     }
 
     @Override
