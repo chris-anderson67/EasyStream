@@ -7,7 +7,7 @@ import com.firebase.geofire.GeoLocation;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import cs.tufts.edu.easy.constants.DatabaseKeys;
+import cs.tufts.edu.easy.Constants.DatabaseKeys;
 import cs.tufts.edu.easy.models.Bathroom;
 
 

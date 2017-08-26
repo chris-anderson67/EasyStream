@@ -5,23 +5,33 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
 import com.firebase.geofire.GeoQuery;
-import com.firebase.geofire.GeoQueryEventListener;
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.Places;
+import com.google.android.gms.location.places.ui.PlaceAutocomplete;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
@@ -33,8 +43,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import cs.tufts.edu.easy.Constants;
+import cs.tufts.edu.easy.ESGeoQueryEventListener;
+import cs.tufts.edu.easy.LocationHelper;
 import cs.tufts.edu.easy.R;
-import cs.tufts.edu.easy.constants.IntentKeys;
 import cs.tufts.edu.easy.firebase.FirebaseManager;
 import cs.tufts.edu.easy.models.Bathroom;
 
@@ -44,8 +56,12 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
 
 
     private static final int MAX_MARKERS = 50;
-    private static final float SEARCH_LOCATION_RADIUS_KM = (float) 0.5;
-    private static final GeoLocation FALLBACK_LOCATION = new GeoLocation(42.3495,-71.089);
+    private static final float MAX_SEARCH_LOCATION_RADIUS_KM = (float) 0.7; // km
+    private static final int MAX_LOAD_ZOOM_RADIUS = 12; // km
+    private static final int DEFAULT_ZOOM_LEVEL = 14;
+    private static final GeoLocation FALLBACK_LOCATION = new GeoLocation(0,0);
+    private static final int PLACE_AUTOCOMPLETE_REQUEST_CODE = 10009;
+    private static final String TAG = LocationAwareActivity.class.getSimpleName();
 
     private GoogleMap map;
     private SupportMapFragment mapFragment;
@@ -59,18 +75,56 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
     private GeoQuery geoQuery;
     private ArrayList<Marker> markers = new ArrayList<>(MAX_MARKERS);
 
+    private FloatingActionButton searchFab;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle(getString(R.string.application_title));
         setContentView(R.layout.activity_location_aware);
+
+        searchFab = (FloatingActionButton) findViewById(R.id.search_fab);
+        searchFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent =
+                            new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY)
+                                    .build(LocationAwareActivity.this);
+                    startActivityForResult(intent, PLACE_AUTOCOMPLETE_REQUEST_CODE);
+                } catch (GooglePlayServicesRepairableException e) {
+                    Toast.makeText(LocationAwareActivity.this, "Problem loading search", Toast.LENGTH_SHORT).show();
+                } catch (GooglePlayServicesNotAvailableException e) {
+                    Toast.makeText(LocationAwareActivity.this, "Error loading search", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         setupFireBase();
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+                Place place = PlaceAutocomplete.getPlace(this, data);
+                CameraPosition newPosition = new CameraPosition.Builder()
+                        .target(place.getLatLng())
+                        .zoom(DEFAULT_ZOOM_LEVEL)
+                        .build();
+                map.animateCamera(CameraUpdateFactory.newCameraPosition(newPosition));
+
+            } else if (resultCode == PlaceAutocomplete.RESULT_ERROR) {
+                Status status = PlaceAutocomplete.getStatus(this, data);
+                Log.i(TAG, status.getStatusMessage());
+
+            } else if (resultCode == RESULT_CANCELED) {
+                // The user canceled the operation.
+            }
+        }
     }
 
     private void setupFireBase() {
@@ -80,7 +134,7 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
 
         // if no current location yet use fallback location so query is non-null to set listeners
         geoQuery = geoFire.queryAtLocation(currentLocation == null ? FALLBACK_LOCATION : currentLocation,
-                SEARCH_LOCATION_RADIUS_KM);
+                MAX_SEARCH_LOCATION_RADIUS_KM);
     }
 
     @Override
@@ -92,8 +146,7 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap)
-    {
+    public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
         map.setOnMarkerClickListener(this);
         map.setOnInfoWindowClickListener(this);
@@ -106,12 +159,17 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
         googleMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
             @Override
             public void onCameraIdle() {
-                LatLng position = map.getCameraPosition().target;
-                geoQuery.setCenter(new GeoLocation(position.latitude, position.longitude));
+                if (LocationHelper.getViewRadius(map) < MAX_LOAD_ZOOM_RADIUS) {
+                    LatLng position = map.getCameraPosition().target;
+                    geoQuery.setCenter(new GeoLocation(position.latitude, position.longitude));
+                }
+                // don't update if the user is zoomed far out
             }
         });
 
-        geoQuery.addGeoQueryEventListener(new GeoQueryEventListener() {
+        // Add and remove markers as they enter and leave the query radius,
+        // remove older markers if limit is reached
+        geoQuery.addGeoQueryEventListener(new ESGeoQueryEventListener() {
             @Override
             public void onKeyEntered(String key, GeoLocation location) {
                 Marker marker = map.addMarker(new MarkerOptions()
@@ -125,29 +183,7 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
                 }
                 markers.add(marker);
             }
-
-            @Override
-            public void onKeyExited(String key) {
-
-            }
-
-            @Override
-            public void onKeyMoved(String key, GeoLocation location) {
-
-            }
-
-            @Override
-            public void onGeoQueryReady() {
-                System.out.println("All locations loaded for current target");
-            }
-
-            @Override
-            public void onGeoQueryError(DatabaseError error) {
-                System.err.println("There was an error with this query: " + error);
-            }
         });
-
-
     }
 
     @Override
@@ -176,7 +212,7 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
     @Override
     public void onInfoWindowClick(Marker marker) {
         Intent myIntent = new Intent(this, BathroomInfoActivity.class);
-        myIntent.putExtra(IntentKeys.BATHROOM_ID, (String) marker.getTag());
+        myIntent.putExtra(Constants.IntentKeys.BATHROOM_ID, (String) marker.getTag());
         startActivity(myIntent);
     }
 
@@ -184,17 +220,20 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
         apiClient = new GoogleApiClient.Builder(this)
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
+                .addApi(Places.PLACE_DETECTION_API)
                 .addConnectionCallbacks(this)
                 .build();
         apiClient.connect();
     }
 
     @Override
-    public void onLocationChanged(Location location)
-    {
+    public void onLocationChanged(Location location) {
         this.currentLocation = new GeoLocation(location.getLatitude(), location.getLongitude());
-        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16));
+        CameraPosition newPosition = new CameraPosition.Builder()
+                .target(new LatLng(location.getLatitude(), location.getLongitude()))
+                .zoom(DEFAULT_ZOOM_LEVEL)
+                .build();
+        map.animateCamera(CameraUpdateFactory.newCameraPosition(newPosition));
     }
 
     @Override

@@ -7,7 +7,7 @@
 
     <fragment android:layout_height="wrap_content" android:layout_width="wrap_content"
         android:id="@+id/add_bathroom_location_map"
-        tools:context=".activities.BathroomMapsActivity"
+        tools:context=".activities.LocationAwareActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment">
     </fragment>
 

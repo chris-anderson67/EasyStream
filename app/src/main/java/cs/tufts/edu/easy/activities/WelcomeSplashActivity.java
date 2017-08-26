@@ -28,14 +28,16 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import cs.tufts.edu.easy.Constants;
 import cs.tufts.edu.easy.R;
 import io.fabric.sdk.android.Fabric;
+
+import static cs.tufts.edu.easy.Constants.PermissionCodes;
 
 
 public class WelcomeSplashActivity extends AppCompatActivity implements View.OnClickListener,
         GoogleApiClient.OnConnectionFailedListener {
 
-    private static final int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 270; // let Android studio set these
     private static final String TAG = WelcomeSplashActivity.class.getSimpleName();
     private static final int RC_SIGN_IN = 9001;
 
@@ -144,7 +146,7 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
         switch (requestCode) {
-            case MY_PERMISSIONS_ACCESS_FINE_LOCATION: {
+            case (PermissionCodes.ACCESS_FINE_LOCATION): {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(this, "Thanks!", Toast.LENGTH_SHORT).show();
                 } else {
@@ -164,12 +166,10 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
         } else if (!hasLocationPermission()) {
             requestLocationPermission();
         } else if (view == findViewById(R.id.welcome_find_bathroom_button)) {
-            Intent launchFindIntent = new Intent(WelcomeSplashActivity.this, BathroomMapsActivity.class);
-            WelcomeSplashActivity.this.startActivity(launchFindIntent);
-        } else if (view == findViewById(R.id.welcome_review_bathroom_button)) {
-            Toast.makeText(this, "Coming soon!", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(WelcomeSplashActivity.this, LocationAwareActivity.class);
             WelcomeSplashActivity.this.startActivity(i);
+        } else if (view == findViewById(R.id.welcome_review_bathroom_button)) {
+            Toast.makeText(this, "Coming soon!", Toast.LENGTH_SHORT).show();
 //            Intent launchRateIntent = new Intent(WelcomeSplashActivity.this, AddBathroomActivity.class);
 //            launchRateIntent.putExtra(getString(R.string.maps_intent_latitude), currentLocation.getLatitude());
 //            launchRateIntent.putExtra(getString(R.string.maps_intent_longitude), currentLocation.getLongitude());
@@ -185,7 +185,7 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
 
     private void requestLocationPermission() {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                MY_PERMISSIONS_ACCESS_FINE_LOCATION);
+                Constants.PermissionCodes.ACCESS_FINE_LOCATION);
     }
 
     @Override

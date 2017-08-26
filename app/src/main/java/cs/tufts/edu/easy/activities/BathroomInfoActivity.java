@@ -24,8 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import cs.tufts.edu.easy.Constants;
 import cs.tufts.edu.easy.R;
-import cs.tufts.edu.easy.constants.IntentKeys;
 import cs.tufts.edu.easy.firebase.FirebaseManager;
 import cs.tufts.edu.easy.models.Bathroom;
 
@@ -57,7 +57,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         getViews();
         comments = new ArrayList<>();
 
-        bathroomId = getIntent().getStringExtra(IntentKeys.BATHROOM_ID);
+        bathroomId = getIntent().getStringExtra(Constants.IntentKeys.BATHROOM_ID);
         bathroomReference = FirebaseDatabase.getInstance().getReference(getString(R.string.bathrooms_db_path)).child(bathroomId);
         commentsReference = FirebaseDatabase.getInstance().getReference(getString(R.string.comments_db_path)).child(bathroomId);
 
@@ -70,15 +70,13 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     @Override
     protected void onPause() {
         super.onPause();
-
         bathroomReference.removeEventListener(this);
         commentsReference.removeEventListener(this);
     }
 
     @Override
     protected void onResume() {
-       super.onResume();
-
+        super.onResume();
         bathroomReference.addValueEventListener(this);
         commentsReference.addValueEventListener(this);
     }

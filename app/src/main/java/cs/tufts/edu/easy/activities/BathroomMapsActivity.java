@@ -29,9 +29,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import cs.tufts.edu.easy.Constants;
 import cs.tufts.edu.easy.LocationHelper;
 import cs.tufts.edu.easy.R;
-import cs.tufts.edu.easy.constants.IntentKeys;
 import cs.tufts.edu.easy.firebase.FirebaseManager;
 import cs.tufts.edu.easy.models.Bathroom;
 
@@ -128,7 +128,7 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
             return;
         }
         Intent myIntent = new Intent(this, BathroomInfoActivity.class);
-        myIntent.putExtra(IntentKeys.BATHROOM_ID, (String) marker.getTag());
+        myIntent.putExtra(Constants.IntentKeys.BATHROOM_ID, (String) marker.getTag());
         startActivity(myIntent);
     }
 

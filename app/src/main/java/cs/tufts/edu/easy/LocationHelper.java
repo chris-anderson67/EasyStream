@@ -1,11 +1,19 @@
 package cs.tufts.edu.easy;
 
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
+
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLngBounds;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -104,7 +112,26 @@ public class LocationHelper {
         return provider1.equals(provider2);
     }
 
-    public static boolean hasLocationPermission() {
-        return false;
+    /**
+     * @return True if location permission has been granted
+     */
+    public static boolean hasLocationPermission(Context context) {
+            return !(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) ||
+                    (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION)
+                    == PackageManager.PERMISSION_GRANTED);
+    }
+
+    /**
+     * @param map to measure
+     * @return radius in km
+     */
+    public static double getViewRadius(GoogleMap map) {
+        LatLngBounds bounds = map.getProjection().getVisibleRegion().latLngBounds;
+        CameraPosition center = map.getCameraPosition();
+        float results[] = new float[1];
+
+        Location.distanceBetween(center.target.latitude, center.target.longitude,
+                bounds.northeast.latitude, bounds.northeast.longitude, results);
+        return results[0] / 1000.00;
     }
 }
