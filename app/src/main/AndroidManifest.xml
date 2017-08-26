@@ -70,7 +70,8 @@
             android:value="56548a4ea1599b950066c83d65552d6b5daa04db" />
 
         <activity android:name=".activities.BathroomInfoActivity" />
-        <activity android:name=".activities.AddBathroomActivity"></activity>
+        <activity android:name=".activities.AddBathroomActivity" />
+        <activity android:name=".activities.LocationAwareActivity"/>
     </application>
 
 </manifest>

@@ -1,12 +1,8 @@
 package cs.tufts.edu.easy.activities;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -32,12 +28,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-import cs.tufts.edu.easy.LocationHelper;
 import cs.tufts.edu.easy.R;
 import io.fabric.sdk.android.Fabric;
 
 
-@SuppressWarnings("MissingPermission")
 public class WelcomeSplashActivity extends AppCompatActivity implements View.OnClickListener,
         GoogleApiClient.OnConnectionFailedListener {
 
@@ -46,10 +40,6 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
     private static final int RC_SIGN_IN = 9001;
 
     private GoogleApiClient mGoogleApiClient;
-    // TODO switch to fusedlocationapi
-    private LocationManager locationManager;
-    private Location currentLocation = null;
-
 
     private Button findButton;
     private Button reviewButton;
@@ -79,14 +69,7 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
                 .build();
         mAuth = FirebaseAuth.getInstance();
 
-
-        // setup location listener
-        locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-        if (hasLocationPermission()) {
-            Toast.makeText(this, "requesting location", Toast.LENGTH_SHORT).show();
-            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-        } else {
+        if (!hasLocationPermission()) {
             requestLocationPermission();
         }
     }
@@ -102,21 +85,6 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        locationManager.removeUpdates(locationListener);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (hasLocationPermission()) {
-            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-        }
     }
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
@@ -178,8 +146,7 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
         switch (requestCode) {
             case MY_PERMISSIONS_ACCESS_FINE_LOCATION: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+                    Toast.makeText(this, "Thanks!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "EasyStream uses your currentLocation to \n help you find and add bathrooms.",
                             Toast.LENGTH_LONG).show();
@@ -191,36 +158,24 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View view) {
-        if (!hasLocationPermission()) {
+        if (view == findViewById(R.id.sign_in_button)) {
+            Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+            startActivityForResult(signInIntent, RC_SIGN_IN);
+        } else if (!hasLocationPermission()) {
             requestLocationPermission();
-            return;
-        }
-
-        if (currentLocation == null) {
-            Toast.makeText(this, "We didn't find your location: trying again", Toast.LENGTH_SHORT).show();
-            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-            return;
-        }
-
-        if (view == findViewById(R.id.welcome_find_bathroom_button)) {
+        } else if (view == findViewById(R.id.welcome_find_bathroom_button)) {
             Intent launchFindIntent = new Intent(WelcomeSplashActivity.this, BathroomMapsActivity.class);
-            launchFindIntent.putExtra(getString(R.string.maps_intent_latitude), currentLocation.getLatitude());
-            launchFindIntent.putExtra(getString(R.string.maps_intent_longitude), currentLocation.getLongitude());
             WelcomeSplashActivity.this.startActivity(launchFindIntent);
-
         } else if (view == findViewById(R.id.welcome_review_bathroom_button)) {
             Toast.makeText(this, "Coming soon!", Toast.LENGTH_SHORT).show();
-            return;
+            Intent i = new Intent(WelcomeSplashActivity.this, LocationAwareActivity.class);
+            WelcomeSplashActivity.this.startActivity(i);
 //            Intent launchRateIntent = new Intent(WelcomeSplashActivity.this, AddBathroomActivity.class);
 //            launchRateIntent.putExtra(getString(R.string.maps_intent_latitude), currentLocation.getLatitude());
 //            launchRateIntent.putExtra(getString(R.string.maps_intent_longitude), currentLocation.getLongitude());
 //            WelcomeSplashActivity.this.startActivity(launchRateIntent);
-
-        } else if (view == findViewById(R.id.sign_in_button)) {
-            Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
-            startActivityForResult(signInIntent, RC_SIGN_IN);
         }
+
     }
 
     private boolean hasLocationPermission() {
@@ -237,32 +192,4 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         Toast.makeText(this, "Can't connect to server...", Toast.LENGTH_SHORT).show();
     }
-
-    private LocationListener locationListener = new LocationListener() {
-        @Override
-        public void onLocationChanged(Location location) {
-            Toast.makeText(WelcomeSplashActivity.this, "Location changed to: " + location.toString(), Toast.LENGTH_SHORT).show();
-            if (LocationHelper.isBetterLocation(location, currentLocation)) {
-                Toast.makeText(WelcomeSplashActivity.this, "got better location from " + location.getProvider(), Toast.LENGTH_SHORT).show();
-                currentLocation = location;
-            } else {
-                Toast.makeText(WelcomeSplashActivity.this, "got worse location from " + location.getProvider(), Toast.LENGTH_SHORT).show();
-            }
-        }
-
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-        }
-
-        @Override
-        public void onProviderEnabled(String provider) {
-
-        }
-
-        @Override
-        public void onProviderDisabled(String provider) {
-
-        }
-    };
 }

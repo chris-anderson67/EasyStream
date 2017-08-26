@@ -103,4 +103,8 @@ public class LocationHelper {
         }
         return provider1.equals(provider2);
     }
+
+    public static boolean hasLocationPermission() {
+        return false;
+    }
 }

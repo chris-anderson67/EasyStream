@@ -140,7 +140,7 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
         googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.map_style));
 
 
-        // Current location
+        // Current currentLocation
         LatLng currentLatLng = new LatLng(currentLocation.latitude, currentLocation.longitude);
         googleMap.addMarker(new MarkerOptions()
                 .position(currentLatLng)
@@ -205,10 +205,10 @@ public class BathroomMapsActivity extends AppCompatActivity implements OnMapRead
             currentBestLocation.setLatitude(currentLocation.latitude);
             currentBestLocation.setLongitude(currentLocation.longitude);
             if (LocationHelper.isBetterLocation(location, currentBestLocation)) {
-                Toast.makeText(BathroomMapsActivity.this, "got better location from " + location.getProvider(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(BathroomMapsActivity.this, "got better currentLocation from " + location.getProvider(), Toast.LENGTH_SHORT).show();
                 currentLocation = new GeoLocation(location.getLatitude(), location.getLongitude());
             } else {
-                Toast.makeText(BathroomMapsActivity.this, "got worse location from " + location.getProvider(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(BathroomMapsActivity.this, "got worse currentLocation from " + location.getProvider(), Toast.LENGTH_SHORT).show();
             }
         }
 
