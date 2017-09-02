@@ -166,7 +166,7 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
         } else if (!hasLocationPermission()) {
             requestLocationPermission();
         } else if (view == findViewById(R.id.welcome_find_bathroom_button)) {
-            Intent i = new Intent(WelcomeSplashActivity.this, LocationAwareActivity.class);
+            Intent i = new Intent(WelcomeSplashActivity.this, BathroomMapActivity.class);
             WelcomeSplashActivity.this.startActivity(i);
         } else if (view == findViewById(R.id.welcome_review_bathroom_button)) {
             Toast.makeText(this, "Coming soon!", Toast.LENGTH_SHORT).show();

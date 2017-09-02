@@ -53,7 +53,7 @@ import cs.tufts.edu.easy.R;
 import cs.tufts.edu.easy.firebase.FirebaseManager;
 import cs.tufts.edu.easy.models.Bathroom;
 
-public class LocationAwareActivity extends AppCompatActivity implements OnMapReadyCallback,
+public class BathroomMapActivity extends AppCompatActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener,
         GoogleMap.OnMarkerClickListener, GoogleMap.OnInfoWindowClickListener {
 
@@ -62,9 +62,9 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
     private static final float MAX_SEARCH_LOCATION_RADIUS_KM = (float) 0.7; // km
     private static final int MAX_LOAD_ZOOM_RADIUS = 12; // km
     private static final int DEFAULT_ZOOM_LEVEL = 14;
-    private static final GeoLocation FALLBACK_LOCATION = new GeoLocation(0,0);
     private static final int PLACE_AUTOCOMPLETE_REQUEST_CODE = 10009;
-    private static final String TAG = LocationAwareActivity.class.getSimpleName();
+    private static final GeoLocation FALLBACK_LOCATION = new GeoLocation(0,0);
+    private static final String TAG = BathroomMapActivity.class.getSimpleName();
 
     private GoogleMap map;
     private SupportMapFragment mapFragment;
@@ -93,12 +93,12 @@ public class LocationAwareActivity extends AppCompatActivity implements OnMapRea
                 try {
                     Intent intent =
                             new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY)
-                                    .build(LocationAwareActivity.this);
+                                    .build(BathroomMapActivity.this);
                     startActivityForResult(intent, PLACE_AUTOCOMPLETE_REQUEST_CODE);
                 } catch (GooglePlayServicesRepairableException e) {
-                    Toast.makeText(LocationAwareActivity.this, "Problem loading search", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BathroomMapActivity.this, "Problem loading search", Toast.LENGTH_SHORT).show();
                 } catch (GooglePlayServicesNotAvailableException e) {
-                    Toast.makeText(LocationAwareActivity.this, "Error loading search", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BathroomMapActivity.this, "Error loading search", Toast.LENGTH_SHORT).show();
                 }
             }
         });
