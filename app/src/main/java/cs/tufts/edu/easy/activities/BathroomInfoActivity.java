@@ -7,11 +7,12 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,7 +21,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -42,13 +46,15 @@ import cs.tufts.edu.easy.models.Bathroom;
 import static cs.tufts.edu.easy.R.id.bathroom_details_downvote_button;
 import static cs.tufts.edu.easy.R.id.bathroom_details_map;
 
-public class BathroomInfoActivity extends AppCompatActivity implements ValueEventListener, OnMapReadyCallback{
+public class BathroomInfoActivity extends AppCompatActivity implements ValueEventListener,
+        OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     public static String TAG = BathroomInfoActivity.class.getSimpleName();
 
     private DatabaseReference bathroomReference;
     private DatabaseReference commentsReference;
     private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
 
     private String bathroomId;
     private Bathroom bathroom;
@@ -61,7 +67,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     private CheckBox accessibleCheckBox;
     private CheckBox changingTableCheckBox;
     private CheckBox unisexCheckBox;
-    private ListView commentsView;
+    private LinearLayout commentsView;
     private FloatingActionButton addCommentButton;
     private ImageView upvoteButton;
     private ImageView downvoteButton;
@@ -76,6 +82,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         setContentView(R.layout.activity_bathroom_info);
 
         getViews();
+        addListeners();
         comments = new ArrayList<>();
 
         bathroomId = getIntent().getStringExtra(Constants.IntentKeys.BATHROOM_ID);
@@ -83,9 +90,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         commentsReference = FirebaseDatabase.getInstance().getReference(getString(R.string.comments_db_path)).child(bathroomId);
 
         mAuth = FirebaseAuth.getInstance();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-
-        addListeners();
+        currentUser = mAuth.getCurrentUser();
 
         locationMap = (SupportMapFragment) getSupportFragmentManager().findFragmentById(bathroom_details_map);
         locationMap.getMapAsync(this);
@@ -101,6 +106,9 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     @Override
     protected void onResume() {
         super.onResume();
+        if (currentUser == null) {
+            finish();
+        }
         bathroomReference.addValueEventListener(this);
         commentsReference.addValueEventListener(this);
     }
@@ -109,7 +117,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         nameView = (TextView) findViewById(R.id.bathroom_details_name);
         streetView = (TextView) findViewById(R.id.bathroom_details_street);
         scoreView = (TextView) findViewById(R.id.bathroom_details_score_view);
-        commentsView = (ListView) findViewById(R.id.bathroom_details_comments_list);
+        commentsView = (LinearLayout) findViewById(R.id.bathroom_details_comments_list);
         addCommentButton = (FloatingActionButton) findViewById(R.id.add_comment_fab);
         changingTableCheckBox = (CheckBox) findViewById(R.id.bathroom_details_changing_table_checkbox);
         accessibleCheckBox = (CheckBox) findViewById(R.id.bathroom_details_accessible_checkbox);
@@ -138,7 +146,6 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
                 Toast.makeText(BathroomInfoActivity.this, "downvote", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     private AlertDialog.Builder getCommentAlert() {
@@ -167,6 +174,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {
+        // Comments change
         if (dataSnapshot.getRef().toString().equals(commentsReference.toString())) {
             for (DataSnapshot child : dataSnapshot.getChildren()) {
                 String comment = child.getValue(String.class);
@@ -176,17 +184,24 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
             }
             populateComments();
 
+        // Bathroom data change / received
         } else if (dataSnapshot.getRef().toString().equals(bathroomReference.toString())) {
             bathroom = dataSnapshot.getValue(Bathroom.class);
-            populateBathroomData(bathroom);
+            populateBathroomData();
+            populateMap();
+        }
+    }
 
-            if (map == null) {
-                return;
-            }
-            map.addMarker(new MarkerOptions()
+    @Override
+    public void onCancelled(DatabaseError databaseError) {
+        Log.e(TAG, databaseError.getDetails());
+        databaseError.toException().printStackTrace();
+    }
+
+    private void populateMap() {
+        if (map != null) {
+            Marker marker = map.addMarker(new MarkerOptions()
                     .position(new LatLng(bathroom.latitude, bathroom.longitude))
-                    .title(bathroom.name)
-                    .snippet(bathroom.street)
                     .icon(LocationHelper.getMarkerIcon(this, R.color.colorAccent)));
             map.moveCamera(CameraUpdateFactory
                     .newLatLngZoom(new LatLng(bathroom.latitude, bathroom.longitude), 16));
@@ -200,29 +215,22 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         }
     }
 
-    @Override
-    public void onCancelled(DatabaseError databaseError) {
-        Log.e(TAG, databaseError.getDetails());
-        databaseError.toException().printStackTrace();
-    }
-
     private void populateComments() {
-        List<String> commentsList;
-        if (comments.size() == 0) {
-            commentsList = new ArrayList<>();
-            commentsList.add("No comments yet: be the first to " +
-                    "tell the world what you thought about " + bathroom.name + ".");
-        } else {
-            commentsList = comments;
+        for (String comment : comments) {
+            TextView textView = new TextView(this);
+            textView.setText(comment);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            int margin = (int) getResources().getDimension(R.dimen.md_margin_medium);
+            lp.setMargins(margin, 0, margin, margin);
+
+            textView.setLayoutParams(lp);
+            commentsView.addView(textView);
         }
-        commentsAdapter = new ArrayAdapter<String>(BathroomInfoActivity.this,
-                android.R.layout.simple_list_item_1, commentsList);
-        commentsView.setAdapter(commentsAdapter);
     }
 
-    private void populateBathroomData(Bathroom bathroom) {
+    private void populateBathroomData() {
         nameView.setText(bathroom.name);
-        streetView.setText(bathroom.street + ", " + bathroom.city + ", " + bathroom.country);
+        streetView.setText(bathroom.street);
 
         scoreView.setText(Integer.toString(bathroom.upvote - bathroom.downvote));
 
@@ -235,5 +243,16 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
+        map.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.map_style));
+        UiSettings uiSettings = map.getUiSettings();
+        uiSettings.setScrollGesturesEnabled(false);
+        uiSettings.setMapToolbarEnabled(false);
+        uiSettings.setZoomControlsEnabled(false);
+        uiSettings.setZoomGesturesEnabled(false);
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        return false;
     }
 }
