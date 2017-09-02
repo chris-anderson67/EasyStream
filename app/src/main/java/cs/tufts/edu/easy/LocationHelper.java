@@ -4,14 +4,18 @@ package cs.tufts.edu.easy;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Build;
+import android.support.annotation.ColorRes;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLngBounds;
 
@@ -133,5 +137,16 @@ public class LocationHelper {
         Location.distanceBetween(center.target.latitude, center.target.longitude,
                 bounds.northeast.latitude, bounds.northeast.longitude, results);
         return results[0] / 1000.00;
+    }
+
+    /**
+     * @param context to get resources
+     * @param color to set the marker
+     * @return BitmapDescriptor for tinted default map marker
+     */
+    public static BitmapDescriptor getMarkerIcon(Context context, @ColorRes int color) {
+        float[] hsv = new float[3];
+        Color.colorToHSV(context.getResources().getColor(color), hsv);
+        return BitmapDescriptorFactory.defaultMarker(hsv[0]);
     }
 }

@@ -3,10 +3,8 @@ package cs.tufts.edu.easy.activities;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -32,8 +30,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
@@ -61,7 +57,7 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
     private static final int MAX_MARKERS = 50;
     private static final float MAX_SEARCH_LOCATION_RADIUS_KM = (float) 0.7; // km
     private static final int MAX_LOAD_ZOOM_RADIUS = 12; // km
-    private static final int DEFAULT_ZOOM_LEVEL = 14;
+    private static final int DEFAULT_ZOOM_LEVEL = 15;
     private static final int PLACE_AUTOCOMPLETE_REQUEST_CODE = 10009;
     private static final GeoLocation FALLBACK_LOCATION = new GeoLocation(0,0);
     private static final String TAG = BathroomMapActivity.class.getSimpleName();
@@ -178,7 +174,7 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
                 Marker marker = map.addMarker(new MarkerOptions()
                         .position(new LatLng(location.latitude, location.longitude))
                         .title(key)
-                        .icon(getMarkerIcon(R.color.colorAccent)));
+                        .icon(LocationHelper.getMarkerIcon(BathroomMapActivity.this, R.color.colorAccent)));
                 marker.setTag(key);
 
                 if (markers.size() > MAX_MARKERS) {
@@ -189,11 +185,6 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
         });
     }
 
-    public BitmapDescriptor getMarkerIcon(@ColorRes int color) {
-        float[] hsv = new float[3];
-        Color.colorToHSV(getResources().getColor(color), hsv);
-        return BitmapDescriptorFactory.defaultMarker(hsv[0]);
-    }
 
     @Override
     public boolean onMarkerClick(final Marker marker) {

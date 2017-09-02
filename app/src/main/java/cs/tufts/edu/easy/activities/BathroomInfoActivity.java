@@ -2,17 +2,26 @@ package cs.tufts.edu.easy.activities;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -25,11 +34,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cs.tufts.edu.easy.Constants;
+import cs.tufts.edu.easy.LocationHelper;
 import cs.tufts.edu.easy.R;
 import cs.tufts.edu.easy.firebase.FirebaseManager;
 import cs.tufts.edu.easy.models.Bathroom;
 
-public class BathroomInfoActivity extends AppCompatActivity implements ValueEventListener{
+import static cs.tufts.edu.easy.R.id.bathroom_details_downvote_button;
+import static cs.tufts.edu.easy.R.id.bathroom_details_map;
+
+public class BathroomInfoActivity extends AppCompatActivity implements ValueEventListener, OnMapReadyCallback{
 
     public static String TAG = BathroomInfoActivity.class.getSimpleName();
 
@@ -44,10 +57,18 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
     private TextView nameView;
     private TextView streetView;
-    private TextView cityCountryView;
     private TextView scoreView;
+    private CheckBox accessibleCheckBox;
+    private CheckBox changingTableCheckBox;
+    private CheckBox unisexCheckBox;
     private ListView commentsView;
-    private Button addCommentButton;
+    private FloatingActionButton addCommentButton;
+    private ImageView upvoteButton;
+    private ImageView downvoteButton;
+    private ScrollView scrollView;
+
+    private GoogleMap map;
+    private SupportMapFragment locationMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +85,10 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        setupAddComment();
+        addListeners();
+
+        locationMap = (SupportMapFragment) getSupportFragmentManager().findFragmentById(bathroom_details_map);
+        locationMap.getMapAsync(this);
     }
 
     @Override
@@ -84,19 +108,37 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     private void getViews() {
         nameView = (TextView) findViewById(R.id.bathroom_details_name);
         streetView = (TextView) findViewById(R.id.bathroom_details_street);
-        cityCountryView = (TextView) findViewById(R.id.bathroom_details_city_country);
-        scoreView = (TextView) findViewById(R.id.bathroom_details_score);
+        scoreView = (TextView) findViewById(R.id.bathroom_details_score_view);
         commentsView = (ListView) findViewById(R.id.bathroom_details_comments_list);
-        addCommentButton = (Button) findViewById(R.id.bathroom_details_add_comment_button);
+        addCommentButton = (FloatingActionButton) findViewById(R.id.add_comment_fab);
+        changingTableCheckBox = (CheckBox) findViewById(R.id.bathroom_details_changing_table_checkbox);
+        accessibleCheckBox = (CheckBox) findViewById(R.id.bathroom_details_accessible_checkbox);
+        unisexCheckBox = (CheckBox) findViewById(R.id.bathroom_details_unisex_checkbox);
+        upvoteButton = (ImageView) findViewById(R.id.bathroom_details_upvote_button);
+        downvoteButton = (ImageView) findViewById(bathroom_details_downvote_button);
+        scrollView = (ScrollView) findViewById(R.id.bathroom_details_scroll_view);
     }
 
-    private void setupAddComment() {
+    private void addListeners() {
         addCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getCommentAlert().show();
             }
         });
+        upvoteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(BathroomInfoActivity.this, "upvote", Toast.LENGTH_SHORT).show();
+            }
+        });
+        downvoteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(BathroomInfoActivity.this, "downvote", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     private AlertDialog.Builder getCommentAlert() {
@@ -125,10 +167,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {
-        Toast.makeText(this, "OnData Changed", Toast.LENGTH_SHORT).show();
         if (dataSnapshot.getRef().toString().equals(commentsReference.toString())) {
-            Toast.makeText(this, "Comments changed", Toast.LENGTH_SHORT).show();
-
             for (DataSnapshot child : dataSnapshot.getChildren()) {
                 String comment = child.getValue(String.class);
                 if (!FirebaseManager.isMetaData(child.getKey()) && !comments.contains(comment)) {
@@ -140,6 +179,24 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         } else if (dataSnapshot.getRef().toString().equals(bathroomReference.toString())) {
             bathroom = dataSnapshot.getValue(Bathroom.class);
             populateBathroomData(bathroom);
+
+            if (map == null) {
+                return;
+            }
+            map.addMarker(new MarkerOptions()
+                    .position(new LatLng(bathroom.latitude, bathroom.longitude))
+                    .title(bathroom.name)
+                    .snippet(bathroom.street)
+                    .icon(LocationHelper.getMarkerIcon(this, R.color.colorAccent)));
+            map.moveCamera(CameraUpdateFactory
+                    .newLatLngZoom(new LatLng(bathroom.latitude, bathroom.longitude), 16));
+
+            // map steals focus - scroll back to top
+            scrollView.post(new Runnable() {
+                public void run() {
+                    scrollView.fullScroll(ScrollView.FOCUS_UP);
+                }
+            });
         }
     }
 
@@ -150,18 +207,33 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     }
 
     private void populateComments() {
+        List<String> commentsList;
+        if (comments.size() == 0) {
+            commentsList = new ArrayList<>();
+            commentsList.add("No comments yet: be the first to " +
+                    "tell the world what you thought about " + bathroom.name + ".");
+        } else {
+            commentsList = comments;
+        }
         commentsAdapter = new ArrayAdapter<String>(BathroomInfoActivity.this,
-                android.R.layout.simple_list_item_1, comments);
+                android.R.layout.simple_list_item_1, commentsList);
         commentsView.setAdapter(commentsAdapter);
     }
 
     private void populateBathroomData(Bathroom bathroom) {
         nameView.setText(bathroom.name);
-        streetView.setText(bathroom.street);
-        cityCountryView.setText(bathroom.city + ", " + bathroom.country);
-        scoreView.setText(Integer.toString(bathroom.upvote - bathroom.downvote) +
-                " (+" + Integer.toString(bathroom.upvote) + ", -" + Integer.toString(bathroom.downvote) + ")");
+        streetView.setText(bathroom.street + ", " + bathroom.city + ", " + bathroom.country);
+
+        scoreView.setText(Integer.toString(bathroom.upvote - bathroom.downvote));
+
+        accessibleCheckBox.setChecked(bathroom.accessible);
+        unisexCheckBox.setChecked(bathroom.unisex);
+        changingTableCheckBox.setChecked(bathroom.changing_table);
     }
 
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        map = googleMap;
+    }
 }

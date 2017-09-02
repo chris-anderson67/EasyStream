@@ -59,6 +59,7 @@ dependencies {
     compile "com.google.firebase:firebase-database:$GOOGLE_LIB_VERSION"
     compile "com.google.firebase:firebase-auth:$GOOGLE_LIB_VERSION"
     compile "com.google.android.gms:play-services-places:$GOOGLE_LIB_VERSION"
+    compile "com.android.support:cardview-v7:$SUPPORT_LIB_VERSION"
     compile "com.google.android.gms:play-services-auth:$GOOGLE_LIB_VERSION"
     compile "com.firebase:geofire-android:2.1.1"
     compile "com.android.support.constraint:constraint-layout:1.0.0-alpha8"
