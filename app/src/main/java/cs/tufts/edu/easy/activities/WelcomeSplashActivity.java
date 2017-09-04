@@ -153,7 +153,6 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
                     Toast.makeText(this, "EasyStream uses your currentLocation to \n help you find and add bathrooms.",
                             Toast.LENGTH_LONG).show();
                 }
-                return;
             }
         }
     }

@@ -13,9 +13,14 @@ public class Constants {
         public static String COMMENTS_PATH = "Comments/";
         public static String LOCATIONS_PATH = "Locations/";
         public static String BATHROOMS_PATH = "Bathrooms/";
+        public static String USER_DATA_PATH = "UserData/";
+
+        public static String USER_DATA_COMMENTS = "Comments";
+        public static String USER_DATA_VOTES = "Votes";
     }
 
     public static class IntentKeys {
         public static String BATHROOM_ID = "bathroom_id";
     }
+
 }

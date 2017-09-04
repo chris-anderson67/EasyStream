@@ -50,6 +50,9 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     public static String TAG = BathroomInfoActivity.class.getSimpleName();
+    private static int UPVOTE = 1;
+    private static int DOWNVOTE = -1;
+    private static int NO_VOTE = 0;
 
     private DatabaseReference bathroomReference;
     private DatabaseReference commentsReference;
@@ -60,6 +63,8 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     private Bathroom bathroom;
     private List<String> comments;
     private ArrayAdapter<String> commentsAdapter;
+
+    private int userVote = NO_VOTE;
 
     private TextView nameView;
     private TextView streetView;
@@ -75,6 +80,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
     private GoogleMap map;
     private SupportMapFragment locationMap;
+    private DatabaseReference userReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,15 +91,21 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         addListeners();
         comments = new ArrayList<>();
 
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+        if (currentUser == null) {
+            finish();
+            return;
+        }
+
         bathroomId = getIntent().getStringExtra(Constants.IntentKeys.BATHROOM_ID);
         bathroomReference = FirebaseDatabase.getInstance().getReference(getString(R.string.bathrooms_db_path)).child(bathroomId);
         commentsReference = FirebaseDatabase.getInstance().getReference(getString(R.string.comments_db_path)).child(bathroomId);
-
-        mAuth = FirebaseAuth.getInstance();
-        currentUser = mAuth.getCurrentUser();
+        userReference = FirebaseManager.getUserDataReference().child(currentUser.getUid());
 
         locationMap = (SupportMapFragment) getSupportFragmentManager().findFragmentById(bathroom_details_map);
         locationMap.getMapAsync(this);
+        Log.e(TAG, bathroomId);
     }
 
     @Override
@@ -101,6 +113,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         super.onPause();
         bathroomReference.removeEventListener(this);
         commentsReference.removeEventListener(this);
+        userReference.removeEventListener(this);
     }
 
     @Override
@@ -111,6 +124,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         }
         bathroomReference.addValueEventListener(this);
         commentsReference.addValueEventListener(this);
+        userReference.addValueEventListener(this);
     }
 
     private void getViews() {
@@ -137,15 +151,23 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         upvoteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(BathroomInfoActivity.this, "upvote", Toast.LENGTH_SHORT).show();
+                userVote = (userVote == UPVOTE) ? NO_VOTE : UPVOTE;
+                recordVote();
             }
         });
         downvoteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(BathroomInfoActivity.this, "downvote", Toast.LENGTH_SHORT).show();
+                userVote = (userVote == DOWNVOTE) ? NO_VOTE : DOWNVOTE;
+                recordVote();
             }
         });
+    }
+
+    private void recordVote() {
+        String userId = currentUser.getUid();
+        DatabaseReference ref = FirebaseManager.getUserDataReference().child(userId);
+        ref.child(Constants.DatabaseKeys.USER_DATA_VOTES).child(bathroomId).setValue(userVote);
     }
 
     private AlertDialog.Builder getCommentAlert() {
@@ -186,6 +208,14 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
             bathroom = dataSnapshot.getValue(Bathroom.class);
             populateBathroomData();
             populateMap();
+
+        // User data changed
+        } else if (dataSnapshot.getRef().toString().equals(userReference.toString())) {
+            DataSnapshot vote = dataSnapshot.child(Constants.DatabaseKeys.USER_DATA_VOTES).child(bathroomId);
+            if (vote.exists()) {
+                Toast.makeText(this, String.valueOf(vote.getValue()), Toast.LENGTH_SHORT).show();
+            }
+
         }
     }
 

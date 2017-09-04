@@ -56,6 +56,10 @@ public class FirebaseManager {
         return FirebaseDatabase.getInstance().getReference(DatabaseKeys.LOCATIONS_PATH);
     }
 
+    public static DatabaseReference getUserDataReference() {
+        return FirebaseDatabase.getInstance().getReference(DatabaseKeys.USER_DATA_PATH);
+    }
+
     public static DatabaseReference getCommentsTestReference() {
         return FirebaseDatabase.getInstance().getReference("Test" + DatabaseKeys.COMMENTS_PATH);
     }
