@@ -150,25 +150,22 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
     private AlertDialog.Builder getCommentAlert() {
         AlertDialog.Builder commentAlert = new AlertDialog.Builder(this);
+        final EditText input = new EditText(this);
+
         commentAlert.setTitle(R.string.new_comment);
         commentAlert.setMessage(R.string.new_comment_prompt);
-
-        final EditText input = new EditText(this);
         commentAlert.setView(input);
-
         commentAlert.setPositiveButton(R.string.submit, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 Toast.makeText(BathroomInfoActivity.this, "Submit clicked: " + input.getText().toString(), Toast.LENGTH_SHORT).show();
                 FirebaseManager.addComment(input.getText().toString(), bathroomId);
             }
         });
-
         commentAlert.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 Toast.makeText(BathroomInfoActivity.this, R.string.cancel_comment_confirmation, Toast.LENGTH_SHORT).show();
             }
         });
-
         return commentAlert;
     }
 
@@ -200,7 +197,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
     private void populateMap() {
         if (map != null) {
-            Marker marker = map.addMarker(new MarkerOptions()
+            map.addMarker(new MarkerOptions()
                     .position(new LatLng(bathroom.latitude, bathroom.longitude))
                     .icon(LocationHelper.getMarkerIcon(this, R.color.colorAccent)));
             map.moveCamera(CameraUpdateFactory
