@@ -2,13 +2,15 @@ package cs.tufts.edu.easy.activities;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.ColorRes;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -50,9 +52,9 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     public static String TAG = BathroomInfoActivity.class.getSimpleName();
-    private static int UPVOTE = 1;
-    private static int DOWNVOTE = -1;
-    private static int NO_VOTE = 0;
+    private static final long UPVOTE = 1;
+    private static final long DOWNVOTE = -1;
+    private static final long NO_VOTE = 0;
 
     private DatabaseReference bathroomReference;
     private DatabaseReference commentsReference;
@@ -62,9 +64,8 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     private String bathroomId;
     private Bathroom bathroom;
     private List<String> comments;
-    private ArrayAdapter<String> commentsAdapter;
 
-    private int userVote = NO_VOTE;
+    private long userVote = NO_VOTE;
 
     private TextView nameView;
     private TextView streetView;
@@ -213,10 +214,31 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         } else if (dataSnapshot.getRef().toString().equals(userReference.toString())) {
             DataSnapshot vote = dataSnapshot.child(Constants.DatabaseKeys.USER_DATA_VOTES).child(bathroomId);
             if (vote.exists()) {
-                Toast.makeText(this, String.valueOf(vote.getValue()), Toast.LENGTH_SHORT).show();
+                updateUiWithVote((long) vote.getValue());
             }
-
         }
+    }
+
+    private void updateUiWithVote(long vote) {
+        if (vote == UPVOTE) {
+            tint(upvoteButton, R.color.colorPrimary);
+            tint(downvoteButton, R.color.button_disabled);
+            Toast.makeText(this, String.valueOf(vote), Toast.LENGTH_SHORT).show();
+        } else if (vote == DOWNVOTE) {
+            tint(downvoteButton, R.color.colorPrimary);
+            tint(upvoteButton, R.color.button_disabled);
+            Toast.makeText(this, String.valueOf(vote), Toast.LENGTH_SHORT).show();
+        } else {
+            tint(upvoteButton, R.color.button_disabled);
+            tint(downvoteButton, R.color.button_disabled);
+            Toast.makeText(this, String.valueOf(vote), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void tint(ImageView view, @ColorRes int color) {
+//        view.setColorFilter(ContextCompat.getColor(this, color), PorterDuff.Mode.MULTIPLY);
+        DrawableCompat.setTint(view.getDrawable(), ContextCompat.getColor(this, color));
+//        view.setBackgroundColor(getResources().getColor(color));
     }
 
     @Override

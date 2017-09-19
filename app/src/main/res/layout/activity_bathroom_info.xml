@@ -84,6 +84,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="2dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
                             android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
 
                         <TextView
@@ -97,6 +99,8 @@
                             android:id="@+id/bathroom_details_downvote_button"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
                             android:padding="2dp"
                             android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
                     </LinearLayout>
