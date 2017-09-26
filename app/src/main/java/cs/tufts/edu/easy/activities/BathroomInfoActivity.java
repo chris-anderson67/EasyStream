@@ -180,7 +180,6 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         commentAlert.setView(input);
         commentAlert.setPositiveButton(R.string.submit, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                Toast.makeText(BathroomInfoActivity.this, "Submit clicked: " + input.getText().toString(), Toast.LENGTH_SHORT).show();
                 FirebaseManager.addComment(input.getText().toString(), bathroomId);
             }
         });
@@ -236,9 +235,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     }
 
     private void tint(ImageView view, @ColorRes int color) {
-//        view.setColorFilter(ContextCompat.getColor(this, color), PorterDuff.Mode.MULTIPLY);
         DrawableCompat.setTint(view.getDrawable(), ContextCompat.getColor(this, color));
-//        view.setBackgroundColor(getResources().getColor(color));
     }
 
     @Override
