@@ -11,7 +11,8 @@
 - Vote associated with user profiles
 - Comment on bathroom
 
-## TODO
+### Future possible features 
 - Add new bathroom
+
 
 <img src="/rez/easysplash.png"><img src="/rez/easymap.png"><img src="/rez/easydetails.png">
