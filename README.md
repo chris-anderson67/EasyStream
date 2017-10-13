@@ -14,5 +14,4 @@
 ## TODO
 - Add new bathroom
 
-<img src="/rez/easymap.png"><img src="/rez/easysplash.png">
-
+<img src="/rez/easysplash.png"><img src="/rez/easymap.png"><img src="/rez/easydetails.png">
