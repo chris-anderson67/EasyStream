@@ -1,17 +1,15 @@
 # Easy Stream: Find and Review Bathrooms
 ## An app to find a place to go.
 
-## Envisioned Capabilities:
-  - Review bathrooms, add these to remote database
-  - Find bathrooms near them
-  - Search for bathrooms near a location
- 
-## Current Build:
-  - Allows users to see currently reviewed bathrooms on map.
+### Implemented
+- Authenticate with google OAuth
+- See bathrooms on around current location
+- See details about bathrooms in styled details page
+- Search for location using google api
+- Ability to upvote or downvote bathroom once
+- Vote associated with user profiles
+- Comment on bathroom
 
-## For newest builds see alpha branch.
-
-![alt text][screenshot]
-
-[screenshot]: rez/welcome_screenshot.png "Screenshot"
+## TODO
+- Add new bathroom
 [logo]: rez/logo.png "Logo"
