@@ -9,44 +9,53 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="cs.tufts.edu.easy.MainActivity">
+    tools:context="cs.tufts.edu.easy.activities.WelcomeSplashActivity">
 
-    <Button
-        android:text="Find a Bathroom"
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/welcomeFindButton"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:text="Find / Rate a Bathroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome_find_bathroom_button"
         android:layout_marginBottom="15dp"
-        android:layout_above="@+id/welcomeRateButton"
+        android:layout_above="@+id/welcome_review_bathroom_button"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
+        android:visibility="invisible"
+        android:clickable="false"
         android:layout_alignParentStart="true"
         android:backgroundTint="@color/colorAccent"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:onClick="onClickFindButton" />
+        android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
     <Button
-        android:text="Rate a Bathroom"
+        android:text="Add a new Bathroom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/welcomeRateButton"
+        android:id="@+id/welcome_review_bathroom_button"
         android:layout_marginBottom="45dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:backgroundTint="@color/colorAccent"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:onClick="onClickRateButton" />
+        android:visibility="invisible"
+        android:backgroundTint="@color/button_disabled"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
     <TextView
         android:text="An app to help you find a place to go."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
-        android:layout_above="@+id/welcomeFindButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="51dp" />
+        android:layout_marginBottom="31dp"
+        android:layout_above="@+id/welcome_find_bathroom_button"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:text="Easy Stream"
@@ -71,24 +80,20 @@
         android:layout_alignParentEnd="true"
         android:textAlignment="center" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/textView3">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="15dp"
-            app:srcCompat="@drawable/logo_large"
-            android:id="@+id/imageView3" />
-    </FrameLayout>
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_large"
+        android:scaleType="fitCenter"
+        android:layout_above="@+id/textView3"
+        android:padding="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

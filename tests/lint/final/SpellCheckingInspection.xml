@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml</file>
+    <line>26</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'signin'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml</file>
+    <line>39</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'signin'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java</file>
+    <line>53</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'textview'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/GetData.java</file>
+    <line>27</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/GetData.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'melaniebelkin'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>62</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'WINDOWCLICKED'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>95</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'CURBATHROOM'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>114</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'JOBJECT'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>115</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'JOBJECT'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml</file>
+    <line>7</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'apiid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/release/res/values/google_maps_api.xml</file>
+    <line>14</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/release/res/values/google_maps_api.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'signup'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/fabric.properties</file>
+    <line>3</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/fabric.properties" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'fdcf'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>1</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'easystream'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>7</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'easystream'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>82</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'androidmapsapi'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>82</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'ulcs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>122</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'androidmapsapi'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>136</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>136</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>149</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>149</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>158</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>158</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>172</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'androidmapsapi'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>172</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'scpm'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>177</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>177</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>185</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'androidmapsapi'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>185</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'atsc'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>190</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>190</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>207</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>207</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>216</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>216</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>221</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'zzsg'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>224</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Clearcut'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>229</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>229</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>238</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Gservices'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>249</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>249</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>265</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>265</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>277</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'libcore'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>278</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'libcore'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>290</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>290</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>295</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'zzsg'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>303</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>303</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>319</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>319</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>326</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>330</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>330</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>330</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>331</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>331</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>331</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>332</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>332</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>332</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>333</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>333</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>333</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>334</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>334</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>334</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>335</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>335</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>335</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Crashlytics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>357</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>357</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>384</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>384</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>396</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>396</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>424</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>424</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>451</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'okhttp'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>452</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'okhttp'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>453</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'okhttp'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>454</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'okhttp'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>459</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Okio'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>461</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'okhttp'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>461</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'okio'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>462</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'okhttp'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>462</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'okio'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>463</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'okhttp'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>463</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'okio'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>470</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>470</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>495</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'androidmapsapi'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>495</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'ulcs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>504</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'androidmapsapi'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>504</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'appenvironment'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>509</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>509</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>522</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>522</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>531</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt</file>
+    <line>531</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/crashlytics/cs.tufts.edu.easystream_issue_1_crash_5818e9b7018300010a1547d18c069d12.txt" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Synchronizer'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintAllowBackup.xml</file>
+    <line>10</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintAllowBackup.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'autosyncapi'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/WeakerAccess.xml</file>
+    <line>248</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/WeakerAccess.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'appindexing'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/WeakerAccess.xml</file>
+    <line>260</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/WeakerAccess.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'appindexing'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/UnusedImport.xml</file>
+    <line>46</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/UnusedImport.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Snackbar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>9</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'signin'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>17</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'signin'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>25</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'apiid'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>33</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'signup'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>42</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'christopheranderson'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>51</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'christopheranderson'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>60</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'INFOWINDOWCLICKED'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>69</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'CURBATHROOM'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>78</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'JOBJECT'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>87</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'JOBJECT'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>96</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'txtview'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>105</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'melaniebelkin'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintGoogleAppIndexingWarning.xml</file>
+    <line>10</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintGoogleAppIndexingWarning.xml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'indexable'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java</file>
+    <line>9</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Review.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'christopheranderson'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java</file>
+    <line>10</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom.java" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'christopheranderson'</description>
+  </problem>
+</problems>
+

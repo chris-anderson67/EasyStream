@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "279800936704",
+    "firebase_url": "https://easystream-73d8b.firebaseio.com",
+    "project_id": "easystream-73d8b",
+    "storage_bucket": "easystream-73d8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279800936704:android:8e9639e9f0daeda3",
+        "android_client_info": {
+          "package_name": "cs.tufts.edu.easy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279800936704-kvfav7piu4d31kadbsiupa3s68e4quhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGm_9H1PenQq08hOMFNSLRnk_M8Z800Ks"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279800936704:android:d529589b79be466c",
+        "android_client_info": {
+          "package_name": "cs.tufts.edu.easystream"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279800936704-kb8c2qq1bc432h4gto8qsq4elffst9e2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cs.tufts.edu.easystream",
+            "certificate_hash": "5edc69e0e1a8df9dbb45f134fdbc10cf0e8cd25f"
+          }
+        },
+        {
+          "client_id": "279800936704-kvfav7piu4d31kadbsiupa3s68e4quhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGm_9H1PenQq08hOMFNSLRnk_M8Z800Ks"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279800936704-kvfav7piu4d31kadbsiupa3s68e4quhb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,44 @@
+TEST SUBJECT A
+1. What do you think this app does?
+I think the app helps you find the nearest bathroom.
+2. What do you dislike about this app?
+nothing
+3. What changes would make you want to use this app? 
+I think its fine as is.
+4. Is there anything else we should know? 
+Nope
+
+TEST SUBJECT B
+1. What do you think this app does?
+Tells me where bathroom near to me is 
+2. What do you dislike about this app?
+Nothing!
+3. What changes would make you want to use this app? 
+None
+4. Is there anything else we should know? 
+No!
+
+TEST SUBJECT C
+1. What do you think this app does?
+It seems like this app is supposed to help you find a bathroom.
+2. What do you dislike about this app?
+Nothing in particular, but I don't really know what it does just from the name.
+3. What confuses you about the app?
+nothing really!
+3. What changes would make you want to use this app? 
+make it more aesthetically pleasing.
+4. Is there anything else we should know? 
+nope!
+
+TEST SUBJECT D
+1. What do you think this app does?
+An app to help me find a bathroom
+2. What do you dislike about this app?
+I dislike that the info-window does not tell me the rating of the bathroom that I'm clicking on.
+3. What confuses you about the app?
+Why is the icon an unlocked lock and not a bathroom symbol or something more relevant?
+3. What changes would make you want to use this app? 
+I would want a marker for the closest bathroom to my geolocation
+and a marker for the most highly rated bathroom near my currentLocation
+4. Is there anything else we should know? 
+I love the simplicity of it. But in a way, it almost feels too simple...

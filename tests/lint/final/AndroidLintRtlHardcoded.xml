@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml</file>
+    <line>21</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentRight&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentEnd&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 24&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml</file>
+    <line>23</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using left/right instead of start/end attributes</problem_class>
+    <hints />
+    <description>&lt;html&gt;Redundant attribute &lt;code&gt;layout_alignParentLeft&lt;/code&gt;; already defining &lt;code&gt;layout_alignParentStart&lt;/code&gt; with &lt;code&gt;targetSdkVersion&lt;/code&gt; 24&lt;/html&gt;</description>
+  </problem>
+</problems>
+

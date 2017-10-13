@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/build.gradle</file>
+    <line>7</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/build.gradle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Gradle Dynamic Version</problem_class>
+    <hints />
+    <description>&lt;html&gt;Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (io.fabric.tools:gradle:1.+)&lt;/html&gt;</description>
+  </problem>
+</problems>
+

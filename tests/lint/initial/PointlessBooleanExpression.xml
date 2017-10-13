@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/GetData.java</file>
+    <line>39</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.GetData GetData(boolean details)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Pointless boolean expression</problem_class>
+    <description>&lt;code&gt;details == false&lt;/code&gt; can be simplified to '!details' #loc</description>
+  </problem>
+</problems>
+

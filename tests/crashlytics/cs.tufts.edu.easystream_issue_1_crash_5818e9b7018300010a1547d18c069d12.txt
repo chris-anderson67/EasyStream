@@ -1,0 +1,534 @@
+# Crashlytics - plaintext stacktrace downloaded by Christopher Anderson at Tue, 01 Nov 2016 19:28:38 GMT
+# URL: https://www.fabric.io/easystreamers-projects/android/apps/cs.tufts.edu.easystream/issues/5818ea490aeb16625b5f31ef/sessions/5818e9b7018300010a1547d18c069d12
+# Organization: EasyStreamer's Projects
+# Platform: android
+# Application: Easy Stream
+# Version: 1.0 (1)
+# Bundle Identifier: cs.tufts.edu.easystream
+# Issue #: 1
+# Issue ID: 5818ea490aeb16625b5f31ef
+# Session ID: 5818e9b7018300010a1547d18c069d12
+# Date: 2016-11-01T19:17:28Z
+# OS Version: 7.0
+# Device: Android SDK built for x86
+# RAM Free: 77.7%
+# Disk Free: 69.9%
+
+#0. Crashed: main: 0 0 0x0000000000000000
+       at cs.tufts.edu.easy.activities.BathroomMapsActivity.onInfoWindowClick(MapsActivity.java:66)
+       at com.google.android.gms.maps.GoogleMap$4.zze(Unknown Source)
+       at com.google.android.gms.maps.internal.zzm$zza.onTransact(Unknown Source)
+       at android.os.Binder.transact(Binder.java:499)
+       at vq.a(:com.google.android.gms.DynamiteModulesB:82)
+       at maps.ad.T.c(Unknown Source)
+       at maps.D.c.b(Unknown Source)
+       at maps.V.n.l_(Unknown Source)
+       at maps.V.n.a(Unknown Source)
+       at maps.V.u.d(Unknown Source)
+       at maps.V.P.onSingleTapConfirmed(Unknown Source)
+       at maps.z.e$b.onSingleTapConfirmed(Unknown Source)
+       at maps.z.c$a.handleMessage(Unknown Source)
+       at android.os.Handler.dispatchMessage(Handler.java:102)
+       at android.os.Looper.loop(Looper.java:154)
+       at android.app.ActivityThread.main(ActivityThread.java:6077)
+       at java.lang.reflect.Method.invoke(Method.java)
+       at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:865)
+       at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:755)
+
+--
+
+Fatal Exception: java.lang.NullPointerException: Attempt to invoke virtual method 'int java.lang.Integer.intValue()' on a null object reference
+       at cs.tufts.edu.easy.activities.BathroomMapsActivity.onInfoWindowClick(MapsActivity.java:66)
+       at com.google.android.gms.maps.GoogleMap$4.zze(Unknown Source)
+       at com.google.android.gms.maps.internal.zzm$zza.onTransact(Unknown Source)
+       at android.os.Binder.transact(Binder.java:499)
+       at vq.a(:com.google.android.gms.DynamiteModulesB:82)
+       at maps.ad.T.c(Unknown Source)
+       at maps.D.c.b(Unknown Source)
+       at maps.V.n.l_(Unknown Source)
+       at maps.V.n.a(Unknown Source)
+       at maps.V.u.d(Unknown Source)
+       at maps.V.P.onSingleTapConfirmed(Unknown Source)
+       at maps.z.e$b.onSingleTapConfirmed(Unknown Source)
+       at maps.z.c$a.handleMessage(Unknown Source)
+       at android.os.Handler.dispatchMessage(Handler.java:102)
+       at android.os.Looper.loop(Looper.java:154)
+       at android.app.ActivityThread.main(ActivityThread.java:6077)
+       at java.lang.reflect.Method.invoke(Method.java)
+       at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:865)
+       at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:755)
+
+#0. Crashed: main: 0 0 0x0000000000000000
+       at cs.tufts.edu.easy.activities.BathroomMapsActivity.onInfoWindowClick(MapsActivity.java:66)
+       at com.google.android.gms.maps.GoogleMap$4.zze(Unknown Source)
+       at com.google.android.gms.maps.internal.zzm$zza.onTransact(Unknown Source)
+       at android.os.Binder.transact(Binder.java:499)
+       at vq.a(:com.google.android.gms.DynamiteModulesB:82)
+       at maps.ad.T.c(Unknown Source)
+       at maps.D.c.b(Unknown Source)
+       at maps.V.n.l_(Unknown Source)
+       at maps.V.n.a(Unknown Source)
+       at maps.V.u.d(Unknown Source)
+       at maps.V.P.onSingleTapConfirmed(Unknown Source)
+       at maps.z.e$b.onSingleTapConfirmed(Unknown Source)
+       at maps.z.c$a.handleMessage(Unknown Source)
+       at android.os.Handler.dispatchMessage(Handler.java:102)
+       at android.os.Looper.loop(Looper.java:154)
+       at android.app.ActivityThread.main(ActivityThread.java:6077)
+       at java.lang.reflect.Method.invoke(Method.java)
+       at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:865)
+       at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:755)
+
+#1. androidmapsapi-ulcs-1
+       at java.lang.Thread.sleep(Thread.java)
+       at java.lang.Thread.sleep(Thread.java:371)
+       at java.lang.Thread.sleep(Thread.java:313)
+       at maps.ad.av.run(Unknown Source)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#2. Thread-11
+       at android.os.MessageQueue.nativePollOnce(MessageQueue.java)
+       at android.os.MessageQueue.next(MessageQueue.java:323)
+       at android.os.Looper.loop(Looper.java:136)
+       at maps.O.b.run(Unknown Source)
+       at maps.O.m.run(Unknown Source)
+
+#3. RenderDrive
+       at java.lang.Thread.sleep(Thread.java)
+       at java.lang.Thread.sleep(Thread.java:371)
+       at java.lang.Thread.sleep(Thread.java:313)
+       at maps.V.m$a.run(Unknown Source)
+
+#4. GLThread 292
+       at java.lang.Object.wait(Object.java)
+       at maps.V.y$f.f(Unknown Source)
+       at maps.V.y$f.run(Unknown Source)
+
+#5. Thread-16
+       at android.os.MessageQueue.nativePollOnce(MessageQueue.java)
+       at android.os.MessageQueue.next(MessageQueue.java:323)
+       at android.os.Looper.loop(Looper.java:136)
+       at maps.O.b.run(Unknown Source)
+       at maps.O.m.run(Unknown Source)
+
+#6. Thread-14
+       at android.os.MessageQueue.nativePollOnce(MessageQueue.java)
+       at android.os.MessageQueue.next(MessageQueue.java:323)
+       at android.os.Looper.loop(Looper.java:136)
+       at maps.O.b.run(Unknown Source)
+
+#7. androidmapsapi-ula-1
+       at java.lang.Thread.sleep(Thread.java)
+       at java.lang.Thread.sleep(Thread.java:371)
+       at java.lang.Thread.sleep(Thread.java:313)
+       at maps.ad.at.run(Unknown Source)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#8. GAC_Executor[0]
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:413)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at qf.run(:com.google.android.gms.DynamiteModulesB:17)
+       at java.lang.Thread.run(Thread.java:761)
+
+#9. VolleyNetworkDispatcher
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:519)
+       at ff.run(:com.google.android.gms.DynamiteModulesB:91)
+
+#10. GAC_Executor[1]
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:413)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at qf.run(:com.google.android.gms.DynamiteModulesB:17)
+       at java.lang.Thread.run(Thread.java:761)
+
+#11. CacheCommitter:Thread-10
+       at java.lang.Thread.sleep(Thread.java)
+       at java.lang.Thread.sleep(Thread.java:371)
+       at java.lang.Thread.sleep(Thread.java:313)
+       at maps.O.b$b.run(Unknown Source)
+
+#12. androidmapsapi-scpm-1
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:201)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2077)
+       at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1103)
+       at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1084)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#13. androidmapsapi-atsc-1
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:413)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#14. HeapTaskDaemon
+       at dalvik.system.VMRuntime.runHeapTasks(VMRuntime.java)
+       at java.lang.Daemons$HeapTaskDaemon.run(Daemons.java:433)
+       at java.lang.Thread.run(Thread.java:761)
+
+#15. VolleyNetworkDispatcher
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:519)
+       at ff.run(:com.google.android.gms.DynamiteModulesB:91)
+
+#16. GAC_Executor[1]
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:413)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at com.google.android.gms.internal.zzsg.run(Unknown Source)
+       at java.lang.Thread.run(Thread.java:761)
+
+#17. ClearcutLoggerApiImpl
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1091)
+       at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1084)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at hq.run(:com.google.android.gms.DynamiteModulesB:124)
+       at java.lang.Thread.run(Thread.java:761)
+
+#18. Gservices
+       at android.os.MessageQueue.nativePollOnce(MessageQueue.java)
+       at android.os.MessageQueue.next(MessageQueue.java:323)
+       at android.os.Looper.loop(Looper.java:136)
+       at aee.run(:com.google.android.gms.DynamiteModulesB:96)
+
+#19. Queue
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:519)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.performOperation(DependencyPriorityBlockingQueue.java:197)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.get(DependencyPriorityBlockingQueue.java:236)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.take(DependencyPriorityBlockingQueue.java:65)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.take(DependencyPriorityBlockingQueue.java:46)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#20. Queue
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:519)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.performOperation(DependencyPriorityBlockingQueue.java:197)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.get(DependencyPriorityBlockingQueue.java:236)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.take(DependencyPriorityBlockingQueue.java:65)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.take(DependencyPriorityBlockingQueue.java:46)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#21. Thread-3
+       at libcore.io.Posix.accept(Posix.java)
+       at libcore.io.BlockGuardOs.accept(BlockGuardOs.java:64)
+       at android.system.Os.accept(Os.java:43)
+       at android.net.LocalSocketImpl.accept(LocalSocketImpl.java:336)
+       at android.net.LocalServerSocket.accept(LocalServerSocket.java:90)
+       at com.android.tools.fd.runtime.Server$SocketServerThread.run(Server.java:150)
+       at java.lang.Thread.run(Thread.java:761)
+
+#22. GAC_Executor[0]
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:413)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at com.google.android.gms.internal.zzsg.run(Unknown Source)
+       at java.lang.Thread.run(Thread.java:761)
+
+#23. Queue
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:519)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.performOperation(DependencyPriorityBlockingQueue.java:197)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.get(DependencyPriorityBlockingQueue.java:236)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.take(DependencyPriorityBlockingQueue.java:65)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.take(DependencyPriorityBlockingQueue.java:46)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#24. pool-2-thread-1
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:413)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#25. Crashlytics Exception Handler1
+       at dalvik.system.VMStack.getThreadStackTrace(VMStack.java)
+       at java.lang.Thread.getStackTrace(Thread.java:1566)
+       at java.lang.Thread.getAllStackTraces(Thread.java:1616)
+       at com.crashlytics.android.core.CrashlyticsUncaughtExceptionHandler.writeSessionEvent(CrashlyticsUncaughtExceptionHandler.java:1078)
+       at com.crashlytics.android.core.CrashlyticsUncaughtExceptionHandler.writeFatal(CrashlyticsUncaughtExceptionHandler.java:812)
+       at com.crashlytics.android.core.CrashlyticsUncaughtExceptionHandler.handleUncaughtException(CrashlyticsUncaughtExceptionHandler.java:278)
+       at com.crashlytics.android.core.CrashlyticsUncaughtExceptionHandler.access$100(CrashlyticsUncaughtExceptionHandler.java:55)
+       at com.crashlytics.android.core.CrashlyticsUncaughtExceptionHandler$5.call(CrashlyticsUncaughtExceptionHandler.java:254)
+       at com.crashlytics.android.core.CrashlyticsUncaughtExceptionHandler$5.call(CrashlyticsUncaughtExceptionHandler.java:251)
+       at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at io.fabric.sdk.android.services.common.ExecutorUtils$1$1.onRun(ExecutorUtils.java:75)
+       at io.fabric.sdk.android.services.common.BackgroundPriorityRunnable.run(BackgroundPriorityRunnable.java:30)
+       at java.lang.Thread.run(Thread.java:761)
+
+#26. FinalizerWatchdogDaemon
+       at java.lang.Thread.sleep(Thread.java)
+       at java.lang.Thread.sleep(Thread.java:371)
+       at java.lang.Thread.sleep(Thread.java:313)
+       at java.lang.Daemons$FinalizerWatchdogDaemon.sleepFor(Daemons.java:314)
+       at java.lang.Daemons$FinalizerWatchdogDaemon.waitForFinalization(Daemons.java:336)
+       at java.lang.Daemons$FinalizerWatchdogDaemon.run(Daemons.java:253)
+       at java.lang.Thread.run(Thread.java:761)
+
+#27. Queue
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:519)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.performOperation(DependencyPriorityBlockingQueue.java:197)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.get(DependencyPriorityBlockingQueue.java:236)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.take(DependencyPriorityBlockingQueue.java:65)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.take(DependencyPriorityBlockingQueue.java:46)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#28. ReferenceQueueDaemon
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Daemons$ReferenceQueueDaemon.run(Daemons.java:150)
+       at java.lang.Thread.run(Thread.java:761)
+
+#29. Thread-12
+       at android.os.MessageQueue.nativePollOnce(MessageQueue.java)
+       at android.os.MessageQueue.next(MessageQueue.java:323)
+       at android.os.Looper.loop(Looper.java:136)
+       at maps.O.b.run(Unknown Source)
+
+#30. AsyncTask #4
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:201)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2077)
+       at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:438)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1057)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#31. Answers Events Handler1
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1091)
+       at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1084)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at io.fabric.sdk.android.services.common.ExecutorUtils$1$1.onRun(ExecutorUtils.java:75)
+       at io.fabric.sdk.android.services.common.BackgroundPriorityRunnable.run(BackgroundPriorityRunnable.java:30)
+       at java.lang.Thread.run(Thread.java:761)
+
+#32. process reaper
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:201)
+       at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:432)
+       at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:333)
+       at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:908)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1057)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#33. Queue
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:519)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.performOperation(DependencyPriorityBlockingQueue.java:197)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.get(DependencyPriorityBlockingQueue.java:236)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.take(DependencyPriorityBlockingQueue.java:65)
+       at io.fabric.sdk.android.services.concurrency.DependencyPriorityBlockingQueue.take(DependencyPriorityBlockingQueue.java:46)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#34. Thread-15
+       at android.os.MessageQueue.nativePollOnce(MessageQueue.java)
+       at android.os.MessageQueue.next(MessageQueue.java:323)
+       at android.os.Looper.loop(Looper.java:136)
+       at maps.O.b.run(Unknown Source)
+       at maps.O.m.run(Unknown Source)
+
+#35. Thread-13
+       at android.os.MessageQueue.nativePollOnce(MessageQueue.java)
+       at android.os.MessageQueue.next(MessageQueue.java:323)
+       at android.os.Looper.loop(Looper.java:136)
+       at maps.O.b.run(Unknown Source)
+       at maps.O.m.run(Unknown Source)
+
+#36. OkHttp ConnectionPool
+       at java.lang.Object.wait(Object.java)
+       at com.android.okhttp.ConnectionPool.performCleanup(ConnectionPool.java:305)
+       at com.android.okhttp.ConnectionPool.runCleanupUntilPoolIsEmpty(ConnectionPool.java:242)
+       at com.android.okhttp.ConnectionPool.-wrap0(ConnectionPool.java)
+       at com.android.okhttp.ConnectionPool$1.run(ConnectionPool.java:97)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#37. Okio Watchdog
+       at java.lang.Object.wait(Object.java)
+       at com.android.okhttp.okio.AsyncTimeout.awaitTimeout(AsyncTimeout.java:323)
+       at com.android.okhttp.okio.AsyncTimeout.-wrap0(AsyncTimeout.java)
+       at com.android.okhttp.okio.AsyncTimeout$Watchdog.run(AsyncTimeout.java:286)
+
+#38. VolleyCacheDispatcher
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:519)
+       at ez.run(:com.google.android.gms.DynamiteModulesB:91)
+
+#39. FinalizerDaemon
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Object.wait(Object.java:407)
+       at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:188)
+       at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:209)
+       at java.lang.Daemons$FinalizerDaemon.run(Daemons.java:204)
+       at java.lang.Thread.run(Thread.java:761)
+
+#40. Thread-10
+       at android.os.MessageQueue.nativePollOnce(MessageQueue.java)
+       at android.os.MessageQueue.next(MessageQueue.java:323)
+       at android.os.Looper.loop(Looper.java:136)
+       at maps.O.b.run(Unknown Source)
+       at maps.O.m.run(Unknown Source)
+
+#41. ibs
+       at android.os.MessageQueue.nativePollOnce(MessageQueue.java)
+       at android.os.MessageQueue.next(MessageQueue.java:323)
+       at android.os.Looper.loop(Looper.java:136)
+       at maps.O.d.run(Unknown Source)
+
+#42. androidmapsapi-ulcs-1
+       at java.lang.Thread.sleep(Thread.java)
+       at java.lang.Thread.sleep(Thread.java:371)
+       at java.lang.Thread.sleep(Thread.java:313)
+       at maps.ad.av.run(Unknown Source)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#43. androidmapsapi-appenvironment-1
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:201)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2077)
+       at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1103)
+       at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1084)
+       at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1058)
+       at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1118)
+       at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607)
+       at java.lang.Thread.run(Thread.java:761)
+
+#44. VolleyNetworkDispatcher
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:519)
+       at ff.run(:com.google.android.gms.DynamiteModulesB:91)
+
+#45. VolleyNetworkDispatcher
+       at java.lang.Object.wait(Object.java)
+       at java.lang.Thread.parkFor$(Thread.java:2127)
+       at sun.misc.Unsafe.park(Unsafe.java:325)
+       at java.util.concurrent.locks.LockSupport.park(LockSupport.java:161)
+       at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2035)
+       at java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:519)
+       at ff.run(:com.google.android.gms.DynamiteModulesB:91)
+

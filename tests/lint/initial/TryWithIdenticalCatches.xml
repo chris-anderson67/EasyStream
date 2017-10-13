@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/Bathroom_Details.java</file>
+    <line>43</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.activities.BathroomDetailsActivity void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Identical 'catch' branches in 'try' statement</problem_class>
+    <description>'catch' branch identical to 'InterruptedException' branch #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MapsActivity.java</file>
+    <line>84</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.activities.BathroomMapsActivity void onMapReady(com.google.android.gms.maps.GoogleMap googleMap)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Identical 'catch' branches in 'try' statement</problem_class>
+    <description>'catch' branch identical to 'InterruptedException' branch #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/cs/tufts/edu/easy/MainActivity.java</file>
+    <line>56</line>
+    <module>app</module>
+    <package>cs.tufts.edu.easy</package>
+    <entry_point TYPE="method" FQNAME="cs.tufts.edu.easy.activities.WelcomeSplashActivity void onClickRateButton(android.view.View view)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Identical 'catch' branches in 'try' statement</problem_class>
+    <description>'catch' branch identical to 'InterruptedException' branch #loc</description>
+  </problem>
+</problems>
+

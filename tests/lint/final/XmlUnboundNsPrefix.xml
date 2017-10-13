@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/release/res/values/google_maps_api.xml</file>
+    <line>1</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/release/res/values/google_maps_api.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/release/res/values/google_maps_api.xml</file>
+    <line>22</line>
+    <module>app</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/release/res/values/google_maps_api.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintInefficientWeight.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintInefficientWeight.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintInefficientWeight.xml</file>
+    <line>12</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintInefficientWeight.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/UnusedProperty.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/UnusedProperty.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/UnusedProperty.xml</file>
+    <line>11</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/UnusedProperty.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintAllowBackup.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintAllowBackup.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintAllowBackup.xml</file>
+    <line>12</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintAllowBackup.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintHardcodedText.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintHardcodedText.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintHardcodedText.xml</file>
+    <line>66</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintHardcodedText.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/WeakerAccess.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/WeakerAccess.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/WeakerAccess.xml</file>
+    <line>303</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/WeakerAccess.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/PointlessBooleanExpression.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/PointlessBooleanExpression.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/PointlessBooleanExpression.xml</file>
+    <line>12</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/PointlessBooleanExpression.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/FieldCanBeLocal.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/FieldCanBeLocal.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/FieldCanBeLocal.xml</file>
+    <line>12</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/FieldCanBeLocal.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/unused.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/unused.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/unused.xml</file>
+    <line>224</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/unused.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUselessLeaf.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUselessLeaf.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUselessLeaf.xml</file>
+    <line>12</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUselessLeaf.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/XmlUnboundNsPrefix.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/XmlUnboundNsPrefix.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/XmlUnboundNsPrefix.xml</file>
+    <line>19</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/XmlUnboundNsPrefix.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUseSparseArrays.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUseSparseArrays.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUseSparseArrays.xml</file>
+    <line>13</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUseSparseArrays.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUnusedResources.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUnusedResources.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUnusedResources.xml</file>
+    <line>12</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUnusedResources.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/CanBeFinal.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/CanBeFinal.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/CanBeFinal.xml</file>
+    <line>13</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/CanBeFinal.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintObsoleteLayoutParam.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintObsoleteLayoutParam.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintObsoleteLayoutParam.xml</file>
+    <line>48</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintObsoleteLayoutParam.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintGradleDependency.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintGradleDependency.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintGradleDependency.xml</file>
+    <line>39</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintGradleDependency.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/UnusedImport.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/UnusedImport.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/UnusedImport.xml</file>
+    <line>102</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/UnusedImport.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml</file>
+    <line>107</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/SpellCheckingInspection.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/TryWithIdenticalCatches.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/TryWithIdenticalCatches.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/TryWithIdenticalCatches.xml</file>
+    <line>30</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/TryWithIdenticalCatches.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUnusedAttribute.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUnusedAttribute.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUnusedAttribute.xml</file>
+    <line>21</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintUnusedAttribute.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintContentDescription.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintContentDescription.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintContentDescription.xml</file>
+    <line>12</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintContentDescription.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/DefaultFileTemplate.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/DefaultFileTemplate.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/DefaultFileTemplate.xml</file>
+    <line>30</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/DefaultFileTemplate.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintIconLocation.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintIconLocation.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintIconLocation.xml</file>
+    <line>12</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintIconLocation.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/UnusedParameters.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/UnusedParameters.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/UnusedParameters.xml</file>
+    <line>27</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/UnusedParameters.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/GroovyMissingReturnStatement.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/GroovyMissingReturnStatement.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/GroovyMissingReturnStatement.xml</file>
+    <line>11</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/GroovyMissingReturnStatement.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/ConstantConditions.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/ConstantConditions.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/ConstantConditions.xml</file>
+    <line>30</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/ConstantConditions.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintRtlHardcoded.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintRtlHardcoded.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintRtlHardcoded.xml</file>
+    <line>21</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintRtlHardcoded.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintGoogleAppIndexingWarning.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintGoogleAppIndexingWarning.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/AndroidLintGoogleAppIndexingWarning.xml</file>
+    <line>12</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/AndroidLintGoogleAppIndexingWarning.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/Convert2Diamond.xml</file>
+    <line>2</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/Convert2Diamond.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/tests/lint/initial/Convert2Diamond.xml</file>
+    <line>21</line>
+    <module>Easy</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/lint/initial/Convert2Diamond.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+</problems>
+

@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">Easy Stream</string>
     <string name="title_activity_maps">Map</string>
+    <string name="application_title">EasyStream</string>
+    <string name="maps_intent_latitude">current_location_latitude</string>
+    <string name="maps_intent_longitude">current_location_longitude</string>
+    <string name="bathrooms_db_path">Bathrooms/</string>
+    <string name="comments_db_path">Comments/</string>
+    <string name="handicap_accessible">Handicap Accessible</string>
+    <string name="unisex">Unisex</string>
+    <string name="changing_table">Changing Table</string>
+    <string name="add_comment">Add Comment</string>
+    <string name="new_comment">New Comment</string>
+    <string name="new_comment_prompt">Tell us what you thought!</string>
+    <string name="cancel_comment_confirmation">Are you sure you don\'t want to comment?</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="use_current_location">Use Current Location</string>
+    <string name="location">Location</string>
+    <string name="comments">Comments</string>
 </resources>
