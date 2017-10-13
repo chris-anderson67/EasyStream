@@ -1,4 +1,4 @@
-# Easy Stream: Find and Review Bathrooms
+# Easy Stream: Find and Review Public Bathrooms
 
 ### Features
 - Authenticate with google OAuth
@@ -13,4 +13,7 @@
 
 ## TODO
 - Add new bathroom
-[logo]: rez/logo.png "Logo"
+
+<img src="/rez/easymap.png">
+<img src="/rez/easymap.png">
+
