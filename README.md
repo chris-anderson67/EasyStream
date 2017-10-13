@@ -12,4 +12,6 @@
 
 ## TODO
 - Add new bathroom
-[logo]: rez/logo.png "Logo"
+
+<img src="/rez/easymap.png"><img src="/rez/easysplash.png">
+
