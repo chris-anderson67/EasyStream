@@ -1,8 +1,9 @@
-# Easy Stream: Find and Review Bathrooms
-## An app to find a place to go.
+# Easy Stream: Find and Review Public Bathrooms
 
-### Implemented
+### Features
 - Authenticate with google OAuth
+- Connected to Firebase Database
+- Database populated with 25,000+ bathroom entries
 - See bathrooms on around current location
 - See details about bathrooms in styled details page
 - Search for location using google api
@@ -12,4 +13,7 @@
 
 ## TODO
 - Add new bathroom
-[logo]: rez/logo.png "Logo"
+
+<img src="/rez/easymap.png">
+<img src="/rez/easymap.png">
+
