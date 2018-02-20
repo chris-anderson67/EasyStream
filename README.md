@@ -1,4 +1,5 @@
 # Easy Stream: Find and Review Public Bathrooms
+<img src="/rez/easysplash.png"><img src="/rez/easymap.png"><img src="/rez/easydetails.png">
 
 ### Features
 - Authenticate with google OAuth
@@ -15,4 +16,4 @@
 - Add new bathroom
 
 
-<img src="/rez/easysplash.png"><img src="/rez/easymap.png"><img src="/rez/easydetails.png">
+
