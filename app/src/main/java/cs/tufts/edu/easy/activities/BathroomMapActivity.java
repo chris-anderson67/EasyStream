@@ -74,6 +74,8 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
     private GeoQuery geoQuery;
     private ArrayList<Marker> markers = new ArrayList<>(MAX_MARKERS);
 
+    private boolean animatedCurrentLocation = false;
+
     private FloatingActionButton searchFab;
 
     @Override
@@ -194,7 +196,6 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
         });
     }
 
-
     @Override
     public boolean onMarkerClick(final Marker marker) {
         if (marker == null) {
@@ -211,9 +212,7 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
                     }
 
                     @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
+                    public void onCancelled(DatabaseError databaseError) {}
                 });
         return false;
     }
@@ -238,11 +237,14 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
     @Override
     public void onLocationChanged(Location location) {
         this.currentLocation = new GeoLocation(location.getLatitude(), location.getLongitude());
-        CameraPosition newPosition = new CameraPosition.Builder()
-                .target(new LatLng(location.getLatitude(), location.getLongitude()))
-                .zoom(DEFAULT_ZOOM_LEVEL)
-                .build();
-        map.animateCamera(CameraUpdateFactory.newCameraPosition(newPosition));
+        if (!animatedCurrentLocation) {
+            CameraPosition newPosition = new CameraPosition.Builder()
+                    .target(new LatLng(location.getLatitude(), location.getLongitude()))
+                    .zoom(DEFAULT_ZOOM_LEVEL)
+                    .build();
+            map.animateCamera(CameraUpdateFactory.newCameraPosition(newPosition));
+            animatedCurrentLocation = true;
+        }
     }
 
     @Override
