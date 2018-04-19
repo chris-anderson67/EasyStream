@@ -18,4 +18,10 @@
     <string name="use_current_location">Use Current Location</string>
     <string name="location">Location</string>
     <string name="comments">Comments</string>
+    <string name="loading">...</string>
+    <string name="find_or_rate_a_toilet">Find or Rate a Toilet</string>
+    <string name="an_app_to_help_you_find_a_place_to_go">An app to help you find a place to go.</string>
+    <string name="easy_stream">Easy Stream</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="description">An app to help you find a place to go.</string>
 </resources>

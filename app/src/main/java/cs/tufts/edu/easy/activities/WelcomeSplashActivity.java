@@ -44,7 +44,6 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
     private GoogleApiClient mGoogleApiClient;
 
     private Button findButton;
-    private Button reviewButton;
     private SignInButton signInButton;
     private FirebaseAuth mAuth;
 
@@ -56,7 +55,6 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_main);
         getViews();
         findButton.setOnClickListener(this);
-        reviewButton.setOnClickListener(this);
         signInButton.setOnClickListener(this);
 
 
@@ -78,7 +76,6 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
 
     private void getViews() {
         findButton = (Button) findViewById(R.id.welcome_find_bathroom_button);
-        reviewButton = (Button) findViewById(R.id.welcome_review_bathroom_button);
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
     }
 
@@ -126,17 +123,10 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
             signInButton.setVisibility(View.INVISIBLE);
             signInButton.setClickable(false);
 
-            reviewButton.setVisibility(View.VISIBLE);
-            reviewButton.setClickable(true);
 
             findButton.setVisibility(View.VISIBLE);
-            reviewButton.setClickable(true);
         } else {
-            reviewButton.setVisibility(View.INVISIBLE);
-            reviewButton.setClickable(false);
-
             findButton.setVisibility(View.INVISIBLE);
-            reviewButton.setClickable(false);
 
             signInButton.setVisibility(View.VISIBLE);
             signInButton.setClickable(true);
@@ -167,14 +157,7 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
         } else if (view == findViewById(R.id.welcome_find_bathroom_button)) {
             Intent i = new Intent(WelcomeSplashActivity.this, BathroomMapActivity.class);
             WelcomeSplashActivity.this.startActivity(i);
-        } else if (view == findViewById(R.id.welcome_review_bathroom_button)) {
-            Toast.makeText(this, "Coming soon!", Toast.LENGTH_SHORT).show();
-//            Intent launchRateIntent = new Intent(WelcomeSplashActivity.this, AddBathroomActivity.class);
-//            launchRateIntent.putExtra(getString(R.string.maps_intent_latitude), currentLocation.getLatitude());
-//            launchRateIntent.putExtra(getString(R.string.maps_intent_longitude), currentLocation.getLongitude());
-//            WelcomeSplashActivity.this.startActivity(launchRateIntent);
         }
-
     }
 
     private boolean hasLocationPermission() {

@@ -213,7 +213,7 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
             public void onKeyEntered(String key, GeoLocation location) {
                 Marker marker = map.addMarker(new MarkerOptions()
                         .position(new LatLng(location.latitude, location.longitude))
-                        .title(key)
+                        .title(getString(R.string.loading))
                         .icon(LocationHelper.getMarkerIcon(BathroomMapActivity.this, R.color.colorAccent)));
                 marker.setTag(key);
 
