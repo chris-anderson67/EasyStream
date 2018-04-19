@@ -59,6 +59,8 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
     private static final int MAX_LOAD_ZOOM_RADIUS = 12; // km
     private static final int DEFAULT_ZOOM_LEVEL = 15;
     private static final int PLACE_AUTOCOMPLETE_REQUEST_CODE = 10009;
+    private static final double DEFAULT_LATITUDE = 40.749213;
+    private static final double DEFAULT_LONGITUDE = -73.986392;
     private static final GeoLocation FALLBACK_LOCATION = new GeoLocation(0,0);
     private static final String TAG = BathroomMapActivity.class.getSimpleName();
 
@@ -77,6 +79,7 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
     private boolean animatedCurrentLocation = false;
 
     private FloatingActionButton searchFab;
+    private FloatingActionButton newBathroomFab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +90,28 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        setupViews();
+
+        setupFireBase();
+
+        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+    }
+
+    private void setupViews() {
         searchFab = (FloatingActionButton) findViewById(R.id.search_fab);
+        newBathroomFab = (FloatingActionButton) findViewById(R.id.new_bathroom_fab);
+        newBathroomFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Coming soon!", Toast.LENGTH_SHORT).show();
+//            Intent launchRateIntent = new Intent(WelcomeSplashActivity.this, AddBathroomActivity.class);
+//            launchRateIntent.putExtra(getString(R.string.maps_intent_latitude), currentLocation.getLatitude());
+//            launchRateIntent.putExtra(getString(R.string.maps_intent_longitude), currentLocation.getLongitude());
+//            WelcomeSplashActivity.this.startActivity(launchRateIntent);
+
+            }
+        });
         searchFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,11 +127,6 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
                 }
             }
         });
-
-        setupFireBase();
-
-        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
     }
 
     @Override
@@ -163,8 +182,18 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
         googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.map_style));
 
         buildGoogleApiClient();
+
         //noinspection MissingPermission
         map.setMyLocationEnabled(true);
+        map.getUiSettings().setMapToolbarEnabled(false);
+
+        // Set default region to be shown if no current location received
+        CameraPosition newPosition = new CameraPosition.Builder()
+                .target(new LatLng(DEFAULT_LATITUDE, DEFAULT_LONGITUDE))
+                .zoom(DEFAULT_ZOOM_LEVEL)
+                .build();
+        map.moveCamera(CameraUpdateFactory.newCameraPosition(newPosition));
+
 
         googleMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
             @Override
