@@ -54,6 +54,7 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
         GoogleMap.OnMarkerClickListener, GoogleMap.OnInfoWindowClickListener {
 
 
+    private static final int MENU_ITEM_ITEM1 = 1;
     private static final int MAX_MARKERS = 50;
     private static final float MAX_SEARCH_LOCATION_RADIUS_KM = (float) 0.7; // km
     private static final int MAX_LOAD_ZOOM_RADIUS = 12; // km
@@ -98,6 +99,24 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
         mapFragment.getMapAsync(this);
     }
 
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        menu.add(Menu.NONE, MENU_ITEM_ITEM1, Menu.NONE, "Sign Out");
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case MENU_ITEM_ITEM1:
+//
+//                return true;
+//
+//            default:
+//                return false;
+//        }
+//    }
+
     private void setupViews() {
         searchFab = (FloatingActionButton) findViewById(R.id.search_fab);
         newBathroomFab = (FloatingActionButton) findViewById(R.id.new_bathroom_fab);
@@ -127,6 +146,13 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        // Close the app on back pressed
+        this.finishAffinity();
     }
 
     @Override

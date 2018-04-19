@@ -123,10 +123,17 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
             signInButton.setVisibility(View.INVISIBLE);
             signInButton.setClickable(false);
 
-
-            findButton.setVisibility(View.VISIBLE);
+            if (hasLocationPermission()) {
+                Intent i = new Intent(WelcomeSplashActivity.this, BathroomMapActivity.class);
+                WelcomeSplashActivity.this.startActivity(i);
+            } else {
+                requestLocationPermission();
+                findButton.setVisibility(View.VISIBLE);
+                findButton.setClickable(true);
+            }
         } else {
             findButton.setVisibility(View.INVISIBLE);
+            findButton.setClickable(false);
 
             signInButton.setVisibility(View.VISIBLE);
             signInButton.setClickable(true);
@@ -149,11 +156,11 @@ public class WelcomeSplashActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View view) {
-        if (view == findViewById(R.id.sign_in_button)) {
+        if (!hasLocationPermission()) {
+            requestLocationPermission();
+        } else if (view == findViewById(R.id.sign_in_button)) {
             Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
             startActivityForResult(signInIntent, RC_SIGN_IN);
-        } else if (!hasLocationPermission()) {
-            requestLocationPermission();
         } else if (view == findViewById(R.id.welcome_find_bathroom_button)) {
             Intent i = new Intent(WelcomeSplashActivity.this, BathroomMapActivity.class);
             WelcomeSplashActivity.this.startActivity(i);
