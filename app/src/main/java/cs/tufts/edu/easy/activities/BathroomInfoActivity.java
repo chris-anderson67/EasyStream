@@ -65,7 +65,8 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     private Bathroom bathroom;
     private List<String> comments;
 
-    private long userVote = NO_VOTE;
+    private long newUserVote = NO_VOTE;
+    private long oldUserVote = NO_VOTE;
 
     private TextView nameView;
     private TextView streetView;
@@ -99,6 +100,9 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
             return;
         }
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         bathroomId = getIntent().getStringExtra(Constants.IntentKeys.BATHROOM_ID);
         bathroomReference = FirebaseDatabase.getInstance().getReference(getString(R.string.bathrooms_db_path)).child(bathroomId);
         commentsReference = FirebaseDatabase.getInstance().getReference(getString(R.string.comments_db_path)).child(bathroomId);
@@ -107,6 +111,12 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         locationMap = (SupportMapFragment) getSupportFragmentManager().findFragmentById(bathroom_details_map);
         locationMap.getMapAsync(this);
         Log.e(TAG, bathroomId);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     @Override
@@ -152,23 +162,62 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         upvoteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userVote = (userVote == UPVOTE) ? NO_VOTE : UPVOTE;
+                newUserVote = (newUserVote == UPVOTE) ? NO_VOTE : UPVOTE;
                 recordVote();
             }
         });
         downvoteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userVote = (userVote == DOWNVOTE) ? NO_VOTE : DOWNVOTE;
+                newUserVote = (newUserVote == DOWNVOTE) ? NO_VOTE : DOWNVOTE;
                 recordVote();
             }
         });
     }
 
     private void recordVote() {
+        // Update Bathroom ref with difference from old votes
+
+        // I wish I'd used a score instead of upvotes and downvotes
+        // but oh well lets do some if statements
+        // what a terrible mess
+        if (oldUserVote == NO_VOTE) {
+            if (newUserVote == UPVOTE){
+                // none + up -> increment upvote
+                bathroom.upvote += 1;
+
+            } else if (newUserVote == DOWNVOTE) {
+                // none + down -> increment downvote
+                bathroom.downvote += 1;
+            }
+        } else if (oldUserVote == UPVOTE) {
+            if (newUserVote == DOWNVOTE) {
+                // up + down -> decrement upvote, increment downvote
+                bathroom.upvote -= 1;
+                bathroom.downvote += 1;
+
+            } else if (newUserVote == NO_VOTE) {
+                // up + none -> decrement upvote
+                bathroom.upvote -= 1;
+            }
+        } else if (oldUserVote == DOWNVOTE) {
+            if (newUserVote == UPVOTE) {
+                // down + up -> decrement downvote, increment upvote
+                bathroom.downvote -= 1;
+                bathroom.upvote += 1;
+
+            } else if (newUserVote == NO_VOTE) {
+                // down + none -> decrement downvote
+                bathroom.downvote -= 1;
+            }
+        }
+        bathroomReference.setValue(bathroom);
+
+
+        // Update the user ref with their vote
         String userId = currentUser.getUid();
         DatabaseReference ref = FirebaseManager.getUserDataReference().child(userId);
-        ref.child(Constants.DatabaseKeys.USER_DATA_VOTES).child(bathroomId).setValue(userVote);
+        ref.child(Constants.DatabaseKeys.USER_DATA_VOTES).child(bathroomId).setValue(newUserVote);
     }
 
     private AlertDialog.Builder getCommentAlert() {
@@ -213,12 +262,13 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         } else if (dataSnapshot.getRef().toString().equals(userReference.toString())) {
             DataSnapshot vote = dataSnapshot.child(Constants.DatabaseKeys.USER_DATA_VOTES).child(bathroomId);
             if (vote.exists()) {
-                updateUiWithVote((long) vote.getValue());
+                updateUiAndStateWithVote((long) vote.getValue());
             }
         }
     }
 
-    private void updateUiWithVote(long vote) {
+    private void updateUiAndStateWithVote(long vote) {
+        oldUserVote = vote;
         if (vote == UPVOTE) {
             tint(upvoteButton, R.color.colorPrimary);
             tint(downvoteButton, R.color.button_disabled);

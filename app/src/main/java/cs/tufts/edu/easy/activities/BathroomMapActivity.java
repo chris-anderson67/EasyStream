@@ -82,6 +82,9 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
         setTitle(getString(R.string.application_title));
         setContentView(R.layout.activity_location_aware);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         searchFab = (FloatingActionButton) findViewById(R.id.search_fab);
         searchFab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +106,12 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     @Override
