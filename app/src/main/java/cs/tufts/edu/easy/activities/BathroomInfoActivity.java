@@ -262,6 +262,7 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
     }
 
     private void populateComments() {
+        commentsView.removeAllViews();
         for (String comment : comments) {
             TextView textView = new TextView(this);
             textView.setText(comment);
