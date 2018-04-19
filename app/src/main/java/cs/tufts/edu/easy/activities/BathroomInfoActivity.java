@@ -93,6 +93,8 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         addListeners();
         comments = new ArrayList<>();
 
+        updateUiAndStateWithVote(NO_VOTE);
+
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
         if (currentUser == null) {
@@ -272,15 +274,12 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         if (vote == UPVOTE) {
             tint(upvoteButton, R.color.colorPrimary);
             tint(downvoteButton, R.color.button_disabled);
-            Toast.makeText(this, String.valueOf(vote), Toast.LENGTH_SHORT).show();
         } else if (vote == DOWNVOTE) {
             tint(downvoteButton, R.color.colorPrimary);
             tint(upvoteButton, R.color.button_disabled);
-            Toast.makeText(this, String.valueOf(vote), Toast.LENGTH_SHORT).show();
         } else {
             tint(upvoteButton, R.color.button_disabled);
             tint(downvoteButton, R.color.button_disabled);
-            Toast.makeText(this, String.valueOf(vote), Toast.LENGTH_SHORT).show();
         }
     }
 
