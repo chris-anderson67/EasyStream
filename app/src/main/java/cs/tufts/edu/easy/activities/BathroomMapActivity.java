@@ -9,6 +9,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -35,6 +37,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -54,7 +57,7 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
         GoogleMap.OnMarkerClickListener, GoogleMap.OnInfoWindowClickListener {
 
 
-    private static final int MENU_ITEM_ITEM1 = 1;
+    private static final int MENU_ITEM_SIGN_OUT = 1;
     private static final int MAX_MARKERS = 50;
     private static final float MAX_SEARCH_LOCATION_RADIUS_KM = (float) 0.7; // km
     private static final int MAX_LOAD_ZOOM_RADIUS = 12; // km
@@ -76,6 +79,7 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
     private GeoFire geoFire;
     private GeoQuery geoQuery;
     private ArrayList<Marker> markers = new ArrayList<>(MAX_MARKERS);
+    private FirebaseAuth firebaseAuth;
 
     private boolean animatedCurrentLocation = false;
 
@@ -97,25 +101,32 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        firebaseAuth = FirebaseAuth.getInstance();
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        menu.add(Menu.NONE, MENU_ITEM_ITEM1, Menu.NONE, "Sign Out");
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case MENU_ITEM_ITEM1:
-//
-//                return true;
-//
-//            default:
-//                return false;
-//        }
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        if (firebaseAuth.getCurrentUser() != null) {
+            menu.add(Menu.NONE, MENU_ITEM_SIGN_OUT, Menu.NONE, "Sign Out");
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_ITEM_SIGN_OUT:
+                if (firebaseAuth.getCurrentUser() != null) {
+                    firebaseAuth.signOut();
+                    this.finish();
+                }
+                return true;
+
+            default:
+                return false;
+        }
+    }
 
     private void setupViews() {
         searchFab = (FloatingActionButton) findViewById(R.id.search_fab);
@@ -124,11 +135,12 @@ public class BathroomMapActivity extends AppCompatActivity implements OnMapReady
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Coming soon!", Toast.LENGTH_SHORT).show();
-//            Intent launchRateIntent = new Intent(WelcomeSplashActivity.this, AddBathroomActivity.class);
-//            launchRateIntent.putExtra(getString(R.string.maps_intent_latitude), currentLocation.getLatitude());
-//            launchRateIntent.putExtra(getString(R.string.maps_intent_longitude), currentLocation.getLongitude());
-//            WelcomeSplashActivity.this.startActivity(launchRateIntent);
-
+                Intent launchRateIntent = new Intent(BathroomMapActivity.this, AddBathroomActivity.class);
+                if (currentLocation != null) {
+                    launchRateIntent.putExtra(getString(R.string.maps_intent_latitude), currentLocation.latitude);
+                    launchRateIntent.putExtra(getString(R.string.maps_intent_longitude), currentLocation.longitude);
+                }
+                BathroomMapActivity.this.startActivity(launchRateIntent);
             }
         });
         searchFab.setOnClickListener(new View.OnClickListener() {

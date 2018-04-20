@@ -56,7 +56,6 @@ public class AddBathroomActivity extends AppCompatActivity implements View.OnCli
         nextButton.setOnClickListener(this);
     }
 
-
     private void getViews() {
         viewPager = (NoSwipeViewpager) findViewById(R.id.add_activity_view_pager);
         nextButton = (Button) findViewById(R.id.add_activity_next_button);

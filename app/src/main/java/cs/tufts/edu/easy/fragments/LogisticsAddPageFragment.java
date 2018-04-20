@@ -62,7 +62,8 @@ public class LogisticsAddPageFragment extends BaseAddPageFragment implements OnM
 
             googleMap.addMarker(new MarkerOptions()
                     .position(currentLatLng)
-                    .title("Current Location")
+                    .title("New Location")
+                    .draggable(true)
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
             googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 18));
         }
