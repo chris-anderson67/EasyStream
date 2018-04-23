@@ -56,20 +56,18 @@ public class FirebaseManager {
             newBathroom.street = address.getSubThoroughfare() + " " + address.getThoroughfare();
             newBathroom.country = address.getCountryName();
             newBathroom.city = address.getLocality();
-            Log.e("addBathroom", "addBathroom: " + newBathroom.toString(), null);
 
         } catch (IOException e) {
             e.printStackTrace();
+            Log.e(TAG, "addBathroom: Geocoder Error!", null);
         }
 
         // Auto-generate key for new bathroom
         DatabaseReference newBathroomRef = getBathroomsReference();
         String newBathroomId = newBathroomRef.push().getKey();
-        Log.e(TAG, "addBathroom: " + "got key", null);
 
         // Add the bathroom
         newBathroomRef.child(newBathroomId).setValue(newBathroom);
-        Log.e(TAG, "addBathroom: " + "added bathroom", null);
 
         // Autogenerate key for comment
         DatabaseReference newCommentsRef = getCommentsReference().child(newBathroomId);
@@ -77,13 +75,11 @@ public class FirebaseManager {
 
         // Add the comment
         newCommentsRef.child(newCommentId).setValue(newBathroom.comment);
-        Log.e(TAG, "addBathroom: " + "added comments", null);
 
         // Add currentLocation data to locations ref at new-bathroom's key
         GeoFire geoFire = new GeoFire(getLocationsReference());
         geoFire.setLocation(newBathroomId,
                 new GeoLocation(newBathroom.latitude, newBathroom.longitude));
-        Log.e(TAG, "addBathroom: " + "added locations", null);
 
         // Associate the bathroom with the user
         DatabaseReference newUserDataRef = getUserDataReference().child(userId);

@@ -47,6 +47,8 @@ import cs.tufts.edu.easy.models.Bathroom;
 
 import static cs.tufts.edu.easy.R.id.bathroom_details_downvote_button;
 import static cs.tufts.edu.easy.R.id.bathroom_details_map;
+import static cs.tufts.edu.easy.firebase.FirebaseManager.getCommentsReference;
+import static cs.tufts.edu.easy.firebase.FirebaseManager.getUserDataReference;
 
 public class BathroomInfoActivity extends AppCompatActivity implements ValueEventListener,
         OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
@@ -231,7 +233,19 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         commentAlert.setView(input);
         commentAlert.setPositiveButton(R.string.submit, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                FirebaseManager.addComment(input.getText().toString(), bathroomId);
+                DatabaseReference commentsRef = getCommentsReference().child(bathroomId);
+                DatabaseReference userDataRef = getUserDataReference().child(currentUser.getUid());
+                String comment = input.getText().toString();
+
+                // Add the comment
+                String newCommentId = commentsRef.push().getKey();
+                commentsRef.child(newCommentId).setValue(comment);
+
+                // Associate the comment with the user
+                userDataRef.child(Constants.DatabaseKeys.USER_DATA_COMMENTS)
+                        .child(bathroomId)
+                        .child(newCommentId)
+                        .setValue(comment);
             }
         });
         commentAlert.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
