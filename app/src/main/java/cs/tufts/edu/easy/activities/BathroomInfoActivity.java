@@ -1,6 +1,7 @@
 package cs.tufts.edu.easy.activities;
 
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.v4.content.ContextCompat;
@@ -36,8 +37,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 import cs.tufts.edu.easy.Constants;
 import cs.tufts.edu.easy.LocationHelper;
@@ -65,7 +67,8 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
     private String bathroomId;
     private Bathroom bathroom;
-    private List<String> comments;
+    private HashMap<String, String> comments;
+    private Set<String> userCommentIDs;
 
     private long newUserVote = NO_VOTE;
     private long oldUserVote = NO_VOTE;
@@ -93,7 +96,8 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
         getViews();
         addListeners();
-        comments = new ArrayList<>();
+        comments = new HashMap<>();
+        userCommentIDs = new HashSet<>(0);
 
         updateUiAndStateWithVote(NO_VOTE);
 
@@ -262,8 +266,9 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         if (dataSnapshot.getRef().toString().equals(commentsReference.toString())) {
             for (DataSnapshot child : dataSnapshot.getChildren()) {
                 String comment = child.getValue(String.class);
-                if (!FirebaseManager.isMetaData(child.getKey()) && !comments.contains(comment)) {
-                    comments.add(comment);
+                String key = child.getKey();
+                if (!FirebaseManager.isMetaData(child.getKey()) && !comments.containsKey(key)) {
+                    comments.put(key, comment);
                 }
             }
             populateComments();
@@ -277,9 +282,15 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         // User data changed
         } else if (dataSnapshot.getRef().toString().equals(userReference.toString())) {
             DataSnapshot vote = dataSnapshot.child(Constants.DatabaseKeys.USER_DATA_VOTES).child(bathroomId);
+            DataSnapshot userComments = dataSnapshot.child(Constants.DatabaseKeys.USER_DATA_COMMENTS).child(bathroomId);
             if (vote.exists()) {
                 updateUiAndStateWithVote((long) vote.getValue());
             }
+
+            for (DataSnapshot child : userComments.getChildren()) {
+                userCommentIDs.add(child.getKey());
+            }
+            populateComments();
         }
     }
 
@@ -326,14 +337,19 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
 
     private void populateComments() {
         commentsView.removeAllViews();
-        for (String comment : comments) {
+        for (String key : comments.keySet()) {
             TextView textView = new TextView(this);
-            textView.setText(comment);
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            if (userCommentIDs.contains(key)) {
+                textView.setTypeface(textView.getTypeface(), Typeface.BOLD_ITALIC);
+            }
+            textView.setText(comments.get(key));
+            LinearLayout.LayoutParams lp =
+                    new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                                                  ViewGroup.LayoutParams.WRAP_CONTENT);
             int margin = (int) getResources().getDimension(R.dimen.md_margin_medium);
             lp.setMargins(margin, 0, margin, margin);
-
             textView.setLayoutParams(lp);
+
             commentsView.addView(textView);
         }
     }
