@@ -12,6 +12,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import cs.tufts.edu.easy.R;
@@ -21,9 +22,11 @@ import cs.tufts.edu.easy.models.Bathroom;
 import static cs.tufts.edu.easy.R.id.add_bathroom_location_map;
 
 
-public class LogisticsAddPageFragment extends BaseAddPageFragment implements OnMapReadyCallback{
+public class LogisticsAddPageFragment extends BaseAddPageFragment implements OnMapReadyCallback {
 
     Location currentLocation = null;
+    private double latitude = 0.0;
+    private double longitude = 0.0;
 
     @Override
     protected void setupViews(View rootView) {
@@ -39,7 +42,8 @@ public class LogisticsAddPageFragment extends BaseAddPageFragment implements OnM
 
     @Override
     public Bathroom getUpdatedBathroom(Bathroom initialBathroom) {
-
+        initialBathroom.latitude = latitude;
+        initialBathroom.longitude = longitude;
         return initialBathroom;
     }
 
@@ -66,6 +70,20 @@ public class LogisticsAddPageFragment extends BaseAddPageFragment implements OnM
                     .draggable(true)
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
             googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 18));
+
+            googleMap.setOnMarkerDragListener(new GoogleMap.OnMarkerDragListener() {
+                @Override
+                public void onMarkerDragStart(Marker marker) { }
+
+                @Override
+                public void onMarkerDrag(Marker marker) { }
+
+                @Override
+                public void onMarkerDragEnd(Marker marker) {
+                    latitude = marker.getPosition().latitude;
+                    longitude = marker.getPosition().longitude;
+                }
+            });
         }
     }
 }

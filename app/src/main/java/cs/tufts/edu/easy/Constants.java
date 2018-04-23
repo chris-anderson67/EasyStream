@@ -17,6 +17,7 @@ public class Constants {
 
         public static String USER_DATA_COMMENTS = "Comments";
         public static String USER_DATA_VOTES = "Votes";
+        public static String USER_DATA_BATHROOMS = "Bathrooms";
     }
 
     public static class IntentKeys {

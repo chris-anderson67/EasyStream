@@ -11,10 +11,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import cs.tufts.edu.easy.AddBathroomFlowAdapter;
 import cs.tufts.edu.easy.R;
+import cs.tufts.edu.easy.firebase.FirebaseManager;
 import cs.tufts.edu.easy.fragments.BaseAddPageFragment;
 import cs.tufts.edu.easy.models.Bathroom;
 import cs.tufts.edu.easy.views.NoSwipeViewpager;
@@ -30,7 +30,6 @@ public class AddBathroomActivity extends AppCompatActivity implements View.OnCli
 
     private Bathroom bathroom = new Bathroom();
     private Location currentLocation = new Location("");
-    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +41,10 @@ public class AddBathroomActivity extends AppCompatActivity implements View.OnCli
         currentLocation.setLongitude(intent.getDoubleExtra(getString(R.string.maps_intent_longitude), 0.0));
 
         // Only allow authenticated users to proceed
-        mAuth = FirebaseAuth.getInstance();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser == null) {
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
             Toast.makeText(this, "Authentication error", Toast.LENGTH_SHORT).show();
             finish();
         }
-
 
         getViews();
         pagerAdapter = new AddBathroomFlowAdapter(getSupportFragmentManager());
@@ -86,7 +82,9 @@ public class AddBathroomActivity extends AppCompatActivity implements View.OnCli
         }
 
         if (view == nextButton) {
+            // Bathroom should be complete here
             if (currentItem == NUM_STEPS - 1) {
+                FirebaseManager.addBathroom(this, bathroom);
                 finish();
             } else {
                 viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);

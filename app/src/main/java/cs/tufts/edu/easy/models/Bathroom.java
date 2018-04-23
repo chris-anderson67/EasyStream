@@ -2,10 +2,10 @@ package cs.tufts.edu.easy.models;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 
+import static android.R.attr.id;
+
 @IgnoreExtraProperties
 public class Bathroom {
-
-    public int id = -1;
 
     public boolean accessible;
     public boolean changing_table;
@@ -44,7 +44,7 @@ public class Bathroom {
                 "Comment: " + comment + "\n" +
                 "Directions: " + directions + "\n" +
                 "Latitude: " + String.valueOf(latitude) + "\n" +
-                "Longitude: " + String.valueOf(latitude) + "\n" +
+                "Longitude: " + String.valueOf(longitude) + "\n" +
                 "Created At: " + created_at + "\n" +
                 "Updated At: " + updated_at + "\n";
     }
