@@ -187,8 +187,8 @@ public class BathroomInfoActivity extends AppCompatActivity implements ValueEven
         // Update Bathroom ref with difference from old votes
 
         // I wish I'd used a score instead of upvotes and downvotes
-        // but oh well lets do some if statements
-        // what a terrible mess
+        // but at this point we're just going to do some mindless logic.
+        // What a terrible mess
         if (oldUserVote == NO_VOTE) {
             if (newUserVote == UPVOTE){
                 // none + up -> increment upvote
